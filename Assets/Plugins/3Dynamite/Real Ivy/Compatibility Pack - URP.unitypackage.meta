@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Plugins/3Dynamite/Real Ivy/Compatibility Pack - URP.unitypackage.meta
 guid: d87654f0feb8c9d4f8a1540e2650d1a9
+========
+guid: 43262e4d5c09e064bb1a77c000a7097f
+folderAsset: yes
+>>>>>>>> fa2428a (intégration ( test main menu) : add Ui on wood board):Assets/Plugins/Test Terrain Menu/Plugins/WoodenBoard/Materials.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
