@@ -11,7 +11,7 @@ namespace Code.Scripts.Source.GameFSM.States
     public class GameStateLoungePhase2 : GameBaseState
     {
         public static Action OnSocketChanged;
-        public static Action<bool> OnFusePlugged;
+        public static Action OnFusePlugged;
         [SerializeField] private List<XRSocketInteractor> _bookSockets = new List<XRSocketInteractor>(5);
         [SerializeField] private List<string> _correctBookPlacement = new List<string>(5);
         private  bool _fusePlugged = false;
@@ -63,9 +63,9 @@ namespace Code.Scripts.Source.GameFSM.States
             Debug.Log(" Puzzle terminé");
         }
 
-        private void PlugFuseCheck(bool fuseIsPlugged)
+        private void PlugFuseCheck()
         {
-            _fusePlugged = fuseIsPlugged;
+            _fusePlugged = true;
         }
 
 

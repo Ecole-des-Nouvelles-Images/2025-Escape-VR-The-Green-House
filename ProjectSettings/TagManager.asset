@@ -6,13 +6,15 @@ TagManager:
   tags:
   - Anchor
   - Book
-  - Vhs
   - Fuse
   - Water
   - Seed
   - Shears
   - PostRenderVolume
   - HallPlayableDirector
+  - Key
+  - VHS
+  - Vhs
   layers:
   - Default
   - TransparentFX
