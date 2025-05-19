@@ -141,7 +141,7 @@ namespace Code.Scripts.Source.UI
                 _editOptions = false;
                 _pausePanel.DOKill();
                 _mainPanel.DOKill();
-                _pausePanel.DOAnchorPosX(_pausePanel.TargetAnchoredPosX(-2f), _slideAnimationDuration).SetEase(_slideAnimationEasing);
+                _pausePanel.DOAnchorPosX(_pausePanel.TargetAnchoredPosX(0f), _slideAnimationDuration).SetEase(_slideAnimationEasing);
                 _mainPanel.DOAnchorPosX(_mainPanel.TargetAnchoredPosX(0f), _slideAnimationDuration).SetEase(_slideAnimationEasing);
             }
         }
