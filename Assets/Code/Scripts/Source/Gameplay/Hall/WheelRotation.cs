@@ -1,5 +1,5 @@
 using System.Collections;
-using Code.Scripts.Source.GameFSM.States;
+using Code.Scripts.Source.Managers;
 using UnityEngine;
 
 namespace Code.Scripts.Source.Gameplay.Hall
@@ -15,19 +15,19 @@ namespace Code.Scripts.Source.Gameplay.Hall
         {
             _numberShown = 0;
         }
-    
+
         [ContextMenu("Rotate Wheel")]
         public void OnWheelInteract()
         {
             if (_coroutine != null) return;
-        
+
             _coroutine = StartCoroutine(RotateWheel());
         }
 
         private IEnumerator RotateWheel()
         {
             float t = 0;
-        
+
             Quaternion initialRotation = transform.rotation;
             _zAngle += -36;
             if (_xAngle <= -360)
@@ -41,14 +41,14 @@ namespace Code.Scripts.Source.Gameplay.Hall
                 transform.rotation = Quaternion.Lerp(initialRotation, targetRotation, t);
                 yield return null;
             }
-        
+
             _numberShown++;
             if (_numberShown > 9)
             {
                 _numberShown = 0;
             }
-        
-            GameStateHallInProgress.OnRotated?.Invoke(name, _numberShown);
+
+            GameStateManager.Instance.GameStates.HallInProgress.OnRotated?.Invoke(name, _numberShown);
             _coroutine = null;
         }
     }

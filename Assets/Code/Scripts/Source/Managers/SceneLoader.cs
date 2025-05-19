@@ -44,7 +44,7 @@ namespace Code.Scripts.Source.Managers
         private void Start()
         {
             LoadScene(SceneType.MainMenu);
-            GameStateManager.OnFirstSceneLoaded.Invoke();
+            GameStateManager.Instance.OnFirstSceneLoaded.Invoke();
         }
 
         private void BuildSceneDatabase()

@@ -1143,7 +1143,7 @@ GameObject:
   - component: {fileID: 4750487770912158334}
   - component: {fileID: 4848393432880372035}
   m_Layer: 2
-  m_Name: P_Custom_XR_Origin_Menu
+  m_Name: P_Custom_XR_Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_Camera: {fileID: 4567527946315920041}
   m_OriginBaseGameObject: {fileID: 2094566269425567374}
   m_CameraFloorOffsetObject: {fileID: 9070997970675309635}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 1.7
 --- !u!143 &44401982225497596
 CharacterController:

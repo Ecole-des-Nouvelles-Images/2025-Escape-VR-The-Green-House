@@ -7,8 +7,8 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStateHallInProgress: GameBaseState
     {
-        public static Action<GameBaseState, bool, bool> OnCodeFound;
-        public static Action<string, int> OnRotated;
+        public Action<GameBaseState, bool, bool> OnCodeFound;
+        public Action<string, int> OnRotated;
 
         [SerializeField] private int[] _correctCode;
         private int[] _currentCode;
@@ -19,9 +19,10 @@ namespace Code.Scripts.Source.GameFSM.States
             base.EnterState(context);
 
             _ctx = context;
+            _currentCode = new [] {0, 0, 0, 0};
+
             OnRotated += CheckResults;
             OnCodeFound += context.SwitchState;
-            _currentCode = new [] {0, 0, 0, 0};
         }
 
         public override void UpdateState(GameStateManager context)
@@ -34,6 +35,8 @@ namespace Code.Scripts.Source.GameFSM.States
             OnRotated -= CheckResults;
             OnCodeFound -= context.SwitchState;
         }
+
+        // ---
 
         private void CheckResults(string wheelName, int wheelNumber)
         {
