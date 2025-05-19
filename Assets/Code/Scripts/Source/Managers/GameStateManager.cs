@@ -33,6 +33,7 @@ namespace Code.Scripts.Source.Managers
         {
             MenuButton = InputSystem.actions.FindAction("XRI Left/MenuButton", true);
             MenuButtonInteraction = InputSystem.actions.FindAction("XRI Left Interaction/MenuButton", true);
+            _xrNearFarInteractors = new (FindObjectsByType<NearFarInteractor>(FindObjectsSortMode.None));
         }
 
         private void Start()
@@ -100,6 +101,30 @@ namespace Code.Scripts.Source.Managers
         public void PauseGame()
         {
             SwitchState(GameStates.Pause, false, true);
+        }
+
+        public void ChangeNearFarInteractionMode(NearFarMode mode)
+        {
+            foreach (NearFarInteractor interactor in _xrNearFarInteractors)
+            {
+                switch (mode)
+                {
+                    case NearFarMode.Far:
+                        interactor.enableFarCasting = true;
+                        interactor.enableNearCasting = false;
+                        break;
+                    case NearFarMode.Near:
+                        interactor.enableNearCasting = true;
+                        interactor.enableFarCasting = false;
+                        break;
+                    case NearFarMode.Both:
+                        interactor.enableNearCasting = true;
+                        interactor.enableFarCasting = true;
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException($"Unhandled mode {mode} of NearFarMode type.");
+                }
+            }
         }
     }
 }
