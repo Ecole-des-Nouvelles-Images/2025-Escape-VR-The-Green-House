@@ -38,7 +38,7 @@ namespace Code.Scripts.Source.Managers
             OnFirstSceneLoaded += InitializeFSM;
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             OnFirstSceneLoaded -= InitializeFSM;
         }

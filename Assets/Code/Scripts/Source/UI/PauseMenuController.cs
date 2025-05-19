@@ -1,11 +1,9 @@
-using System;
 using Code.Scripts.Source.Audio;
-using Code.Scripts.Source.GameFSM.States;
 using Code.Scripts.Source.Managers;
+using Code.Scripts.Source.Types;
 using Code.Scripts.Utils;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Code.Scripts.Source.UI
@@ -111,7 +109,8 @@ namespace Code.Scripts.Source.UI
 
         private void ReloadGame()
         {
-            SceneLoader.Instance.LoadSceneManual("Setup", LoadSceneMode.Single);
+            SceneLoader.Instance.SwitchScene(SceneType.MainMenu);
+            GameStateManager.Instance.SwitchState(GameStateManager.Instance.GameStates.MainMenu);
         }
 
         public void ShowPausePanel()

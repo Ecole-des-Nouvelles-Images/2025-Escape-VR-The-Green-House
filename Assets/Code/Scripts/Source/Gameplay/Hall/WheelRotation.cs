@@ -1,6 +1,5 @@
 using System.Collections;
 using Code.Scripts.Source.GameFSM.States;
-using Code.Scripts.Source.XR;
 using UnityEngine;
 
 namespace Code.Scripts.Source.Gameplay.Hall

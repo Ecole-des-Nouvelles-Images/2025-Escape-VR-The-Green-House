@@ -1,4 +1,3 @@
-using System;
 using Code.Scripts.Source.GameFSM.States;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;

@@ -1,4 +1,3 @@
-using System;
 using Code.Scripts.Source.XR;
 using UnityEngine;
 using UnityEngine.Video;

@@ -1,10 +1,7 @@
-using System;
-using System.Collections;
 using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.Types;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit;
 using VRTemplateAssets.Scripts;
 
