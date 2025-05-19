@@ -28,7 +28,7 @@ namespace Code.Scripts.Source.XR
         
         private XRKnob _knob;
         private XRSocketTagInteractor _keySocket;
-   
+        private bool _isOpen;
 
         private void Awake()
         {
@@ -53,9 +53,10 @@ namespace Code.Scripts.Source.XR
 
         private void DoorHandleUpdate(float value)
         {
-            if (!Mathf.Approximately(value, 0)) return;
             if (_isLocked) return;
-            
+            if (!Mathf.Approximately(value, 0)) return;
+
+            if (_isOpen) return;
             OpenDoor(_destination);
         }
 
@@ -70,11 +71,12 @@ namespace Code.Scripts.Source.XR
             _CloneKey.SetActive(true);
             _isLocked = false;
             _keySocket.socketActive = false;
-          //  _keySound?.Play();
+          //  _keySound.Play();
         }
 
         private void OpenDoor(SceneType sceneType)
         {
+            _isOpen = true;
             _doorAnimator.SetTrigger(_triggerDoorAnimation);
             SceneLoader.Instance.SwitchScene(sceneType);
         }
