@@ -10,7 +10,7 @@ using VRTemplateAssets.Scripts;
 
 namespace Code.Scripts.Source.XR
 {
-    
+    [RequireComponent(typeof(Animator))]
     public class Door : MonoBehaviour
     {
         [Header("References")]
@@ -19,8 +19,8 @@ namespace Code.Scripts.Source.XR
         [SerializeField] GameObject _CloneKey;
         
         [Header("Animation")]
-        [SerializeField] Animator _doorAnimator;
         [SerializeField] private string _triggerDoorAnimation;
+        private Animator _doorAnimator;
         
         [Header("Sound")]
        // [SerializeField] AudioSource _doorSound;
@@ -33,21 +33,22 @@ namespace Code.Scripts.Source.XR
         private void Awake()
         {
             _knob = GetComponentInChildren<XRKnob>();
-            _keySocket = GetComponentInChildren<XRSocketTagInteractor>();
+            _keySocket = GetComponentInChildren<XRSocketTagInteractor?>();
+            _doorAnimator = GetComponent<Animator>();
         }
 
         private void OnEnable()
         {
             _knob.onValueChange.AddListener(DoorHandleUpdate);
             _knob.selectExited.AddListener(ResetHandle);
-            _keySocket.selectEntered.AddListener(InsertKey);
+            _keySocket?.selectEntered.AddListener(InsertKey);
         }
 
         private void OnDisable()
         {
             _knob.onValueChange.RemoveListener(DoorHandleUpdate);
             _knob.selectExited.RemoveListener(ResetHandle);
-            _keySocket.selectEntered.RemoveListener(InsertKey);
+            _keySocket?.selectEntered.RemoveListener(InsertKey);
         }
 
         private void DoorHandleUpdate(float value)

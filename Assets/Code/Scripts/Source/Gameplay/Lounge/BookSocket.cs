@@ -32,18 +32,14 @@ namespace Code.Scripts.Source.Gameplay.Lounge
         if (_socket.firstInteractableSelected.transform.CompareTag("Fuse"))
         {
             Debug.Log("Fuse placed");
-            GameStateLoungePhase2.OnFusePlugged?.Invoke(true);
+            GameStateLoungePhase2.OnFusePlugged?.Invoke();
+            _socket.socketActive = false;
         }
         GameStateLoungePhase2.OnSocketChanged?.Invoke();
     }
 
     private void OnBookRemoved(SelectExitEventArgs args)
     {
-        if (_socket.firstInteractableSelected.transform.CompareTag("Fuse"))
-        {
-            Debug.Log("Fuse removed");
-            GameStateLoungePhase2.OnFusePlugged?.Invoke(false);
-        }
         GameStateLoungePhase2.OnSocketChanged?.Invoke();
     }
 }
