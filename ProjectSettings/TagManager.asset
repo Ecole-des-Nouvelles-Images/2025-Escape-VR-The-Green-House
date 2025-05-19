@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - Book
+  - Vhs
   - Fuse
   - Water
   - Seed
@@ -13,8 +14,7 @@ TagManager:
   - PostRenderVolume
   - HallPlayableDirector
   - Key
-  - VHS
-  - Vhs
+  - GameArea
   layers:
   - Default
   - TransparentFX
@@ -22,7 +22,7 @@ TagManager:
   - PostRender
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
