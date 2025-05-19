@@ -27,12 +27,12 @@ namespace Code.Scripts.Source.Gameplay.Labo
             {
                 TryMix(_vial1, _vial2);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Debug.LogWarning("ERREUR");
             }
         }
-        
+
         private PotionType TryMix(Vial vial1, Vial vial2)
         {
             int resultVial = vial1.Properties.Index + vial2.Properties.Index;
@@ -55,12 +55,12 @@ namespace Code.Scripts.Source.Gameplay.Labo
             }
             throw new Exception("TryMix result bad dosage"); // TODO: Implement PotionType.Trash; // Replace when ready;
         }
-        
+
 
         private void OnDialMoved(XRKnob dial, Vial vial, float value)
         {
             value = Mathf.Clamp(value, 0f, 1f);
-            int stepIndex = Mathf.RoundToInt(value * 4); 
+            int stepIndex = Mathf.RoundToInt(value * 4);
             Debug.Log("stepIndex = " + stepIndex);
             Debug.Log("value = " + value);
             switch (stepIndex)
