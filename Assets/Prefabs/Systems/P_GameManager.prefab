@@ -52,10 +52,14 @@ MonoBehaviour:
       _exposureAnimationDuration: 2
       _exposureToneDownIntensity: -3.5
     <HallInProgress>k__BackingField:
-      _correctCode: 
+      _correctCode: 01000000000000000000000001000000
     <LoungePhase2>k__BackingField:
-      _bookSockets: []
-      _correctBookPlacement: []
+      _correctBookPlacement:
+      - "D\xE9couverte"
+      - "R\xE9action"
+      - Mutation
+      - Conscience
+      - "R\xE9volte"
     <GreenhouseInProgress>k__BackingField:
       _plantSlots: []
       _correctPlants: []

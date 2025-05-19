@@ -15,6 +15,7 @@ TagManager:
   - Key
   - VHS
   - Vhs
+  - LoungeBookSocketsContainer
   layers:
   - Default
   - TransparentFX

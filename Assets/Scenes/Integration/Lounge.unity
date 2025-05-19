@@ -8173,18 +8173,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Remote
       objectReference: {fileID: 0}
-    - target: {fileID: 8739074122187050331, guid: 99a49f092eb6d4843a3cba1bcfcb24f6, type: 3}
-      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739074122187050331, guid: 99a49f092eb6d4843a3cba1bcfcb24f6, type: 3}
-      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739074122187050331, guid: 99a49f092eb6d4843a3cba1bcfcb24f6, type: 3}
-      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
