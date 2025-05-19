@@ -11,27 +11,30 @@ namespace Code.Scripts.Source.XR
     public class Door : MonoBehaviour
     {
         [Header("References")]
-        [SerializeField] SceneType _destination;
+        [SerializeField] private SceneType _destination;
         [SerializeField] private bool _isLocked;
-        [SerializeField] GameObject _CloneKey;
-        
+        [FormerlySerializedAs("_CloneKey")] [SerializeField] private GameObject _cloneKey;
+
         [Header("Animation")]
         [SerializeField] private string _triggerDoorAnimation;
         private Animator _doorAnimator;
-        
+
         [Header("Sound")]
        // [SerializeField] AudioSource _doorSound;
       // [SerializeField] AudioSource _keySound;
-        
+
         private XRKnob _knob;
         private XRSocketTagInteractor _keySocket;
-   
+
 
         private void Awake()
         {
             _knob = GetComponentInChildren<XRKnob>();
-            _keySocket = GetComponentInChildren<XRSocketTagInteractor?>();
+            _keySocket = GetComponentInChildren<XRSocketTagInteractor>();
             _doorAnimator = GetComponent<Animator>();
+
+            if (!_keySocket)
+                throw new System.Exception("Key socket not found");
         }
 
         private void OnEnable()
@@ -52,7 +55,7 @@ namespace Code.Scripts.Source.XR
         {
             if (!Mathf.Approximately(value, 0)) return;
             if (_isLocked) return;
-            
+
             OpenDoor(_destination);
         }
 
@@ -64,7 +67,7 @@ namespace Code.Scripts.Source.XR
         private void InsertKey(SelectEnterEventArgs selectEnterEventArgs)
         {
             Destroy(_keySocket.firstInteractableSelected.transform.gameObject);
-            _CloneKey.SetActive(true);
+            _cloneKey.SetActive(true);
             _isLocked = false;
             _keySocket.socketActive = false;
           //  _keySound?.Play();
@@ -75,9 +78,5 @@ namespace Code.Scripts.Source.XR
             _doorAnimator.SetTrigger(_triggerDoorAnimation);
             SceneLoader.Instance.SwitchScene(sceneType);
         }
-        
-        
-
-     
     }
 }
