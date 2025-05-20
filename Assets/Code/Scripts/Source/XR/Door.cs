@@ -26,15 +26,14 @@ namespace Code.Scripts.Source.XR
         private XRKnob _knob;
         private XRSocketTagInteractor _keySocket;
 
-
         private void Awake()
         {
             _knob = GetComponentInChildren<XRKnob>();
             _keySocket = GetComponentInChildren<XRSocketTagInteractor>();
             _doorAnimator = GetComponent<Animator>();
 
-            if (!_keySocket)
-                throw new System.Exception("Key socket not found");
+            if (!_keySocket && _isLocked)
+                throw new System.Exception($"[Door] Key socket not found on locked door : {gameObject.name}");
         }
 
         private void OnEnable()

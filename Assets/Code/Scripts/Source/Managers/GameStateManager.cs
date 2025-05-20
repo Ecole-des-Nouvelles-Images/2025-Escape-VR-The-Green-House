@@ -34,12 +34,12 @@ namespace Code.Scripts.Source.Managers
             MenuButton = InputSystem.actions.FindAction("XRI Left/MenuButton", true);
             MenuButtonInteraction = InputSystem.actions.FindAction("XRI Left Interaction/MenuButton", true);
             _xrNearFarInteractors = new (FindObjectsByType<NearFarInteractor>(FindObjectsSortMode.None));
+            ChangeNearFarInteractionMode(NearFarMode.None);
         }
 
         private void Start()
         {
             CurrentState = GameStates.Uninitialized;
-            CurrentState.EnterState(this);
         }
 
         private void OnEnable()
@@ -74,6 +74,7 @@ namespace Code.Scripts.Source.Managers
 
         private void InitializeFSM()
         {
+            Debug.Log("[GameStateManager] Initializing FSM...");
             Instance.SwitchState(Instance.GameStates.MainMenu);
         }
 
@@ -91,11 +92,15 @@ namespace Code.Scripts.Source.Managers
             }
 
             if (!bypassExit && CurrentState != null)
+            {
+                Debug.Log($"[Manual] Current exiting state: {CurrentState.GetType().Name}");
                 CurrentState.ExitState(this);
+            }
 
             CurrentState = newState;
 
-            newState.EnterState(this);
+            if (!bypassEntry && CurrentState != null)
+                newState.EnterState(this);
         }
 
         public void PauseGame()
@@ -105,26 +110,37 @@ namespace Code.Scripts.Source.Managers
 
         public void ChangeNearFarInteractionMode(NearFarMode mode)
         {
+            bool enableFarCast;
+            bool enableNearCast;
+
+            switch (mode) {
+                case NearFarMode.None:
+                    enableFarCast = false;
+                    enableNearCast = false;
+                    break;
+                case NearFarMode.Far:
+                    enableFarCast = true;
+                    enableNearCast = false;
+                    break;
+                case NearFarMode.Near:
+                    enableNearCast = true;
+                    enableFarCast = false;
+                    break;
+                case NearFarMode.Both:
+                    enableNearCast = true;
+                    enableFarCast = true;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException($"Unhandled mode {mode} of NearFarMode type.");
+            }
+
             foreach (NearFarInteractor interactor in _xrNearFarInteractors)
             {
-                switch (mode)
-                {
-                    case NearFarMode.Far:
-                        interactor.enableFarCasting = true;
-                        interactor.enableNearCasting = false;
-                        break;
-                    case NearFarMode.Near:
-                        interactor.enableNearCasting = true;
-                        interactor.enableFarCasting = false;
-                        break;
-                    case NearFarMode.Both:
-                        interactor.enableNearCasting = true;
-                        interactor.enableFarCasting = true;
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException($"Unhandled mode {mode} of NearFarMode type.");
-                }
+                interactor.enableNearCasting = enableNearCast;
+                interactor.enableFarCasting = enableFarCast;
             }
+
+            Debug.Log($">> NearFar interaction mode changed to {mode}");
         }
     }
 }
