@@ -14,9 +14,9 @@ namespace Code.Scripts.Source.GameFSM.States
 
         public override void EnterState(GameStateManager context)
         {
-            Debug.Log("[GameStateMainMenu] MainMenu successfully loaded.");
-
             context.ChangeNearFarInteractionMode(NearFarMode.Far);
+
+            Debug.Log("[GameStateMainMenu] MainMenu successfully loaded.");
         }
 
         public override void UpdateState(GameStateManager context)

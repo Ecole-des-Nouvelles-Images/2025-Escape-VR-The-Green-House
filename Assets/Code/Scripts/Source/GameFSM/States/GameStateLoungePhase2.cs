@@ -69,20 +69,22 @@ namespace Code.Scripts.Source.GameFSM.States
             }
 
             if (!_bookSocketsContainer)
+            {
                 _bookSocketsContainer = GameObject.FindGameObjectWithTag("LoungeBookSocketsContainer").transform;
+
+                if (!_bookSocketsContainer)
+                    throw new Exception("[GameStateLoungePhase2] Book sockets container not found.");
+            }
 
             if (_bookSockets.Count == 0)
             {
                 foreach (Transform child in _bookSocketsContainer)
                     _bookSockets.Add(child.GetComponent<XRSocketInteractor>());
             }
-
-            Debug.Log("[GameStateLoungePhase2] Sockets founded for Lounge");
         }
 
         private void CheckPuzzle()
         {
-            Debug.Log("[GameStateLoungePhase2] Checking puzzle...");
             if (_puzzleSolved || !_fusePlugged) return;
 
             for (int i = 0; i < _bookSockets.Count; i++)

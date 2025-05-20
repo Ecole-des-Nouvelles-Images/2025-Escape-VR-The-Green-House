@@ -29,6 +29,8 @@ namespace Code.Scripts.Source.Managers
 
         private SceneTransitionManager _transitionManager;
 
+        private bool _firstSceneLoaded = false;
+
 #if UNITY_EDITOR
         private void OnValidate()
         {
@@ -174,6 +176,12 @@ namespace Code.Scripts.Source.Managers
 
             CurrentScene = scene;
             asyncLoadOperation.allowSceneActivation = true;
+
+            if (!_firstSceneLoaded)
+            {
+                _firstSceneLoaded = true;
+                GameStateManager.Instance.OnFirstSceneLoaded.Invoke();
+            }
 
             if (loadAsActive) {
                 SceneManager.SetActiveScene(SceneManager.GetSceneByName(scene));

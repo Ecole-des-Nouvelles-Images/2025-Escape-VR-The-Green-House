@@ -47,8 +47,8 @@ namespace Code.Scripts.Source.UI
         private void StartGame()
         {
             HideAllPanels();
-            SceneLoader.Instance.SwitchScene(SceneType.Lounge);
             GameStateManager.Instance.SwitchState(GameStateManager.Instance.GameStates.LoungeIntro);
+            SceneLoader.Instance.SwitchScene(SceneType.Lounge);
         }
 
         private void QuitGame()
