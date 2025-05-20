@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using Code.Scripts.Source.GameFSM.States;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 namespace Code.Scripts.Source.Gameplay.Lounge

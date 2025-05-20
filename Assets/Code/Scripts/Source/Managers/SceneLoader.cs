@@ -39,9 +39,12 @@ namespace Code.Scripts.Source.Managers
         {
             BuildSceneDatabase();
             _transitionManager = new(_fadeDuration, _fadeCurve);
+        }
 
+        private void Start()
+        {
             LoadScene(SceneType.MainMenu);
-            GameStateManager.OnFirstSceneLoaded.Invoke();
+            GameStateManager.Instance.OnFirstSceneLoaded.Invoke();
         }
 
         private void BuildSceneDatabase()

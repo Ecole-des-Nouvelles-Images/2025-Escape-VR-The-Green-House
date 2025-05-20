@@ -1,8 +1,6 @@
 using System;
 using Code.Scripts.Source.GameFSM.States;
 using UnityEngine;
-using UnityEngine.Serialization;
-
 
 
 public class PlantSlot : MonoBehaviour

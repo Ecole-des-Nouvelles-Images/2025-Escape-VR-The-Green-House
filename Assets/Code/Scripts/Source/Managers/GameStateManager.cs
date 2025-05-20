@@ -1,16 +1,22 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 using Code.Scripts.Source.GameFSM;
 using Code.Scripts.Source.GameFSM.States;
 using Code.Scripts.Utils;
+using Code.Scripts.Source.Types;
 
 namespace Code.Scripts.Source.Managers
 {
     public class GameStateManager: MonoBehaviourSingleton<GameStateManager>
     {
+        public Action OnFirstSceneLoaded;
+
         [field: SerializeField] public GameStates GameStates { get; private set; } = new();
+
         public GameBaseState CurrentState { get; private set; }
         public GameBaseState PreviousState { get; private set; }
 
@@ -19,12 +25,15 @@ namespace Code.Scripts.Source.Managers
         public InputAction MenuButton { get; private set; }
         public InputAction MenuButtonInteraction { get; private set; }
 
-        public static Action OnFirstSceneLoaded;
+        private List<NearFarInteractor> _xrNearFarInteractors;
+
+        // ---
 
         private void Awake()
         {
             MenuButton = InputSystem.actions.FindAction("XRI Left/MenuButton", true);
             MenuButtonInteraction = InputSystem.actions.FindAction("XRI Left Interaction/MenuButton", true);
+            _xrNearFarInteractors = new (FindObjectsByType<NearFarInteractor>(FindObjectsSortMode.None));
         }
 
         private void Start()
@@ -38,7 +47,7 @@ namespace Code.Scripts.Source.Managers
             OnFirstSceneLoaded += InitializeFSM;
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             OnFirstSceneLoaded -= InitializeFSM;
         }
@@ -65,8 +74,10 @@ namespace Code.Scripts.Source.Managers
 
         private void InitializeFSM()
         {
-            SwitchState(GameStates.MainMenu);
+            Instance.SwitchState(Instance.GameStates.MainMenu);
         }
+
+        // ---
 
         // TODO: rework GameStates to initialize inside their first EnterState() instead of using a bypass here.
         public void SwitchState(GameBaseState newState, bool bypassEntry = false, bool bypassExit = false)
@@ -90,6 +101,30 @@ namespace Code.Scripts.Source.Managers
         public void PauseGame()
         {
             SwitchState(GameStates.Pause, false, true);
+        }
+
+        public void ChangeNearFarInteractionMode(NearFarMode mode)
+        {
+            foreach (NearFarInteractor interactor in _xrNearFarInteractors)
+            {
+                switch (mode)
+                {
+                    case NearFarMode.Far:
+                        interactor.enableFarCasting = true;
+                        interactor.enableNearCasting = false;
+                        break;
+                    case NearFarMode.Near:
+                        interactor.enableNearCasting = true;
+                        interactor.enableFarCasting = false;
+                        break;
+                    case NearFarMode.Both:
+                        interactor.enableNearCasting = true;
+                        interactor.enableFarCasting = true;
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException($"Unhandled mode {mode} of NearFarMode type.");
+                }
+            }
         }
     }
 }
