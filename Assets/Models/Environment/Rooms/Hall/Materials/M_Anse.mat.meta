@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Models/Environment/Rooms/Hall/Materials/M_Anse.mat.meta
 guid: cfcaf79ff29fb3d4a95ff11f02fa1e83
 NativeFormatImporter:
+========
+guid: 0b625239e06ab4d4cb89317cabe7db56
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> integration/salon:Assets/Prefabs/Gameplay/Generic.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 
