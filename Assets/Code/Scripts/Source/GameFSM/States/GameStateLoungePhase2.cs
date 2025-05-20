@@ -14,11 +14,12 @@ namespace Code.Scripts.Source.GameFSM.States
         public static Action OnFusePlugged;
         [SerializeField] private List<XRSocketInteractor> _bookSockets = new List<XRSocketInteractor>(5);
         [SerializeField] private List<string> _correctBookPlacement = new List<string>(5);
+        private Animator _biblioAnimator;
         private  bool _fusePlugged = false;
         private bool _puzzleSolved = false;
         private GameStateManager _ctx;
         private Action<GameBaseState, bool, bool> OnPuzzleSolved;
-
+        
 
         public override void EnterState(GameStateManager context)
         {
@@ -32,7 +33,7 @@ namespace Code.Scripts.Source.GameFSM.States
 
         public override void UpdateState(GameStateManager context)
         {
-
+            
         }
 
         public override void ExitState(GameStateManager context)
@@ -60,6 +61,7 @@ namespace Code.Scripts.Source.GameFSM.States
 
             _puzzleSolved = true;
             OnPuzzleSolved.Invoke(_ctx.GameStates.LaboratoryPhase1, false, false);
+         // _biblioAnimator.SetTrigger("Open");
             Debug.Log(" Puzzle terminé");
         }
 

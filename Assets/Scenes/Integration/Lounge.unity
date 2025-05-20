@@ -8592,6 +8592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_BlocNote
       objectReference: {fileID: 0}
+    - target: {fileID: 1657535787880683146, guid: e59b3d51c3ce48b42afdcbfd75559f73, type: 3}
+      propertyPath: m_UseDynamicAttach
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4523806188345375810, guid: e59b3d51c3ce48b42afdcbfd75559f73, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.8018
@@ -8703,6 +8707,10 @@ PrefabInstance:
     - target: {fileID: 3311992513678846136, guid: 697d5cf9b3ed0054b9c186d160adc8ed, type: 3}
       propertyPath: m_Name
       value: P_VHS_Lounge
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552076095062202403, guid: 697d5cf9b3ed0054b9c186d160adc8ed, type: 3}
+      propertyPath: m_UseDynamicAttach
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

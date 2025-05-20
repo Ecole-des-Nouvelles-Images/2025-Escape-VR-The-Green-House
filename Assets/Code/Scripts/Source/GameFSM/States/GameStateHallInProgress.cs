@@ -31,6 +31,7 @@ namespace Code.Scripts.Source.GameFSM.States
 
         public override void ExitState(GameStateManager context)
         {
+            
             OnRotated -= CheckResults;
             OnCodeFound -= context.SwitchState;
         }
@@ -63,6 +64,8 @@ namespace Code.Scripts.Source.GameFSM.States
         private void UnlockLock()
         {
             OnCodeFound?.Invoke(_ctx.GameStates.HallResolved, false, false);
+            //animation
+            //disable padlock
         }
     }
 }

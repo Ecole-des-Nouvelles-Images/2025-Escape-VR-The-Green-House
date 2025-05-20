@@ -30,7 +30,7 @@ namespace Code.Scripts.Source.Gameplay.Hall
             float t = 0;
         
             Quaternion initialRotation = transform.rotation;
-            _zAngle += -36;
+            _xAngle += -36;
             if (_xAngle <= -360)
                 _xAngle += 360;
             Vector3 targetAngle = new Vector3(_xAngle, _yAngle, _zAngle);

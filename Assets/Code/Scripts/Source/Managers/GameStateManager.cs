@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using Code.Scripts.Source.GameFSM;
 using Code.Scripts.Source.GameFSM.States;
 using Code.Scripts.Utils;
+using UnityEngine.Playables;
 
 namespace Code.Scripts.Source.Managers
 {
@@ -13,14 +14,13 @@ namespace Code.Scripts.Source.Managers
         [field: SerializeField] public GameStates GameStates { get; private set; } = new();
         public GameBaseState CurrentState { get; private set; }
         public GameBaseState PreviousState { get; private set; }
-
         public bool GamePaused { get; set; }
 
         public InputAction MenuButton { get; private set; }
         public InputAction MenuButtonInteraction { get; private set; }
 
         public static Action OnFirstSceneLoaded;
-
+        
         private void Awake()
         {
             MenuButton = InputSystem.actions.FindAction("XRI Left/MenuButton", true);

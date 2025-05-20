@@ -5,21 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff7f65ba-5e09-4db8-94ad-31a7ad8aac47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Corridor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Corridor/Corridor.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Corridor/Corridor.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/Compatibility Pack - Built-In.unitypackage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/Compatibility Pack - HDRP.unitypackage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/Compatibility Pack - URP.unitypackage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Key Insered.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Key Insered.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/Lounge/BookSocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/Lounge/BookSocket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/XR/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/XR/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/XR/GenericObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/XR/GenericObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/XR/IRespawnable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/XR/IRespawnable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Lounge/Materials/M_Biblio.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Lounge/Materials/M_Biblio.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/Compatibility Pack - Built-In.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/Compatibility Pack - HDRP.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/Compatibility Pack - URP.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Generic/P_Door.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Generic/P_Door.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Generic/P_Door_Locked.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Generic/P_Door_Locked.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Generic/P_Key.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Generic/P_Key.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Lounge.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Lounge.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Hall/AC_Case.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Hall/AC_Case.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Hall/A_Case_Opening.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Hall/A_Case_Opening.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Hall/A_Case_Shaking.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Hall/A_Case_Shaking.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Living room/Move biblio.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Living room/Move biblio.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallInProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallInProgress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallIntro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallIntro.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallResolved.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallResolved.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateLoungePhase2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateLoungePhase2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/Hall/WheelRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/Hall/WheelRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Managers/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Managers/GameStateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medias/Playables/Hall/PL_Case_Active.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Medias/Playables/Hall/PL_Case_Active.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medias/Playables/Hall/PL_Ivy-leafy_Run.playable" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medias/Playables/Hall/PL_Ivy-leafy_Run.playable.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_Anse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_Anse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_Sol.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_Sol.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Generic/P_Door_Unlocked.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Generic/P_Door_Unlocked.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Hall/P_CaseLocker_Maximized.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Hall/P_CaseLocker_Maximized.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/XR/CustomAffordance.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/XR/CustomAffordance.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.1.2/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.1.2/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Assembly/Main Menu.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Assembly/Main Menu.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Assembly/Setup.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Assembly/Setup.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Corridor.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Corridor.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,22 +58,26 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2x4v2t6IbOgnWD92aMy69HIGSTe" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "integration/hall",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.34f1\Editor\Unity.exe" />
