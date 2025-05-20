@@ -31,10 +31,9 @@ namespace Code.Scripts.Utils
             }
         }
 
-        [RuntimeInitializeOnLoadMethod]
-        private static void OnRuntimeInitialize()
-        {
-            _instance = FindFirstObjectByType<T>();
-        }
+        // private static void OnRuntimeInitialize()
+        // {
+        //     _instance = FindFirstObjectByType<T>();
+        // }
     }
 }
