@@ -6,9 +6,6 @@ using Code.Scripts.Source.Managers;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
-using Code.Scripts.Source.Gameplay.Lounge;
-using Code.Scripts.Source.Managers;
-
 namespace Code.Scripts.Source.GameFSM.States
 {
     [Serializable]

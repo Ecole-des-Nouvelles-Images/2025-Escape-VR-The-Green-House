@@ -64,10 +64,9 @@ namespace Code.Scripts.Source.Managers
                     case "Lounge":     type = SceneType.Lounge;     break;
                     case "Greenhouse": type = SceneType.Greenhouse; break;
                     case "Laboratory": type = SceneType.Laboratory; break;
-                    case "CorridorA": type = SceneType.CorridorA; break;
-                    case "CorridorB": type = SceneType.CorridorB; break;
-
-                    default: type = SceneType.Invalid; break;
+                    case "CorridorA":  type = SceneType.CorridorA;  break;
+                    case "CorridorB":  type = SceneType.CorridorB;  break;
+                    default:           type = SceneType.Invalid;    break;
                 }
 
                 SceneAssets.Add(type, scene);

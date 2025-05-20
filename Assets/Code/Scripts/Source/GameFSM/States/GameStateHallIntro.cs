@@ -1,7 +1,5 @@
 using System;
 using Code.Scripts.Source.Managers;
-using UnityEngine;
-using UnityEngine.Playables;
 
 namespace Code.Scripts.Source.GameFSM.States
 {
