@@ -14,8 +14,8 @@ TagManager:
   - HallPlayableDirector
   - Key
   - VHS
-  - Vhs
   - LoungeBookSocketsContainer
+  - GameArea
   layers:
   - Default
   - TransparentFX
@@ -23,32 +23,32 @@ TagManager:
   - PostRender
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
   m_SortingLayers:
   - name: Default
     uniqueID: 0

@@ -32,7 +32,6 @@ namespace Code.Scripts.Source.Gameplay.Lounge
             {
                 Debug.Log("Fuse placed");
                 GameStateManager.Instance.GameStates.LoungePhase2.OnFusePlugged?.Invoke();
-                _socket.socketActive = false;
             }
             GameStateManager.Instance.GameStates.LoungePhase2.OnSocketChanged?.Invoke();
         }

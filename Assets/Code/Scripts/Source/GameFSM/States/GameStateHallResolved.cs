@@ -10,7 +10,7 @@ namespace Code.Scripts.Source.GameFSM.States
     public class GameStateHallResolved: GameBaseState
     {
         private PlayableDirector _playableDirector;
-
+        [SerializeField] private PlayableAsset _openCaseAsset;
         public override void EnterState(GameStateManager context)
         {
             base.EnterState(context);
@@ -19,7 +19,7 @@ namespace Code.Scripts.Source.GameFSM.States
             {
                 throw new NullReferenceException("HallPlayableDirector not found");
             }
-            PlayCinematic();
+            OpenCase();
         }
 
         public override void UpdateState(GameStateManager context)
@@ -31,15 +31,13 @@ namespace Code.Scripts.Source.GameFSM.States
         {
 
         }
-
-        public void PlayCinematic()
+        
+        private void OpenCase()
         {
-            _playableDirector.Play();
+           _playableDirector.playableAsset = _openCaseAsset;
+           _playableDirector.extrapolationMode = DirectorWrapMode.Hold;
+           _playableDirector.Play();
         }
-
-        public void StopCinematic()
-        {
-            _playableDirector.Stop();
-        }
+        
     }
 }

@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Code.Scripts.Source.Gameplay.Lounge;
+using Code.Scripts.Source.Managers;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
@@ -22,6 +24,7 @@ namespace Code.Scripts.Source.GameFSM.States
         private GameStateManager _ctx;
         private Transform _bookSocketsContainer;
         private List<XRSocketInteractor> _bookSockets = new(5);
+        private Animator _biblioAnimator;
 
         private bool _initialized;
         private bool _fusePlugged;
@@ -35,6 +38,8 @@ namespace Code.Scripts.Source.GameFSM.States
                 Initialize(context);
 
             _ctx = context;
+
+            _biblioAnimator = _bookSocketsContainer.parent.GetComponent<Animator>();
 
             _onPuzzleSolved += context.SwitchState;
             OnSocketChanged += CheckPuzzle;
@@ -99,6 +104,7 @@ namespace Code.Scripts.Source.GameFSM.States
 
             _puzzleSolved = true;
             _onPuzzleSolved.Invoke(_ctx.GameStates.LaboratoryPhase1, false, false);
+            _biblioAnimator.SetTrigger("Open");
             Debug.Log("[GameStateLoungePhase2] Puzzle solved!");
         }
 
@@ -106,5 +112,7 @@ namespace Code.Scripts.Source.GameFSM.States
         {
             _fusePlugged = true;
         }
+
+
     }
 }

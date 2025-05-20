@@ -40,6 +40,7 @@ namespace Code.Scripts.Source.Managers
         private void Start()
         {
             CurrentState = GameStates.Uninitialized;
+            CurrentState.EnterState(this);
         }
 
         private void OnEnable()

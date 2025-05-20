@@ -1,7 +1,10 @@
+using System;
+using System.Collections;
 using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.Types;
+using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using VRTemplateAssets.Scripts;
 
@@ -25,6 +28,7 @@ namespace Code.Scripts.Source.XR
 
         private XRKnob _knob;
         private XRSocketTagInteractor _keySocket;
+        private bool _isOpen;
 
         private void Awake()
         {
@@ -54,7 +58,9 @@ namespace Code.Scripts.Source.XR
         {
             if (!Mathf.Approximately(value, 0)) return;
             if (_isLocked) return;
+            if (!Mathf.Approximately(value, 0)) return;
 
+            if (_isOpen) return;
             OpenDoor(_destination);
         }
 
@@ -74,6 +80,7 @@ namespace Code.Scripts.Source.XR
 
         private void OpenDoor(SceneType sceneType)
         {
+            _isOpen = true;
             _doorAnimator.SetTrigger(_triggerDoorAnimation);
             SceneLoader.Instance.SwitchScene(sceneType);
         }
