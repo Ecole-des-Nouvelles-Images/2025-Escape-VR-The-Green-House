@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
@@ -31,7 +32,7 @@ namespace Code.Scripts.Source.GameFSM.States
             base.EnterState(context);
 
             if (!_initialized)
-                Initialize();
+                Initialize(context);
 
             _ctx = context;
 
@@ -54,14 +55,19 @@ namespace Code.Scripts.Source.GameFSM.States
 
         // ---
 
-        private void Initialize()
+        private void Initialize(GameStateManager ctx)
         {
-            GetXRSocketInteractors();
+            ctx.StartCoroutine(GetXRSocketInteractors());
             _initialized = true;
         }
 
-        private void GetXRSocketInteractors()
+        private IEnumerator GetXRSocketInteractors()
         {
+            while (SceneLoader.Instance.ActiveScene.name != "Lounge")
+            {
+                yield return null;
+            }
+
             if (!_bookSocketsContainer)
                 _bookSocketsContainer = GameObject.FindGameObjectWithTag("LoungeBookSocketsContainer").transform;
 
@@ -70,11 +76,13 @@ namespace Code.Scripts.Source.GameFSM.States
                 foreach (Transform child in _bookSocketsContainer)
                     _bookSockets.Add(child.GetComponent<XRSocketInteractor>());
             }
+
+            Debug.Log("[GameStateLoungePhase2] Sockets founded for Lounge");
         }
 
         private void CheckPuzzle()
         {
-            Debug.Log("Checking Puzzle");
+            Debug.Log("[GameStateLoungePhase2] Checking puzzle...");
             if (_puzzleSolved || !_fusePlugged) return;
 
             for (int i = 0; i < _bookSockets.Count; i++)
@@ -84,12 +92,12 @@ namespace Code.Scripts.Source.GameFSM.States
                 GameObject selected = _bookSockets[i].GetOldestInteractableSelected().transform.gameObject;
                 Book book = selected.GetComponent<Book>();
 
-                if (book == null || book.BookName != _correctBookPlacement[i]) return;
+                if (!book || book.BookName != _correctBookPlacement[i]) return;
             }
 
             _puzzleSolved = true;
             _onPuzzleSolved.Invoke(_ctx.GameStates.LaboratoryPhase1, false, false);
-            Debug.Log(" Puzzle terminé");
+            Debug.Log("[GameStateLoungePhase2] Puzzle solved!");
         }
 
         private void PlugFuseCheck()

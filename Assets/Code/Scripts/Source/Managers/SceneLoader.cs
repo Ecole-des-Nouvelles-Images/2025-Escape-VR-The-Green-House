@@ -23,6 +23,7 @@ namespace Code.Scripts.Source.Managers
         public static Dictionary<SceneType, string> SceneAssets { get; private set; } = new();
 
         // public SceneField CurrentScene; // TODO: SceneField low-level ctor error.
+        public Scene ActiveScene => SceneManager.GetActiveScene();
         public string CurrentScene { get; private set; }
         public string PreviousScene { get; private set; }
 
