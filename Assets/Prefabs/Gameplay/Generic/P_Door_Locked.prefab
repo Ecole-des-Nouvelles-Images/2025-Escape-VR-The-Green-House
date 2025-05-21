@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26772786139555305}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1235877402951708803}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
 --- !u!114 &1422266900483479046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,13 +202,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2512249828813820563}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0496}
-  m_LocalScale: {x: 0.009325016, y: 0.009325016, z: 0.011156623}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: -0, y: 0, z: 0.02}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1235877402951708803}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
 --- !u!33 &9177923056000447062
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2512249828813820563}
-  m_Mesh: {fileID: -6207464732648724676, guid: de0170bd1d9097648947b550b1d5b8ea, type: 3}
+  m_Mesh: {fileID: 8965453108957567152, guid: e9ca19cbe5925c34c8e47af17f1a836d, type: 3}
 --- !u!23 &5847119590502172817
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -310,13 +310,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3666100244775230573}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1235877402951708803}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &7309062288774170137
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -324,7 +324,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3666100244775230573}
-  m_Mesh: {fileID: -6434134255231668031, guid: 3b51bdfabd2ae3e49a9d8c7b4a1c85b3, type: 3}
+  m_Mesh: {fileID: 5832475106419125447, guid: e3358b74ae9445742836f736ad90afb3, type: 3}
 --- !u!23 &3178882725660988165
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -348,7 +348,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1802457028287551105, guid: 3b51bdfabd2ae3e49a9d8c7b4a1c85b3, type: 3}
+  - {fileID: 2100000, guid: ca1d35ed4b0abdc428a787984fd9d21d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -614,7 +614,7 @@ Transform:
   m_GameObject: {fileID: 6654996933018250848}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.00019246456}
-  m_LocalPosition: {x: 0.606, y: -0.021, z: 0.0048}
+  m_LocalPosition: {x: 0.6081, y: 0.0386, z: -0.0117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -682,7 +682,7 @@ Transform:
   m_GameObject: {fileID: 7892231817297871735}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.3693771, y: 1.048039, z: 0.0847187}
+  m_LocalPosition: {x: 0.3693771, y: 1.048039, z: 0.023}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -697,7 +697,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7892231817297871735}
-  m_Mesh: {fileID: 180238075024800105, guid: 155d2481d5684f04aa356f026aa8e774, type: 3}
+  m_Mesh: {fileID: 180238075024800105, guid: fd634b6cd9678904987959afd2e3ae73, type: 3}
 --- !u!23 &167015819915175870
 MeshRenderer:
   m_ObjectHideFlags: 0

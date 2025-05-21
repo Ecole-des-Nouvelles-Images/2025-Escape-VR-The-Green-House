@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Models/Environment/Rooms/Hall/Materials/M_Cadena.mat.meta
+guid: 756bbc5f1c07a524083fdd1f8ef63a3d
+NativeFormatImporter:
+========
 guid: 472085175f7e5ca4bb0f7b7c1559f7fd
 folderAsset: yes
 DefaultImporter:
+>>>>>>>> integration/salon:Assets/Prefabs/Gameplay/Lounge/Props.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
