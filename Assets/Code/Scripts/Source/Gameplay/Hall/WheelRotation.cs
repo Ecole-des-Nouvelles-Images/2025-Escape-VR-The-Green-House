@@ -13,6 +13,7 @@ namespace Code.Scripts.Source.Gameplay.Hall
 
         private void Start()
         {
+            transform.localRotation = Quaternion.identity;
             _numberShown = 0;
         }
 
@@ -28,7 +29,7 @@ namespace Code.Scripts.Source.Gameplay.Hall
         {
             float t = 0;
 
-            Quaternion initialRotation = transform.rotation;
+            Quaternion initialRotation = transform.localRotation;
             _xAngle += -36;
             if (_xAngle <= -360)
                 _xAngle += 360;
@@ -38,7 +39,7 @@ namespace Code.Scripts.Source.Gameplay.Hall
             while (t < 1)
             {
                 t += Time.deltaTime / _animDelay;
-                transform.rotation = Quaternion.Lerp(initialRotation, targetRotation, t);
+                transform.localRotation = Quaternion.Lerp(initialRotation, targetRotation, t);
                 yield return null;
             }
 
