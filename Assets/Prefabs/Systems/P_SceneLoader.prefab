@@ -47,7 +47,9 @@ MonoBehaviour:
   _scenes:
   - Main Menu
   - Hall
+  - CorridorA
   - Lounge
+  - CorridorB
   - Greenhouse
   - Laboratory
   _fadeDuration: 2

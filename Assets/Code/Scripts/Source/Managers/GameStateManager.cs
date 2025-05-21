@@ -8,6 +8,7 @@ using Code.Scripts.Source.GameFSM;
 using Code.Scripts.Source.GameFSM.States;
 using Code.Scripts.Utils;
 using Code.Scripts.Source.Types;
+using Unity.XR.CoreUtils;
 
 namespace Code.Scripts.Source.Managers
 {
@@ -15,6 +16,7 @@ namespace Code.Scripts.Source.Managers
     {
         public Action OnFirstSceneLoaded;
 
+        [SerializeField] private XROrigin _playerXROrigin;
         [field: SerializeField] public GameStates GameStates { get; private set; } = new();
 
         public GameBaseState CurrentState { get; private set; }
@@ -39,6 +41,7 @@ namespace Code.Scripts.Source.Managers
 
         private void Start()
         {
+            RecenterPlayerXROrigin();
             CurrentState = GameStates.Uninitialized;
             CurrentState.EnterState(this);
         }
@@ -142,6 +145,12 @@ namespace Code.Scripts.Source.Managers
             }
 
             Debug.Log($">> NearFar interaction mode changed to {mode}");
+        }
+
+        public void RecenterPlayerXROrigin()
+        {
+            _playerXROrigin.MatchOriginUpOriginForward(_playerXROrigin.transform.up, _playerXROrigin.transform.forward);
+            Debug.Log("[GameStateManager] Player XROrigin re-centered.");
         }
     }
 }
