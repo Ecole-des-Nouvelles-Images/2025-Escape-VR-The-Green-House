@@ -5,24 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Assembly/Setup.unity
     guid: 621bd90d71210124f878ff4f3395a37a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Assembly/Main Menu.unity
     guid: 92d8eefc85405cb4d9d2d69e9b4eea5b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Assembly/Hall.unity
     guid: e3e2770a8b1a5f44d9aab6319d9db53e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Assembly/Lounge.unity
     guid: 0af0faeb036e8dd4e907a6bbc97280f5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Assembly/Greenhouse.unity
     guid: a0072d476746ee546abbef9ba428de36
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Assembly/Laboratory.unity
     guid: 35ed03bd676260d458d8fa7ba5226833
+  - enabled: 1
+    path: Assets/Plugins/Test Terrain Menu/Menu Terrain.unity
+    guid: c09c9cfe868f7f44ab0d31f26385fd25
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
