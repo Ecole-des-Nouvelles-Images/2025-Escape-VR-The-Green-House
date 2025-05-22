@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371260409195906345}
   - component: {fileID: 5600433275586054218}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1359,7 +1359,7 @@ GameObject:
   - component: {fileID: 6029051398806927153}
   - component: {fileID: 8917315819556117489}
   m_Layer: 8
-  m_Name: Collision_1
+  m_Name: Back Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2191,7 +2191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 549425753612799264}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Stoppers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
