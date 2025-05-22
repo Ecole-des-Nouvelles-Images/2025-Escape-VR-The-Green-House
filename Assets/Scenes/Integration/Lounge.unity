@@ -9399,6 +9399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_VHS_Lounge
       objectReference: {fileID: 0}
+    - target: {fileID: 4469104639728536265, guid: 697d5cf9b3ed0054b9c186d160adc8ed, type: 3}
+      propertyPath: m_TagString
+      value: VHS
+      objectReference: {fileID: 0}
     - target: {fileID: 7552076095062202403, guid: 697d5cf9b3ed0054b9c186d160adc8ed, type: 3}
       propertyPath: m_MovementType
       value: 0

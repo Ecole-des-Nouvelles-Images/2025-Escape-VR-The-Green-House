@@ -16,7 +16,6 @@ TagManager:
   - VHS
   - LoungeBookSocketsContainer
   - GameArea
-  - Vhs
   layers:
   - Default
   - TransparentFX

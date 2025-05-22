@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7552076095062202403}
   m_Layer: 0
   m_Name: P_VHS_Lounge
-  m_TagString: Vhs
+  m_TagString: VHS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
