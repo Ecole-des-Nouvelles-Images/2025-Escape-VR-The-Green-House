@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - Book
+  - Vhs
   - Fuse
   - Water
   - Seed
@@ -24,7 +25,7 @@ TagManager:
   - Water
   - UI
   - Player
-  -
+  - Non-Interactable UI
   -
   -
   -
