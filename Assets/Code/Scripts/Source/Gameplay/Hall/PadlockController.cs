@@ -1,3 +1,6 @@
+using System;
+using Code.Scripts.Source.GameFSM.States;
+using Code.Scripts.Source.Managers;
 using DG.Tweening;
 using UnityEngine;
 
@@ -16,9 +19,22 @@ namespace Code.Scripts.Source.Gameplay.Hall
         private Vector3 _originalScale;
         private Vector3 _originalPosition;
         private bool _isZoomed;
+        private Animator _animator;
+        
+
+        private void OnEnable()
+        {
+            GameStateManager.Instance.GameStates.HallInProgress.OnCodeFound += UnlockPadLock;
+        }
+
+        private void OnDisable()
+        {
+            GameStateManager.Instance.GameStates.HallInProgress.OnCodeFound -= UnlockPadLock;
+        }
 
         private void Start()
         {
+            _animator = GetComponent<Animator>();
             _originalScale = _padlockPrefab.localScale;
             _originalPosition = _padlockPrefab.position;
         }
@@ -38,6 +54,12 @@ namespace Code.Scripts.Source.Gameplay.Hall
             }
 
             _isZoomed = !_isZoomed;
+        }
+
+        private void UnlockPadLock(GameBaseState gameBaseState, bool b, bool arg3)
+        {
+            _animator.SetTrigger("Open");
+            Zoom();
         }
     }
 }
