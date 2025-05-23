@@ -8,7 +8,6 @@ namespace Code.Scripts.Source.UI
 {
     public class UIButtonFeedback : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
-        [SerializeField] private float _soundVolume = 0.3f;
         [SerializeField] private float _feedbackDuration = 2f;
 
         private AudioSource _audio;

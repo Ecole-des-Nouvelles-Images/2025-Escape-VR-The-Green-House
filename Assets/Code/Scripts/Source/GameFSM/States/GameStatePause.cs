@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using DG.Tweening;
 
 using Code.Scripts.Source.Managers;
+using Code.Scripts.Source.Types;
 using Code.Scripts.Source.UI;
 using UnityEngine.SceneManagement;
 
@@ -30,6 +31,8 @@ namespace Code.Scripts.Source.GameFSM.States
         public override void EnterState(GameStateManager context)
         {
             base.EnterState(context);
+
+            context.ChangeNearFarInteractionMode(NearFarMode.Far);
 
             if (!_postRenderVolume)
                 throw new NullReferenceException("[GameStatePause] Missing reference for _postRenderVolume.\n> Check if the post-process volume is assigned in the inspector.");
@@ -71,6 +74,8 @@ namespace Code.Scripts.Source.GameFSM.States
 
             context.GamePaused = false;
             EnableXRInteractable(true);
+
+            context.ChangeNearFarInteractionMode(NearFarMode.Near);
 
             Debug.Log("Pause state exited!");
         }

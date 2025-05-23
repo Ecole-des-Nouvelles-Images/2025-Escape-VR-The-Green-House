@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Code.Scripts.Source.XR;
 using UnityEngine;
 
 public class PlantPuzzle : MonoBehaviour

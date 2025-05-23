@@ -5,14 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff7f65ba-5e09-4db8-94ad-31a7ad8aac47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.cmake/api/v1/query/client-agp/cache-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.cmake/api/v1/query/client-agp/cmakeFiles-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.cmake/api/v1/query/client-agp/codemodel-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.cmake/api/v1/reply/cache-v2-ae99d89b4289a795e0ec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.cmake/api/v1/reply/cmakeFiles-v1-a4cd48c7668a5a55cb2f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.cmake/api/v1/reply/codemodel-v2-c068ab1c2d95119a7b27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.cmake/api/v1/reply/directory-.-RelWithDebInfo-d0094a50bb2071803777.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.cmake/api/v1/reply/directory-GameActivity-RelWithDebInfo-3edf2ef9e25ca0503118.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.cmake/api/v1/reply/index-2025-05-22T09-38-29-0775.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.cmake/api/v1/reply/target-game-RelWithDebInfo-a0a79a9caa98911361d5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CompilerIdC/CMakeCCompilerId.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CompilerIdCXX/CMakeCXXCompilerId.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/CMakeFiles/rules.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/GameActivity/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/additional_project_files.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/android_gradle_build.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/android_gradle_build_mini.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/build.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/build_file_index.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/compile_commands.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/compile_commands.json.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/metadata_generation_command.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/prefab_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/arm64-v8a/symbol_folder_index.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/hash_key.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/1a3f156j/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/game-activity/game-activityConfig.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.utmp/tools/release/arm64-v8a/compile_commands.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/Compatibility Pack - Built-In.unitypackage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/Compatibility Pack - HDRP.unitypackage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/Compatibility Pack - URP.unitypackage.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallResolved.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallResolved.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Medias/Playables/Hall/PL_Case_Opening.playable" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Medias/Playables/Hall/PL_Case_Opening.playable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Assembly/Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Assembly/Hall.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Assembly/Setup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Assembly/Setup.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 Android Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 Android Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 VR Template.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 VR Template.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Hall/A_Case_Opening.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Hall/A_Case_Opening.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Hall/A_Case_Shaking.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Hall/A_Case_Shaking.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medias/Playables/Hall/PL_Case_Active.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Medias/Playables/Hall/PL_Case_Active.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medias/Playables/Hall/PL_Opencase.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Medias/Playables/Hall/PL_Opencase.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_BookNote.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_BookNote.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ivy Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ivy Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Lounge/Armoire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Lounge/Armoire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Lounge.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Lounge.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,31 +75,51 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84f0d810adef4e6c8deab33e4ae93f7c1dec00/77/303f291f/ILogger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84f0d810adef4e6c8deab33e4ae93f7c1dec00/80/8c5a9ec2/Debug.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projets/Unity/2025-Escape-VR-TheGreenhouse/Assets/Prefabs/XR/P_Custom_XR_Origin_Menu.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projets/Unity/2025-Escape-VR-TheGreenhouse/Assets/Prefabs/XR/P_Custom_XR_Origin_Menu.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/97bc78f3dd3a43f491128b16a87395db12ac00/23/ec2a9e91/02000090pdb45.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d8227d6dc1c941ba8148283a0e6d40737800/7d/bf9f9b59/PlayableDirector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Scripts/Source/Types/NearFarMode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.project-auditor/Editor/API/ProjectAuditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit/Runtime/UI/LazyFollow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit/Runtime/Utilities/DisposableManagerSingleton.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2x4v2t6IbOgnWD92aMy69HIGSTe" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "integration/hall",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -64,14 +139,19 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="D:\Utilisateurs\miche\Unity\6000.0.34f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\Utilisateurs\miche\Unity Project 2025\2025-Escape-VR-TheGreenHouse&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\Utilisateurs\miche\Unity Project 2025\2025-Escape-VR-TheGreenHouse" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
-      <option name="runtimes">
-        <list />
-      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -82,15 +162,13 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
-      <option name="runtimes">
-        <list />
-      </option>
       <option name="selectedOptions">
         <list />
       </option>
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ff7f65ba-5e09-4db8-94ad-31a7ad8aac47" name="Changes" comment="" />
@@ -102,9 +180,20 @@
       <workItem from="1747212199810" duration="13946000" />
       <workItem from="1747241974518" duration="21000" />
       <workItem from="1747295960575" duration="12893000" />
-      <workItem from="1747383838813" duration="7041000" />
+      <workItem from="1747383838813" duration="11281000" />
+      <workItem from="1747499642635" duration="2296000" />
+      <workItem from="1747655694769" duration="60000" />
+      <workItem from="1747655778243" duration="1029000" />
+      <workItem from="1747656927466" duration="10566000" />
+      <workItem from="1747728592006" duration="14578000" />
+      <workItem from="1747817377071" duration="15128000" />
+      <workItem from="1747902227021" duration="886000" />
+      <workItem from="1747917006232" duration="454000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
@@ -112,7 +201,7 @@
     <option name="unityProject" value="true" />
     <option name="unityProjectFolder" value="true" />
   </component>
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

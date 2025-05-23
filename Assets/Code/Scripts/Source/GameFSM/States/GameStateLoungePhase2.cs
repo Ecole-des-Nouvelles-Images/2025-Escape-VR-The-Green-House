@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Code.Scripts.Source.Gameplay.Lounge;
 using Code.Scripts.Source.Managers;
@@ -10,22 +11,34 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStateLoungePhase2 : GameBaseState
     {
-        public static Action OnSocketChanged;
-        public static Action<bool> OnFusePlugged;
-        [SerializeField] private List<XRSocketInteractor> _bookSockets = new List<XRSocketInteractor>(5);
-        [SerializeField] private List<string> _correctBookPlacement = new List<string>(5);
-        private  bool _fusePlugged = false;
-        private bool _puzzleSolved = false;
-        private GameStateManager _ctx;
-        private Action<GameBaseState, bool, bool> OnPuzzleSolved;
+        [SerializeField] private List<string> _correctBookPlacement = new(5);
 
+        public Action OnSocketChanged;
+        public Action OnFusePlugged;
+
+        private Action<GameBaseState, bool, bool> _onPuzzleSolved;
+
+        private GameStateManager _ctx;
+        private Transform _bookSocketsContainer;
+        private List<XRSocketInteractor> _bookSockets = new(5);
+        private Animator _biblioAnimator;
+
+        private bool _initialized;
+        private bool _fusePlugged;
+        private bool _puzzleSolved;
 
         public override void EnterState(GameStateManager context)
         {
             base.EnterState(context);
 
+            if (!_initialized)
+                Initialize(context);
+
             _ctx = context;
-            OnPuzzleSolved += context.SwitchState;
+
+            _biblioAnimator = _bookSocketsContainer.parent.GetComponent<Animator>();
+
+            _onPuzzleSolved += context.SwitchState;
             OnSocketChanged += CheckPuzzle;
             OnFusePlugged += PlugFuseCheck;
         }
@@ -37,15 +50,43 @@ namespace Code.Scripts.Source.GameFSM.States
 
         public override void ExitState(GameStateManager context)
         {
-            OnPuzzleSolved -= context.SwitchState;
+            _onPuzzleSolved -= context.SwitchState;
             OnSocketChanged -= CheckPuzzle;
             OnFusePlugged -= PlugFuseCheck;
         }
 
+        // ---
+
+        private void Initialize(GameStateManager ctx)
+        {
+            ctx.StartCoroutine(GetXRSocketInteractors());
+            _initialized = true;
+        }
+
+        private IEnumerator GetXRSocketInteractors()
+        {
+            while (SceneLoader.Instance.ActiveScene.name != "Lounge")
+            {
+                yield return null;
+            }
+
+            if (!_bookSocketsContainer)
+            {
+                _bookSocketsContainer = GameObject.FindGameObjectWithTag("LoungeBookSocketsContainer").transform;
+
+                if (!_bookSocketsContainer)
+                    throw new Exception("[GameStateLoungePhase2] Book sockets container not found.");
+            }
+
+            if (_bookSockets.Count == 0)
+            {
+                foreach (Transform child in _bookSocketsContainer)
+                    _bookSockets.Add(child.GetComponent<XRSocketInteractor>());
+            }
+        }
 
         private void CheckPuzzle()
         {
-            Debug.Log("Checking Puzzle");
             if (_puzzleSolved || !_fusePlugged) return;
 
             for (int i = 0; i < _bookSockets.Count; i++)
@@ -55,17 +96,18 @@ namespace Code.Scripts.Source.GameFSM.States
                 GameObject selected = _bookSockets[i].GetOldestInteractableSelected().transform.gameObject;
                 Book book = selected.GetComponent<Book>();
 
-                if (book == null || book.BookName != _correctBookPlacement[i]) return;
+                if (!book || book.BookName != _correctBookPlacement[i]) return;
             }
 
             _puzzleSolved = true;
-            OnPuzzleSolved.Invoke(_ctx.GameStates.LaboratoryPhase1, false, false);
-            Debug.Log(" Puzzle terminé");
+            _onPuzzleSolved.Invoke(_ctx.GameStates.LaboratoryPhase1, false, false);
+            _biblioAnimator.SetTrigger("Open");
+            Debug.Log("[GameStateLoungePhase2] Puzzle solved!");
         }
 
-        private void PlugFuseCheck(bool fuseIsPlugged)
+        private void PlugFuseCheck()
         {
-            _fusePlugged = fuseIsPlugged;
+            _fusePlugged = true;
         }
 
 

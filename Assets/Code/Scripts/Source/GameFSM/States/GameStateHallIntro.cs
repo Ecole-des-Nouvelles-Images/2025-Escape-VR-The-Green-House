@@ -6,6 +6,7 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStateHallIntro : GameBaseState
     {
+       
         public override void EnterState(GameStateManager context)
         {
             context.SwitchState(context.GameStates.HallInProgress);

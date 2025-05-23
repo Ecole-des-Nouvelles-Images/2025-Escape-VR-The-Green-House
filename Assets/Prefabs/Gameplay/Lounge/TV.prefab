@@ -323,7 +323,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
-  _socketTargetTag: Vhs
+  _socketTargetTag: VHS
 --- !u!65 &2934716264785196744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -457,10 +457,6 @@ PrefabInstance:
     - target: {fileID: 4503517029940908001, guid: 6b020b80be9feef4eac662f280b0b5c1, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4503517029940908001, guid: 6b020b80be9feef4eac662f280b0b5c1, type: 3}
-      propertyPath: m_TagString
-      value: Vhs
       objectReference: {fileID: 0}
     - target: {fileID: 7226381674353230151, guid: 6b020b80be9feef4eac662f280b0b5c1, type: 3}
       propertyPath: m_LocalPosition.x

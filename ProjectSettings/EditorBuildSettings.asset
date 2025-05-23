@@ -5,27 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Assembly/Setup.unity
-    guid: 621bd90d71210124f878ff4f3395a37a
-  - enabled: 0
-    path: Assets/Scenes/Assembly/Main Menu.unity
-    guid: 92d8eefc85405cb4d9d2d69e9b4eea5b
-  - enabled: 0
-    path: Assets/Scenes/Assembly/Hall.unity
-    guid: e3e2770a8b1a5f44d9aab6319d9db53e
-  - enabled: 0
-    path: Assets/Scenes/Assembly/Lounge.unity
-    guid: 0af0faeb036e8dd4e907a6bbc97280f5
-  - enabled: 0
-    path: Assets/Scenes/Assembly/Greenhouse.unity
-    guid: a0072d476746ee546abbef9ba428de36
-  - enabled: 0
-    path: Assets/Scenes/Assembly/Laboratory.unity
-    guid: 35ed03bd676260d458d8fa7ba5226833
   - enabled: 1
-    path: Assets/Plugins/Test Terrain Menu/Menu Terrain.unity
-    guid: c09c9cfe868f7f44ab0d31f26385fd25
+    path: Assets/Scenes/Integration/Setup.unity
+    guid: 621bd90d71210124f878ff4f3395a37a
+  - enabled: 1
+    path: Assets/Scenes/Integration/Main Menu.unity
+    guid: 92d8eefc85405cb4d9d2d69e9b4eea5b
+  - enabled: 1
+    path: Assets/Scenes/Integration/Hall.unity
+    guid: ec1456df2e9c5c6458f85e94fbd2d900
+  - enabled: 1
+    path: Assets/Scenes/Integration/CorridorA.unity
+    guid: 12dc9bbf1928bc54c83fae9c90f1b42e
+  - enabled: 1
+    path: Assets/Scenes/Integration/Lounge.unity
+    guid: e88fcef1287980744a8bae19ee50557c
+  - enabled: 1
+    path: Assets/Scenes/Integration/Greenhouse.unity
+    guid: 88e1841a20ad32047b9c0b0c71de71e3
+  - enabled: 1
+    path: Assets/Scenes/Integration/Laboratory.unity
+    guid: 5e49de1adc986cf4fbcfe4e7a3084481
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
