@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Code.Scripts.Source.Audio;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -52,6 +53,9 @@ namespace Code.Scripts.Source.GameFSM.States
             );
 
             _pauseUI.ShowPausePanel();
+            AudioManager.Instance.SetLowpassFrequency(400f);
+            
+          
         }
 
         public override void UpdateState(GameStateManager context)
@@ -65,6 +69,7 @@ namespace Code.Scripts.Source.GameFSM.States
         public override void ExitState(GameStateManager context)
         {
             _pauseUI.HidePausePanel();
+            AudioManager.Instance.SetLowpassFrequency(4000f);
 
             DOTween.To(
                 () => _colorAdjustorModule.postExposure.value,
@@ -75,8 +80,10 @@ namespace Code.Scripts.Source.GameFSM.States
             context.GamePaused = false;
             EnableXRInteractable(true);
 
-            context.ChangeNearFarInteractionMode(NearFarMode.Near);
-
+            if (context.CurrentState != context.GameStates.MainMenu)
+            {
+                context.ChangeNearFarInteractionMode(NearFarMode.Near);
+            }
             Debug.Log("Pause state exited!");
         }
 
