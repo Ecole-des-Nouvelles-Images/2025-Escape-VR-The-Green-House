@@ -17,6 +17,7 @@ namespace Code.Scripts.Source.Gameplay.Lounge
         [Header("GameObject References")] 
         [SerializeField] private GameObject _tvScreen;
         [SerializeField] private XRBaseInteractable _remoteInteractable;
+        [SerializeField] private Light _tvlight;
     
         [Header("Sound Effect")]
         [SerializeField] private AudioSource _tvTapeAudioSource;
@@ -58,9 +59,11 @@ namespace Code.Scripts.Source.Gameplay.Lounge
             _tvTapeAudioSource.Play();
             Invoke("TurnOnTv",2f);
         }
-
+        
+        [ContextMenu("Turn On Tv")]
         private void TurnOnTv()
         {
+            _tvlight.enabled = true;
             _tvOn = true;
             _videoPlayer.isLooping = true;
             PlayVideo(_cassetteInserted ? _VhsVideoClip : _TvStaticVideoClip);
@@ -69,13 +72,16 @@ namespace Code.Scripts.Source.Gameplay.Lounge
     
         private void TurnOffTv()
         {
+            _tvlight.enabled = false;
             _tvOn = false;
             _videoPlayer.isLooping = false;
             PlayVideo(_turnOffVideoClip);
             _tvScreenMaterial.color = _tvOffColor;
         }
 
-        public void ToggleTvPower(ActivateEventArgs args)
+
+      
+        private void ToggleTvPower(ActivateEventArgs args)
         {
             _tvOn = !_tvOn;
             if (_tvOn)

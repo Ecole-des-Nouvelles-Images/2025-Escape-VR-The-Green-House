@@ -65,12 +65,14 @@ namespace Code.Scripts.Source.Managers
         {
             bool pauseButtonPressed = MenuButton.WasPressedThisFrame() || MenuButtonInteraction.WasPressedThisFrame();
 
-            if (pauseButtonPressed && !GamePaused)
+            if (pauseButtonPressed)
             {
-                PauseGame();
+                if (CurrentState != GameStates.MainMenu)
+                {
+                    PauseGame(); 
+                }
                 return;
             }
-
             CurrentState.UpdateState(this);
         }
 
@@ -109,7 +111,12 @@ namespace Code.Scripts.Source.Managers
 
         public void PauseGame()
         {
-            SwitchState(GameStates.Pause, false, true);
+            if (!GamePaused)
+                SwitchState(GameStates.Pause, false, true);
+            else if (PreviousState == GameStates.Pause)
+                throw new Exception($"[GameStateManager] Previous stored state is still in \"Pause\". Please verify transition from and before {CurrentState}.");
+            else
+                SwitchState(PreviousState, true, false);
         }
 
         public void ChangeNearFarInteractionMode(NearFarMode mode)

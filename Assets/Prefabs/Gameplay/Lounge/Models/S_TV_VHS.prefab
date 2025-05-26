@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4704292208889387057, guid: c90debdd1144f764f8c4ae340b2c74ba, type: 3}
       propertyPath: m_TagString
-      value: VHS
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

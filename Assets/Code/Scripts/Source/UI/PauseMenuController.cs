@@ -104,13 +104,13 @@ namespace Code.Scripts.Source.UI
 
         private void ResumeGame()
         {
-            GameStateManager.Instance.SwitchState(GameStateManager.Instance.PreviousState, true, false);
+            GameStateManager.Instance.PauseGame();
         }
 
         private void ReloadGame()
         {
-            SceneLoader.Instance.SwitchScene(SceneType.MainMenu);
             GameStateManager.Instance.SwitchState(GameStateManager.Instance.GameStates.MainMenu);
+            SceneLoader.Instance.SwitchScene(SceneType.MainMenu);
         }
 
         public void ShowPausePanel()

@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace Code.Scripts.Source.XR
 {
-
     public abstract class XRObjectBase : MonoBehaviour
     {
         [SerializeField] protected float _resetDelay = 5f;
