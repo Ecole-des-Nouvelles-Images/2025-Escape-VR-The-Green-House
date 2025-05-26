@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("C:/Users/m.elie/Documents/Unity Project/2025-Escape-VR-TheGreenHouse/.utmp/Debug/6c6t8313/arm64-v8a/GameActivity/cmake_install.cmake")
+  include("C:/Users/m.elie/Documents/Unity Project/2025-Escape-VR-TheGreenHouse/.utmp/Debug/6c6t8313/arm64-v8a/FramePacing/cmake_install.cmake")
 
 endif()
 

@@ -15,3 +15,4 @@ C:\Users\m.elie\Documents\Unity Project\2025-Escape-VR-TheGreenHouse\Library\Bee
 C:\Users\m.elie\Documents\Unity Project\2025-Escape-VR-TheGreenHouse\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAConfigurationCallbacks.h
 C:\Users\m.elie\Documents\Unity Project\2025-Escape-VR-TheGreenHouse\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAKeyEventCallbacks.h
 C:\Users\m.elie\Documents\Unity Project\2025-Escape-VR-TheGreenHouse\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAMotionEventCallbacks.h
+C:\Users\m.elie\Documents\Unity Project\2025-Escape-VR-TheGreenHouse\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\FramePacing\UnitySwappyWrapper.h
