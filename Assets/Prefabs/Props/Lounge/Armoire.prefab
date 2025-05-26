@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 7652845099746425870}
   - component: {fileID: 6940117662385334993}
   - component: {fileID: 1542601282565569566}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: S_ArmoirePorteDroite_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1917,8 +1917,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.05, y: 0.1, z: 0.1}
-  m_Center: {x: -0.005, y: 0, z: 0}
+  m_Size: {x: 0.05, y: 0.05, z: 0.05}
+  m_Center: {x: -0.06, y: 0, z: 0}
 --- !u!1 &6058189526425820658
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,8 +2177,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.05, y: 0.1, z: 0.1}
-  m_Center: {x: 0.005, y: 0, z: 0}
+  m_Size: {x: 0.05, y: 0.05, z: 0.05}
+  m_Center: {x: 0.06, y: 0, z: 0}
 --- !u!1 &7802471871871026955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,7 +2195,7 @@ GameObject:
   - component: {fileID: 8199032034350220351}
   - component: {fileID: 5260571140735567913}
   - component: {fileID: 1785972634593389628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: S_ArmoirePorteGauche_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
