@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.Types;
 using UnityEngine;
@@ -15,7 +16,10 @@ namespace Code.Scripts.Source.GameFSM.States
         public override void EnterState(GameStateManager context)
         {
             context.ChangeNearFarInteractionMode(NearFarMode.Far);
-
+            
+           AudioManager.Instance.ChangeRain(AudioManager.Instance.ClipsIndex.RainOutDoor);
+           AudioManager.Instance.ChangeMusic(AudioManager.Instance.ClipsIndex.MenuMusic);
+            
             Debug.Log("[GameStateMainMenu] MainMenu successfully loaded.");
         }
 

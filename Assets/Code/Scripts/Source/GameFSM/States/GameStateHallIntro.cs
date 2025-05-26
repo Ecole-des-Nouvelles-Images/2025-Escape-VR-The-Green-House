@@ -1,4 +1,5 @@
 using System;
+using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.Managers;
 
 namespace Code.Scripts.Source.GameFSM.States
@@ -9,6 +10,8 @@ namespace Code.Scripts.Source.GameFSM.States
        
         public override void EnterState(GameStateManager context)
         {
+            AudioManager.Instance.ChangeRain(AudioManager.Instance.ClipsIndex.RainInDoor);
+            AudioManager.Instance.ChangeMusic(AudioManager.Instance.ClipsIndex.GameMusic);
             context.SwitchState(context.GameStates.HallInProgress);
         }
 

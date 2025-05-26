@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Code.Scripts.Source.Audio;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -64,15 +65,23 @@ namespace Code.Scripts.Source.GameFSM.States
             );
 
             _pauseUI.ShowPausePanel();
+            AudioManager.Instance.SetLowpassFrequency(400f);
+
+
         }
 
         public override void UpdateState(GameStateManager context)
         {
+            if (context.MenuButton.WasPressedThisFrame() || context.MenuButtonInteraction.WasPressedThisFrame())
+            {
+                context.SwitchState(context.PreviousState, true, false);
+            }
         }
 
         public override void ExitState(GameStateManager context)
         {
             _pauseUI.HidePausePanel();
+            AudioManager.Instance.SetLowpassFrequency(4000f);
 
             DOTween.To(
                 () => _colorAdjustorModule.postExposure.value,

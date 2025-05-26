@@ -67,10 +67,12 @@ namespace Code.Scripts.Source.Managers
 
             if (pauseButtonPressed)
             {
-                PauseGame();
+                if (CurrentState != GameStates.MainMenu)
+                {
+                    PauseGame(); 
+                }
                 return;
             }
-
             CurrentState.UpdateState(this);
         }
 

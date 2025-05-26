@@ -1,3 +1,4 @@
+using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.Types;
 using UnityEngine;
@@ -8,6 +9,7 @@ using VRTemplateAssets.Scripts;
 namespace Code.Scripts.Source.XR
 {
     [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(AudioSource))]
     public class Door : MonoBehaviour
     {
         [Header("References")]
@@ -18,10 +20,9 @@ namespace Code.Scripts.Source.XR
         [Header("Animation")]
         [SerializeField] private string _triggerDoorAnimation;
         private Animator _doorAnimator;
-
+        
         [Header("Sound")]
-       // [SerializeField] AudioSource _doorSound;
-      // [SerializeField] AudioSource _keySound;
+        private AudioSource _doorAudioSource;
 
         private XRKnob _knob;
         private XRSocketTagInteractor _keySocket;
@@ -32,6 +33,7 @@ namespace Code.Scripts.Source.XR
             _knob = GetComponentInChildren<XRKnob>();
             _keySocket = GetComponentInChildren<XRSocketTagInteractor>();
             _doorAnimator = GetComponent<Animator>();
+            _doorAudioSource = GetComponent<AudioSource>();
 
             if (!_keySocket && _isLocked)
                 throw new System.Exception($"[Door] Key socket not found on locked door : {gameObject.name}");
@@ -72,14 +74,22 @@ namespace Code.Scripts.Source.XR
             _cloneKey.SetActive(true);
             _isLocked = false;
             _keySocket.socketActive = false;
-          //  _keySound?.Play();
+            
+            PlayDoorSound( AudioManager.Instance.ClipsIndex.InsertKey);
         }
 
         private void OpenDoor(SceneType sceneType)
         {
+            PlayDoorSound(AudioManager.Instance.ClipsIndex.OpenDoor);
             _isOpen = true;
             _doorAnimator.SetTrigger(_triggerDoorAnimation);
             SceneLoader.Instance.SwitchScene(sceneType);
+        }
+
+        private void PlayDoorSound (AudioClip soundClip)
+        {
+            _doorAudioSource.clip = soundClip;
+            _doorAudioSource.Play();
         }
     }
 }
