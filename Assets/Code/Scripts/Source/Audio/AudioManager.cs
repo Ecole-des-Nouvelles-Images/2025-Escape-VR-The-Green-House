@@ -22,7 +22,7 @@ namespace Code.Scripts.Source.Audio
         [field:SerializeField] public AudioMixerGroup AmbientMixerModule;
         [field:SerializeField] public AudioMixerGroup SFXMixerModule;
 
-        [Header("Ambient Audio Sources")] 
+        [Header("Ambient Audio Sources")]
         [SerializeField] private AudioSource _musicAudioSource;
         [SerializeField] private AudioSource _rainAudioSource;
 
@@ -61,9 +61,9 @@ namespace Code.Scripts.Source.Audio
             }
         }
 
-        private bool _masterVolumeMuted = false;
-        private bool _ambientVolumeMuted = false;
-        private bool _sfxVolumeMuted = false;
+        private bool _masterVolumeMuted;
+        private bool _ambientVolumeMuted;
+        private bool _sfxVolumeMuted;
         public bool MasterVolumeMuted {
             get => _masterVolumeMuted;
             set {
@@ -127,26 +127,26 @@ namespace Code.Scripts.Source.Audio
 
             _mixerSystem.SetFloat(mixerParameter, decibels);
         }
-        
+
         /// <summary>
-        /// Set the low pass filter frequency.
+        /// Set the low-pass filter frequency.
         /// </summary>
         public void SetLowpassFrequency(float frequency)
         {
             _mixerSystem.SetFloat(LowpassParameter, frequency);
         }
-        
+
         /// <summary>
-        /// Change audio clip of main music. 
+        /// Change audio clip of the main music.
         /// </summary>
         public void ChangeMusic(AudioClip musicClip)
         {
             _musicAudioSource.clip = musicClip;
             _musicAudioSource.Play();
         }
-        
+
         /// <summary>
-        /// Change audio clip of rain ambient sound. 
+        /// Change audio clip of rain ambient sound.
         /// </summary>
         public void ChangeRain(AudioClip rainClip)
         {

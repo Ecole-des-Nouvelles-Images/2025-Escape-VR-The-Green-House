@@ -1,5 +1,5 @@
 // Made with Amplify Shader Editor
-// Available at the Unity Asset Store - http://u3d.as/y3X 
+// Available at the Unity Asset Store - http://u3d.as/y3X
 Shader "Real Ivy/Flat leaves"
 {
 	Properties
@@ -41,11 +41,12 @@ Shader "Real Ivy/Flat leaves"
 	{
 		LOD 0
 
-		
+
 
 		Tags { "RenderPipeline"="UniversalPipeline" "RenderType"="TransparentCutout" "Queue"="AlphaTest" }
-		Cull Back
+		Cull Off
 		AlphaToMask Off
+
 		HLSLINCLUDE
 		#pragma target 2.0
 
@@ -53,7 +54,7 @@ Shader "Real Ivy/Flat leaves"
 		{
 			return tessValue;
 		}
-		
+
 		float CalcDistanceTessFactor (float4 vertex, float minDist, float maxDist, float tess, float4x4 o2w, float3 cameraPos )
 		{
 			float3 wpos = mul(o2w,vertex).xyz;
@@ -149,19 +150,19 @@ Shader "Real Ivy/Flat leaves"
 		}
 		ENDHLSL
 
-		
+
 		Pass
 		{
-			
+
 			Name "Forward"
 			Tags { "LightMode"="UniversalForward" }
-			
+
 			Blend One Zero, One Zero
 			ZWrite On
 			ZTest LEqual
 			Offset 0 , 0
 			ColorMask RGBA
-			
+
 
 			HLSLPROGRAM
 			#define _SPECULAR_SETUP 1
@@ -183,7 +184,7 @@ Shader "Real Ivy/Flat leaves"
 			#pragma multi_compile _ _ADDITIONAL_LIGHT_SHADOWS
 			#pragma multi_compile _ _SHADOWS_SOFT
 			#pragma multi_compile _ _MIXED_LIGHTING_SUBTRACTIVE
-			
+
 			#pragma multi_compile _ DIRLIGHTMAP_COMBINED
 			#pragma multi_compile _ LIGHTMAP_ON
 
@@ -197,7 +198,7 @@ Shader "Real Ivy/Flat leaves"
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/UnityInstancing.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
-			
+
 			#if ASE_SRP_VERSION <= 70108
 			#define REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR
 			#endif
@@ -283,7 +284,7 @@ Shader "Real Ivy/Flat leaves"
 			sampler2D _SpecularTexture;
 
 
-			
+
 			VertexOutput VertexFunction( VertexInput v  )
 			{
 				VertexOutput o = (VertexOutput)0;
@@ -295,9 +296,9 @@ Shader "Real Ivy/Flat leaves"
 				float temp_output_66_0 = ( _TimeParameters.x * _Frequency );
 				float4 appendResult94 = (float4(temp_output_66_0 , ( temp_output_66_0 / 2.0 ) , 0.0 , 0.0));
 				float4 temp_output_63_0 = ( ( tex2Dlod( _WindPattern, float4( ( appendResult87 + appendResult94 ).xy, 0, 0.0) ) * _Amplitude ) + ( ( PI + _Center ) / 2.0 ) );
-				
+
 				o.ase_texcoord7.xy = v.texcoord.xy;
-				
+
 				//setting value to unused interpolator channels and avoid initialization warnings
 				o.ase_texcoord7.zw = 0;
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
@@ -338,21 +339,21 @@ Shader "Real Ivy/Flat leaves"
 					half fogFactor = 0;
 				#endif
 				o.fogFactorAndVertexLight = half4(fogFactor, vertexLight);
-				
+
 				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
 				VertexPositionInputs vertexInput = (VertexPositionInputs)0;
 				vertexInput.positionWS = positionWS;
 				vertexInput.positionCS = positionCS;
 				o.shadowCoord = GetShadowCoord( vertexInput );
 				#endif
-				
+
 				o.clipPos = positionCS;
 				#if defined(ASE_NEEDS_FRAG_SCREEN_POSITION)
 				o.screenPos = ComputeScreenPos(positionCS);
 				#endif
 				return o;
 			}
-			
+
 			#if defined(TESSELLATION_ON)
 			struct VertexControl
 			{
@@ -473,7 +474,7 @@ Shader "Real Ivy/Flat leaves"
 				#elif defined(MAIN_LIGHT_CALCULATE_SHADOWS)
 					ShadowCoords = TransformWorldToShadowCoord( WorldPosition );
 				#endif
-	
+
 				WorldViewDirection = SafeNormalize( WorldViewDirection );
 
 				float2 texCoord118 = IN.ase_texcoord7.xy * float2( 1,1 ) + float2( 0,0 );
@@ -486,10 +487,10 @@ Shader "Real Ivy/Flat leaves"
 				float2 Offset109 = ( ( tex2D( _HeightMap, uv_HeightMap ).r - 1 ) * ase_tanViewDir.xy * _ParallaxIntensity ) + texCoord118;
 				float2 Offset117 = Offset109;
 				float4 tex2DNode76 = tex2D( _AlbedoTexture, Offset117 );
-				
+
 				float3 tex2DNode103 = UnpackNormalScale( tex2D( _NormalTexture, Offset117 ), 1.0f );
 				float4 appendResult132 = (float4(tex2DNode103.r , tex2DNode103.g , ( tex2DNode103.b * ase_vface ) , 0.0));
-				
+
 				float3 Albedo = ( _Color * tex2DNode76 ).rgb;
 				float3 Normal = appendResult132.xyz;
 				float3 Emission = 0;
@@ -544,13 +545,13 @@ Shader "Real Ivy/Flat leaves"
 					inputData.bakedGI = BakedGI;
 				#endif
 				half4 color = UniversalFragmentPBR(
-					inputData, 
-					Albedo, 
-					Metallic, 
-					Specular, 
-					Smoothness, 
-					Occlusion, 
-					Emission, 
+					inputData,
+					Albedo,
+					Metallic,
+					Specular,
+					Smoothness,
+					Occlusion,
+					Emission,
 					Alpha);
 
 				#ifdef _TRANSMISSION_ASE
@@ -633,17 +634,17 @@ Shader "Real Ivy/Flat leaves"
 						color.rgb = MixFog(color.rgb, IN.fogFactorAndVertexLight.x);
 					#endif
 				#endif
-				
+
 				return color;
 			}
 
 			ENDHLSL
 		}
 
-		
+
 		Pass
 		{
-			
+
 			Name "ShadowCaster"
 			Tags { "LightMode"="ShadowCaster" }
 
@@ -743,7 +744,7 @@ Shader "Real Ivy/Flat leaves"
 			sampler2D _HeightMap;
 
 
-			
+
 			float3 _LightDirection;
 
 			VertexOutput VertexFunction( VertexInput v )
@@ -757,7 +758,7 @@ Shader "Real Ivy/Flat leaves"
 				float temp_output_66_0 = ( _TimeParameters.x * _Frequency );
 				float4 appendResult94 = (float4(temp_output_66_0 , ( temp_output_66_0 / 2.0 ) , 0.0 , 0.0));
 				float4 temp_output_63_0 = ( ( tex2Dlod( _WindPattern, float4( ( appendResult87 + appendResult94 ).xy, 0, 0.0) ) * _Amplitude ) + ( ( PI + _Center ) / 2.0 ) );
-				
+
 				float3 ase_worldTangent = TransformObjectToWorldDir(v.ase_tangent.xyz);
 				o.ase_texcoord3.xyz = ase_worldTangent;
 				float3 ase_worldNormal = TransformObjectToWorldNormal(v.ase_normal);
@@ -765,9 +766,9 @@ Shader "Real Ivy/Flat leaves"
 				float ase_vertexTangentSign = v.ase_tangent.w * unity_WorldTransformParams.w;
 				float3 ase_worldBitangent = cross( ase_worldNormal, ase_worldTangent ) * ase_vertexTangentSign;
 				o.ase_texcoord5.xyz = ase_worldBitangent;
-				
+
 				o.ase_texcoord2.xy = v.ase_texcoord.xy;
-				
+
 				//setting value to unused interpolator channels and avoid initialization warnings
 				o.ase_texcoord2.zw = 0;
 				o.ase_texcoord3.w = 0;
@@ -900,7 +901,7 @@ Shader "Real Ivy/Flat leaves"
 			{
 				UNITY_SETUP_INSTANCE_ID( IN );
 				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX( IN );
-				
+
 				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
 				float3 WorldPosition = IN.worldPos;
 				#endif
@@ -929,7 +930,7 @@ Shader "Real Ivy/Flat leaves"
 				float2 Offset109 = ( ( tex2D( _HeightMap, uv_HeightMap ).r - 1 ) * ase_tanViewDir.xy * _ParallaxIntensity ) + texCoord118;
 				float2 Offset117 = Offset109;
 				float4 tex2DNode76 = tex2D( _AlbedoTexture, Offset117 );
-				
+
 				float Alpha = tex2DNode76.a;
 				float AlphaClipThreshold = _Cutoff;
 				float AlphaClipThresholdShadow = 0.5;
@@ -951,10 +952,10 @@ Shader "Real Ivy/Flat leaves"
 			ENDHLSL
 		}
 
-		
+
 		Pass
 		{
-			
+
 			Name "DepthOnly"
 			Tags { "LightMode"="DepthOnly" }
 
@@ -1054,7 +1055,7 @@ Shader "Real Ivy/Flat leaves"
 			sampler2D _HeightMap;
 
 
-			
+
 			VertexOutput VertexFunction( VertexInput v  )
 			{
 				VertexOutput o = (VertexOutput)0;
@@ -1066,7 +1067,7 @@ Shader "Real Ivy/Flat leaves"
 				float temp_output_66_0 = ( _TimeParameters.x * _Frequency );
 				float4 appendResult94 = (float4(temp_output_66_0 , ( temp_output_66_0 / 2.0 ) , 0.0 , 0.0));
 				float4 temp_output_63_0 = ( ( tex2Dlod( _WindPattern, float4( ( appendResult87 + appendResult94 ).xy, 0, 0.0) ) * _Amplitude ) + ( ( PI + _Center ) / 2.0 ) );
-				
+
 				float3 ase_worldTangent = TransformObjectToWorldDir(v.ase_tangent.xyz);
 				o.ase_texcoord3.xyz = ase_worldTangent;
 				float3 ase_worldNormal = TransformObjectToWorldNormal(v.ase_normal);
@@ -1074,9 +1075,9 @@ Shader "Real Ivy/Flat leaves"
 				float ase_vertexTangentSign = v.ase_tangent.w * unity_WorldTransformParams.w;
 				float3 ase_worldBitangent = cross( ase_worldNormal, ase_worldTangent ) * ase_vertexTangentSign;
 				o.ase_texcoord5.xyz = ase_worldBitangent;
-				
+
 				o.ase_texcoord2.xy = v.ase_texcoord.xy;
-				
+
 				//setting value to unused interpolator channels and avoid initialization warnings
 				o.ase_texcoord2.zw = 0;
 				o.ase_texcoord3.w = 0;
@@ -1231,7 +1232,7 @@ Shader "Real Ivy/Flat leaves"
 				float2 Offset109 = ( ( tex2D( _HeightMap, uv_HeightMap ).r - 1 ) * ase_tanViewDir.xy * _ParallaxIntensity ) + texCoord118;
 				float2 Offset117 = Offset109;
 				float4 tex2DNode76 = tex2D( _AlbedoTexture, Offset117 );
-				
+
 				float Alpha = tex2DNode76.a;
 				float AlphaClipThreshold = _Cutoff;
 
@@ -1247,10 +1248,10 @@ Shader "Real Ivy/Flat leaves"
 			ENDHLSL
 		}
 
-		
+
 		Pass
 		{
-			
+
 			Name "Meta"
 			Tags { "LightMode"="Meta" }
 
@@ -1352,7 +1353,7 @@ Shader "Real Ivy/Flat leaves"
 			sampler2D _HeightMap;
 
 
-			
+
 			VertexOutput VertexFunction( VertexInput v  )
 			{
 				VertexOutput o = (VertexOutput)0;
@@ -1364,7 +1365,7 @@ Shader "Real Ivy/Flat leaves"
 				float temp_output_66_0 = ( _TimeParameters.x * _Frequency );
 				float4 appendResult94 = (float4(temp_output_66_0 , ( temp_output_66_0 / 2.0 ) , 0.0 , 0.0));
 				float4 temp_output_63_0 = ( ( tex2Dlod( _WindPattern, float4( ( appendResult87 + appendResult94 ).xy, 0, 0.0) ) * _Amplitude ) + ( ( PI + _Center ) / 2.0 ) );
-				
+
 				float3 ase_worldTangent = TransformObjectToWorldDir(v.ase_tangent.xyz);
 				o.ase_texcoord3.xyz = ase_worldTangent;
 				float3 ase_worldNormal = TransformObjectToWorldNormal(v.ase_normal);
@@ -1372,15 +1373,15 @@ Shader "Real Ivy/Flat leaves"
 				float ase_vertexTangentSign = v.ase_tangent.w * unity_WorldTransformParams.w;
 				float3 ase_worldBitangent = cross( ase_worldNormal, ase_worldTangent ) * ase_vertexTangentSign;
 				o.ase_texcoord5.xyz = ase_worldBitangent;
-				
+
 				o.ase_texcoord2.xy = v.ase_texcoord.xy;
-				
+
 				//setting value to unused interpolator channels and avoid initialization warnings
 				o.ase_texcoord2.zw = 0;
 				o.ase_texcoord3.w = 0;
 				o.ase_texcoord4.w = 0;
 				o.ase_texcoord5.w = 0;
-				
+
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
 					float3 defaultVertexValue = v.vertex.xyz;
 				#else
@@ -1535,8 +1536,8 @@ Shader "Real Ivy/Flat leaves"
 				float2 Offset109 = ( ( tex2D( _HeightMap, uv_HeightMap ).r - 1 ) * ase_tanViewDir.xy * _ParallaxIntensity ) + texCoord118;
 				float2 Offset117 = Offset109;
 				float4 tex2DNode76 = tex2D( _AlbedoTexture, Offset117 );
-				
-				
+
+
 				float3 Albedo = ( _Color * tex2DNode76 ).rgb;
 				float3 Emission = 0;
 				float Alpha = tex2DNode76.a;
@@ -1549,16 +1550,16 @@ Shader "Real Ivy/Flat leaves"
 				MetaInput metaInput = (MetaInput)0;
 				metaInput.Albedo = Albedo;
 				metaInput.Emission = Emission;
-				
+
 				return MetaFragment(metaInput);
 			}
 			ENDHLSL
 		}
 
-		
+
 		Pass
 		{
-			
+
 			Name "Universal2D"
 			Tags { "LightMode"="Universal2D" }
 
@@ -1593,7 +1594,7 @@ Shader "Real Ivy/Flat leaves"
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/UnityInstancing.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
-			
+
 			#define ASE_NEEDS_VERT_POSITION
 			#define ASE_NEEDS_VERT_NORMAL
 			#define ASE_NEEDS_FRAG_WORLD_POSITION
@@ -1664,7 +1665,7 @@ Shader "Real Ivy/Flat leaves"
 			sampler2D _HeightMap;
 
 
-			
+
 			VertexOutput VertexFunction( VertexInput v  )
 			{
 				VertexOutput o = (VertexOutput)0;
@@ -1676,7 +1677,7 @@ Shader "Real Ivy/Flat leaves"
 				float temp_output_66_0 = ( _TimeParameters.x * _Frequency );
 				float4 appendResult94 = (float4(temp_output_66_0 , ( temp_output_66_0 / 2.0 ) , 0.0 , 0.0));
 				float4 temp_output_63_0 = ( ( tex2Dlod( _WindPattern, float4( ( appendResult87 + appendResult94 ).xy, 0, 0.0) ) * _Amplitude ) + ( ( PI + _Center ) / 2.0 ) );
-				
+
 				float3 ase_worldTangent = TransformObjectToWorldDir(v.ase_tangent.xyz);
 				o.ase_texcoord3.xyz = ase_worldTangent;
 				float3 ase_worldNormal = TransformObjectToWorldNormal(v.ase_normal);
@@ -1684,15 +1685,15 @@ Shader "Real Ivy/Flat leaves"
 				float ase_vertexTangentSign = v.ase_tangent.w * unity_WorldTransformParams.w;
 				float3 ase_worldBitangent = cross( ase_worldNormal, ase_worldTangent ) * ase_vertexTangentSign;
 				o.ase_texcoord5.xyz = ase_worldBitangent;
-				
+
 				o.ase_texcoord2.xy = v.ase_texcoord.xy;
-				
+
 				//setting value to unused interpolator channels and avoid initialization warnings
 				o.ase_texcoord2.zw = 0;
 				o.ase_texcoord3.w = 0;
 				o.ase_texcoord4.w = 0;
 				o.ase_texcoord5.w = 0;
-				
+
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
 					float3 defaultVertexValue = v.vertex.xyz;
 				#else
@@ -1844,8 +1845,8 @@ Shader "Real Ivy/Flat leaves"
 				float2 Offset109 = ( ( tex2D( _HeightMap, uv_HeightMap ).r - 1 ) * ase_tanViewDir.xy * _ParallaxIntensity ) + texCoord118;
 				float2 Offset117 = Offset109;
 				float4 tex2DNode76 = tex2D( _AlbedoTexture, Offset117 );
-				
-				
+
+
 				float3 Albedo = ( _Color * tex2DNode76 ).rgb;
 				float Alpha = tex2DNode76.a;
 				float AlphaClipThreshold = _Cutoff;
@@ -1860,12 +1861,12 @@ Shader "Real Ivy/Flat leaves"
 			}
 			ENDHLSL
 		}
-		
+
 	}
 	/*ase_lod*/
-	
+
 	Fallback "Hidden/InternalErrorShader"
-	
+
 }
 /*ASEBEGIN
 Version=18707
