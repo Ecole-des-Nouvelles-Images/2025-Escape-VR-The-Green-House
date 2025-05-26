@@ -22,6 +22,8 @@ namespace Code.Scripts.Source.Managers
         // public static Dictionary<SceneType, SceneField> SceneAssets { get; private set; } = new(); // TODO: SceneField low-level ctor error.
         public static Dictionary<SceneType, string> SceneAssets { get; private set; } = new();
 
+        public static Action OnSceneChanged;
+
         // public SceneField CurrentScene; // TODO: SceneField low-level ctor error.
         public Scene ActiveScene => SceneManager.GetActiveScene();
         public string CurrentScene { get; private set; }
@@ -119,6 +121,11 @@ namespace Code.Scripts.Source.Managers
         public void LoadSceneManual(string sceneName, LoadSceneMode loadMode)
         {
             SceneManager.LoadScene(sceneName, loadMode);
+
+            if (loadMode == LoadSceneMode.Single)
+            {
+                OnSceneChanged?.Invoke();
+            }
         }
 
 
@@ -187,6 +194,8 @@ namespace Code.Scripts.Source.Managers
                 Debug.Log($"[SceneLoader] Scene {{{SceneManager.GetActiveScene().name}}} is now active.");
             }
             _transitionManager.Crossfade.FadeOut();
+
+            OnSceneChanged?.Invoke();
         }
 
 

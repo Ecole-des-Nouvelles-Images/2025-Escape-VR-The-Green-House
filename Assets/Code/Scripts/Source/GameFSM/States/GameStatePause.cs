@@ -28,9 +28,23 @@ namespace Code.Scripts.Source.GameFSM.States
 
         // ---
 
+        public GameStatePause()
+        {
+            SceneLoader.OnSceneChanged += ResetActiveXRInteractables;
+        }
+
+        ~GameStatePause()
+        {
+            SceneLoader.OnSceneChanged -= ResetActiveXRInteractables;
+        }
+
+        // ---
+
         public override void EnterState(GameStateManager context)
         {
             base.EnterState(context);
+
+            context.GamePaused = true;
 
             context.ChangeNearFarInteractionMode(NearFarMode.Far);
 
@@ -40,10 +54,8 @@ namespace Code.Scripts.Source.GameFSM.States
             if (!_postRenderVolume.profile.TryGet(out _colorAdjustorModule))
                 throw new Exception("[GameStatePause] Unable to get {ColorAdjustments} post-process profile's module");
 
-            UpdateCurrentXRInteractable();
+            UpdateCurrentXRInteractables();
             EnableXRInteractable(false);
-
-            context.GamePaused = true;
 
             DOTween.To(
                 () => _colorAdjustorModule.postExposure.value,
@@ -56,10 +68,6 @@ namespace Code.Scripts.Source.GameFSM.States
 
         public override void UpdateState(GameStateManager context)
         {
-            if (context.MenuButton.WasPressedThisFrame() || context.MenuButtonInteraction.WasPressedThisFrame())
-            {
-                context.SwitchState(context.PreviousState, true, false);
-            }
         }
 
         public override void ExitState(GameStateManager context)
@@ -77,21 +85,24 @@ namespace Code.Scripts.Source.GameFSM.States
 
             context.ChangeNearFarInteractionMode(NearFarMode.Near);
 
-            Debug.Log("Pause state exited!");
+            Debug.Log("[GameStatePause] Exiting...");
         }
 
         // ---
 
         private void EnableXRInteractable(bool enable)
         {
-            if (_currentSceneInteractable.Count > 0)
+            if (_currentSceneInteractable == null || _currentSceneInteractable.Count <= 0)
             {
-                for (int i = 0; i < _currentSceneInteractable.Count; i++)
-                    _currentSceneInteractable[i].enabled = enable;
+                Debug.LogWarning($"GameStatePause: No XRBaseInteractable found in scene {SceneLoader.Instance.CurrentScene} but no further problems to report.");
+                return;
             }
+
+            for (int i = 0; i < _currentSceneInteractable.Count; i++)
+                _currentSceneInteractable[i].enabled = enable;
         }
 
-        private void UpdateCurrentXRInteractable()
+        private void UpdateCurrentXRInteractables()
         {
             if (_currentSceneInteractable.Count == 0)
             {
@@ -99,8 +110,20 @@ namespace Code.Scripts.Source.GameFSM.States
                 GameObject[] activeObjects = activeScene.GetRootGameObjects();
 
                 foreach (GameObject item in activeObjects)
-                    _currentSceneInteractable.AddRange(item.GetComponentsInChildren<XRBaseInteractable>());
+                {
+                    XRBaseInteractable[] interactableCollection = item.GetComponentsInChildren<XRBaseInteractable>();
+
+                    if (interactableCollection is { Length: > 0 })
+                    {
+                        _currentSceneInteractable.AddRange(interactableCollection);
+                    }
+                }
             }
+        }
+
+        public void ResetActiveXRInteractables()
+        {
+            _currentSceneInteractable.Clear();
         }
     }
 }
