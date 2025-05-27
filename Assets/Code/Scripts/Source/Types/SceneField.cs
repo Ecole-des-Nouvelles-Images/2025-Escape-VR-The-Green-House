@@ -1,11 +1,10 @@
 ﻿using System;
-using Code.Scripts.Source.Types;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
-namespace Code.Scripts.Utils
+namespace Code.Scripts.Source.Types
 {
     [Serializable]
     public class SceneField

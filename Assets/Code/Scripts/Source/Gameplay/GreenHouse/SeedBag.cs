@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public class SeedBag : MonoBehaviour
+namespace Code.Scripts.Source.Gameplay.GreenHouse
 {
-    public string PlantName => _plantName;
-    [SerializeField] private string _plantName;
-    public GameObject PlantPrefab => _plantPrefab;
-    [SerializeField] private GameObject _plantPrefab;
+    public class SeedBag : MonoBehaviour
+    {
+        public string PlantName => _plantName;
+        [SerializeField] private string _plantName;
+        public GameObject PlantPrefab => _plantPrefab;
+        [SerializeField] private GameObject _plantPrefab;
     
+    }
 }
