@@ -5,42 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff7f65ba-5e09-4db8-94ad-31a7ad8aac47" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Audio/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Lighting/Hall Lighting.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lighting/Hall Lighting.lighting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/HDRi/M_Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/HDRi/M_Skybox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/SampleResources/Materials/Bark_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/SampleResources/Materials/Bark_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/SampleResources/Materials/Leave_01_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/SampleResources/Materials/Leave_01_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/SampleResources/Materials/Leave_01_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/SampleResources/Materials/Leave_01_02.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/SampleResources/Shaders/FlatLeaves.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/3Dynamite/Real Ivy/SampleResources/Shaders/FlatLeaves.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Menu Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Menu Terrain.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Plugins/TerrainDemoScene_URP/Prefabs/Trees/Conifer Billboard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Plugins/TerrainDemoScene_URP/Prefabs/Trees/Conifer Billboard.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Plugins/TerrainDemoScene_URP/Prefabs/Trees/Conifer/Textures/Conifer_Billboard_Color.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Plugins/TerrainDemoScene_URP/Prefabs/Trees/Conifer/Textures/Conifer_Billboard_Color.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Systems/P_AudioManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Systems/P_AudioManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/LightingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/LightingData.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_dir.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_light.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-1.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-1.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-1.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-1.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/LightingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/LightingData.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_dir.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_light.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_shadowmask.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_shadowmask.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/ReflectionProbe-0.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/ReflectionProbe-0.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallIntro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallIntro.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Narrator/Narrator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Narrator/Narrator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Narrator/SubtitleModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Narrator/SubtitleModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Plugins/TerrainDemoScene_URP/Prefabs/Trees/Cypress/Materials/Cypress_Forest_Desktop.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Plugins/TerrainDemoScene_URP/Prefabs/Trees/Cypress/Materials/Cypress_Forest_Desktop.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/P_UIModules.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/P_UIModules.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/P_UIPause.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/P_UIPause.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/XR/P_Custom_XR_Origin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/XR/P_Custom_XR_Origin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.1.2/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.1.2/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Setup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Setup.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 Android Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 Android Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 VR Template.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 VR Template.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "feature/narrator",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -109,9 +87,6 @@
       <option name="WORKING_DIRECTORY" value="D:\Projets\Unity\2025-Escape-VR-TheGreenhouse" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="ENV_FILE_PATHS" value="" />
-      <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
@@ -120,9 +95,6 @@
       <option name="WORKING_DIRECTORY" value="D:\Projets\Unity\2025-Escape-VR-TheGreenhouse" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="ENV_FILE_PATHS" value="" />
-      <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
@@ -131,9 +103,6 @@
       <option name="WORKING_DIRECTORY" value="D:\Utilisateurs\miche\Unity Project 2025\2025-Escape-VR-TheGreenHouse" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="ENV_FILE_PATHS" value="" />
-      <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -147,7 +116,6 @@
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -161,7 +129,6 @@
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
   </component>
@@ -188,6 +155,7 @@
       <workItem from="1747917006232" duration="454000" />
       <workItem from="1747988704645" duration="6239000" />
       <workItem from="1748250038424" duration="12063000" />
+      <workItem from="1748347419029" duration="4943000" />
     </task>
     <servers />
   </component>
