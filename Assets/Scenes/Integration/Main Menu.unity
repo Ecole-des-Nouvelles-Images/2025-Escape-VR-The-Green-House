@@ -1181,7 +1181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2450532103301445591, guid: 724418e7b6483d3429548db1140dc61b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 95682326918082064, guid: 724418e7b6483d3429548db1140dc61b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1632,7 +1632,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: 5fe1c7bf54ea8e14cbf0cc57dd778a4b, type: 2}
-  m_TreeDistance: 0
+  m_TreeDistance: 1143
   m_TreeBillboardDistance: 5
   m_TreeCrossFadeLength: 0
   m_TreeMaximumFullLODCount: 50
