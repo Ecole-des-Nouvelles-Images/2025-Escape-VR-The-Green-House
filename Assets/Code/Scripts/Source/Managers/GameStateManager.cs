@@ -9,12 +9,15 @@ using Code.Scripts.Source.GameFSM.States;
 using Code.Scripts.Utils;
 using Code.Scripts.Source.Types;
 using Unity.XR.CoreUtils;
+using UnityEngine.SceneManagement;
 
 namespace Code.Scripts.Source.Managers
 {
     public class GameStateManager: MonoBehaviourSingleton<GameStateManager>
     {
         public Action OnFirstSceneLoaded;
+
+        public Action OnDoorOpened;
 
         [SerializeField] private XROrigin _playerXROrigin;
         [field: SerializeField] public GameStates GameStates { get; private set; } = new();
@@ -49,11 +52,13 @@ namespace Code.Scripts.Source.Managers
         private void OnEnable()
         {
             OnFirstSceneLoaded += InitializeFSM;
+            OnDoorOpened += OpenDoor;
         }
 
         private void OnDestroy()
         {
             OnFirstSceneLoaded -= InitializeFSM;
+            OnDoorOpened -= OpenDoor;
         }
 
         private void OnApplicationQuit()
@@ -107,6 +112,8 @@ namespace Code.Scripts.Source.Managers
 
             if (!bypassEntry && CurrentState != null)
                 newState.EnterState(this);
+            
+            Debug.Log(CurrentState);
         }
 
         public void PauseGame()
@@ -158,6 +165,14 @@ namespace Code.Scripts.Source.Managers
         {
             _playerXROrigin.MatchOriginUpOriginForward(_playerXROrigin.transform.up, _playerXROrigin.transform.forward);
             Debug.Log("[GameStateManager] Player XROrigin re-centered.");
+        }
+
+        private void OpenDoor()
+        {
+            if (CurrentState == GameStates.HallResolved && SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(3))
+            {
+                SwitchState(GameStates.LoungeIntro);
+            }
         }
     }
 }

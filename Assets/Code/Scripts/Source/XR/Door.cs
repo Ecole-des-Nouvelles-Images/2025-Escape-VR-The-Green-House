@@ -84,6 +84,7 @@ namespace Code.Scripts.Source.XR
             _isOpen = true;
             _doorAnimator.SetTrigger(_triggerDoorAnimation);
             SceneLoader.Instance.SwitchScene(sceneType);
+            GameStateManager.Instance.OnDoorOpened?.Invoke();
         }
 
         private void PlayDoorSound (AudioClip soundClip)
