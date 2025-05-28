@@ -14,6 +14,7 @@ namespace Code.Scripts.Source.UI
         [SerializeField] private RectTransform _mainPanel;
         [SerializeField] private RectTransform _pausePanel;
         [Space]
+        [SerializeField] private Vector3 _scale = new(0.0005f, 0.0005f, 0.0005f);
         [SerializeField] private float _slideAnimationDuration = 1.5f;
         [SerializeField] private Ease _slideAnimationEasing;
 
@@ -115,12 +116,12 @@ namespace Code.Scripts.Source.UI
 
         public void ShowPausePanel()
         {
-            _root.DOScale(1, 1f).SetEase(Ease.OutBounce);
+            _root.DOScale(1 * _scale, 1f).SetEase(Ease.OutBounce);
         }
 
         public void HidePausePanel()
         {
-            _root.DOScale(0, 1f).SetEase(Ease.InBounce);
+            _root.DOScale(0 * _scale, 1f).SetEase(Ease.InBounce);
         }
 
         // ---

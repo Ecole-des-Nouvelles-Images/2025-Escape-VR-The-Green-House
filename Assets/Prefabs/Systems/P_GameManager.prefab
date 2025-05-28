@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1eb681a6a64d7aa6d9d5dbedd23939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerXROrigin: {fileID: 0}
   <GameStates>k__BackingField:
     <Pause>k__BackingField:
       _pauseUI: {fileID: 0}
@@ -52,7 +53,9 @@ MonoBehaviour:
       _exposureAnimationDuration: 2
       _exposureToneDownIntensity: -3.5
     <HallInProgress>k__BackingField:
-      _correctCode: 01000000000000000000000001000000
+      _correctCode: 02000000070000000300000006000000
+    <HallResolved>k__BackingField:
+      _openCaseAsset: {fileID: 11400000, guid: 8427ed4ff154bd2449bf6a212df5d291, type: 2}
     <LoungePhase2>k__BackingField:
       _correctBookPlacement:
       - "D\xE9couverte"

@@ -320,7 +320,7 @@ MonoBehaviour:
     <PadlockWheel>k__BackingField: {fileID: 8300000, guid: b0c3ed110f3ff7a4fbe87c889be99b8d, type: 3}
     <PadlockZoom>k__BackingField: {fileID: 8300000, guid: 327df401083b93e4da478188219abbd4, type: 3}
   _initialMasterVolume: 1
-  _initialAmbienVolume: 0.5
+  _initialAmbientVolume: 0.5
   _initialSFXVolume: 0.7
   MasterMixerModule: {fileID: 24300002, guid: 42fb11a823e959c4fa6f116060d78441, type: 2}
   AmbientMixerModule: {fileID: 9137229251004968622, guid: 42fb11a823e959c4fa6f116060d78441, type: 2}
