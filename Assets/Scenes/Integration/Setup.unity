@@ -2012,30 +2012,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_UIModules
       objectReference: {fileID: 0}
-    - target: {fileID: 3606906562725701645, guid: 81a7e95364286064189b99ced552fdd2, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139652006138645572, guid: 81a7e95364286064189b99ced552fdd2, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139652006138645572, guid: 81a7e95364286064189b99ced552fdd2, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139652006138645572, guid: 81a7e95364286064189b99ced552fdd2, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139652006138645572, guid: 81a7e95364286064189b99ced552fdd2, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139652006138645572, guid: 81a7e95364286064189b99ced552fdd2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6543245325958720316, guid: 81a7e95364286064189b99ced552fdd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

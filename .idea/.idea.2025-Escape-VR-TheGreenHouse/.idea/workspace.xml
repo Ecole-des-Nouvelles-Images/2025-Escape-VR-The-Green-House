@@ -5,20 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff7f65ba-5e09-4db8-94ad-31a7ad8aac47" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallIntro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateHallIntro.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/tools/debug/arm64-v8a/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/tools/debug/arm64-v8a/compile_commands.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/Hall/PadlockController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/Hall/PadlockController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Narrator/Narrator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Narrator/Narrator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Narrator/SubtitleModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Narrator/SubtitleModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Plugins/TerrainDemoScene_URP/Prefabs/Trees/Cypress/Materials/Cypress_Forest_Desktop.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Plugins/TerrainDemoScene_URP/Prefabs/Trees/Cypress/Materials/Cypress_Forest_Desktop.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Narrator/Test.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Narrator/Test.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Fonts/Dreamy Notes Sans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Fonts/Dreamy Notes Sans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Hall/P_Case_Lock_Minimized.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Hall/P_Case_Lock_Minimized.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/P_UIModules.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/P_UIModules.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/P_UIPause.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/P_UIPause.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/XR/P_Custom_XR_Origin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/XR/P_Custom_XR_Origin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.1.2/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.1.2/Starter Assets/Prefabs/Interactors/Teleport Interactor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_dir.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu/Lightmap-0_comp_light.exr.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Setup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Setup.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 Android Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 Android Profile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 VR Template.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 VR Template.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Project Configuration/URP_Preset_Performance.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Project Configuration/URP_Preset_Performance.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Project Configuration/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Project Configuration/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +39,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/97bc78f3dd3a43f491128b16a87395db12ac00/23/ec2a9e91/02000090pdb45.il" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d8227d6dc1c941ba8148283a0e6d40737800/7d/bf9f9b59/PlayableDirector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Projets/Unity/2025-Escape-VR-TheGreenhouse/.utmp/tools/debug/arm64-v8a/compile_commands.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Projets/Unity/2025-Escape-VR-TheGreenhouse/.utmp/tools/debug/arm64-v8a/compile_commands.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Projets/Unity/2025-Escape-VR-TheGreenhouse/Assets/Code/Scripts/Source/GameFSM/States/GameStatePause.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projets/Unity/2025-Escape-VR-TheGreenhouse/Assets/Code/Scripts/Source/GameFSM/States/GameStatePause.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Scripts/Source/Narrator/ProximityNarrator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Scripts/Source/Types/NearFarMode.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Projets/Unity/2025-Escape-VR-TheGreenhouse/Assets/Settings/Project Configuration/UniversalRenderPipelineGlobalSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projets/Unity/2025-Escape-VR-TheGreenhouse/Assets/Settings/Project Configuration/UniversalRenderPipelineGlobalSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.inf.my-hierarchy/Runtime/Components/MyHierarchyGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.project-auditor/Editor/API/ProjectAuditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit/Runtime/UI/LazyFollow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit/Runtime/Utilities/DisposableManagerSingleton.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projets/Unity/2025-Escape-VR-TheGreenhouse/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projets/Unity/2025-Escape-VR-TheGreenhouse/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,6 +77,13 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\NOAH\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\NOAH\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\NOAH\\AppData\\Local\\Symbols\\src"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -110,9 +116,6 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
-      <option name="runtimes">
-        <list />
-      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -123,9 +126,6 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
-      <option name="runtimes">
-        <list />
-      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -156,6 +156,7 @@
       <workItem from="1747988704645" duration="6239000" />
       <workItem from="1748250038424" duration="12063000" />
       <workItem from="1748347419029" duration="4943000" />
+      <workItem from="1748422396865" duration="4801000" />
     </task>
     <servers />
   </component>
@@ -178,14 +179,7 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Code/Scripts/Source/Managers/GameStateManager.cs</url>
           <line>54</line>
-          <properties documentPath="D:\Projets\Unity\2025-Escape-VR-TheGreenhouse\Assets\Code\Scripts\Source\Managers\GameStateManager.cs" containingFunctionPresentation="Method 'OnDestroy'">
-            <startOffsets>
-              <option value="1760" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1761" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="D:\Projets\Unity\2025-Escape-VR-TheGreenhouse\Assets\Code\Scripts\Source\Managers\GameStateManager.cs" containingFunctionPresentation="Method 'OnDestroy'" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

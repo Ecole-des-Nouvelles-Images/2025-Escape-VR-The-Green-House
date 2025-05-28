@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
@@ -14,20 +15,27 @@ namespace Code.Scripts.Source.Narrator
 
         private Coroutine subtitleRoutine;
 
+        private void Start()
+        {
+            canvasGroup.alpha = 0;
+        }
+
         public void ShowSubtitle(string subtitle, float displayDuration)
         {
             if (subtitleRoutine != null)
-                StopCoroutine(subtitleRoutine);
-
+            {
+                StopCoroutine(subtitleRoutine); 
+                DOTween.Kill(canvasGroup);
+            }
             subtitleRoutine = StartCoroutine(HandleSubtitle(subtitle, displayDuration));
         }
 
         private IEnumerator HandleSubtitle(string text, float displayDuration)
         {
-            subtitleText.text = "";
+            DOTween.Kill(canvasGroup);
             canvasGroup.alpha = 0;
-            canvasGroup.gameObject.SetActive(true);
 
+            subtitleText.text = "";
             canvasGroup.DOFade(1, fadeDuration);
 
             foreach (char c in text)
@@ -40,7 +48,6 @@ namespace Code.Scripts.Source.Narrator
             canvasGroup.DOFade(0, fadeDuration);
             yield return new WaitForSeconds(fadeDuration);
 
-            canvasGroup.gameObject.SetActive(false);
             subtitleRoutine = null;
         }
     }

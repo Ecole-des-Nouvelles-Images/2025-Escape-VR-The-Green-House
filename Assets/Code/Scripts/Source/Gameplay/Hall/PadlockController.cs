@@ -2,6 +2,7 @@ using System;
 using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.GameFSM.States;
 using Code.Scripts.Source.Managers;
+using Code.Scripts.Source.Narrator;
 using DG.Tweening;
 using UnityEngine;
 
@@ -17,6 +18,7 @@ namespace Code.Scripts.Source.Gameplay.Hall
         [SerializeField] private float _zoomDuration = 0.5f;
         [SerializeField] private AnimationCurve _moveCurve;
         [SerializeField] private AnimationCurve _scaleCurve;
+        [SerializeField] private VoiceLineSO _narratorVoiceLine;
         
         [Header("Puzzle references")]
         [SerializeField] private GameObject _key;
@@ -79,6 +81,11 @@ namespace Code.Scripts.Source.Gameplay.Hall
         {
             _audioSource.clip = AudioManager.Instance.ClipsIndex.PadlockWheel;
             _audioSource.Play();
+        }
+
+        public void PlayFirstNarratorVoiceLine()
+        {
+            Narrator.Narrator.Instance.PlayVoiceLine(_narratorVoiceLine);
         }
     }
 }
