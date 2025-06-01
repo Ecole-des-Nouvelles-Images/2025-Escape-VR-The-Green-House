@@ -13,7 +13,8 @@ namespace Code.Scripts.Source.GameFSM.States
         public static Action OnPlantGrown;
         public bool PuzzleSolved { get; private set; }
 
-        [SerializeField] private List<PlantSlot> _plantSlots;
+        [SerializeField] private List<PlantSlot> _plantSlots = new(3);
+         
         [SerializeField] private List<string> _correctPlants;
 
         private GameStateManager _ctx;

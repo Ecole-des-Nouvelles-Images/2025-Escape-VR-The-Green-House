@@ -1,7 +1,9 @@
+using Code.Scripts.Source.Audio;
 using UnityEngine;
 
 namespace Code.Scripts.Source.Gameplay.GreenHouse
 {
+    [RequireComponent(typeof(AudioSource))]
     public class OnTilt : MonoBehaviour
     {
         private enum ToolType
@@ -14,6 +16,16 @@ namespace Code.Scripts.Source.Gameplay.GreenHouse
         [SerializeField] private ToolType _toolType;
         [Range(0,180)] [SerializeField] private float _orientationTreshold = 40f;
         private float angle;
+        private AudioSource _audioSource;
+        private bool _sfxIsPlaying;
+
+        private void Awake()
+        {
+            _audioSource = GetComponent<AudioSource>();
+            _audioSource.outputAudioMixerGroup = AudioManager.Instance.SFXMixerModule;
+            _audioSource.playOnAwake = false;
+            _audioSource.loop = true;
+        }
 
         private void Update()
         {
@@ -45,11 +57,30 @@ namespace Code.Scripts.Source.Gameplay.GreenHouse
         private void OnWaterBegin()
         {
             if (!_particle.isPlaying) _particle.Play();
+
+            if (_sfxIsPlaying) return;
+            switch (_toolType)
+            {
+                case ToolType.SeedBag:
+                    _audioSource.clip = AudioManager.Instance.ClipsIndex.Seed;
+                    break;
+                case ToolType.WateringCan:
+                    _audioSource.clip = AudioManager.Instance.ClipsIndex.WaterCan;
+                    break;
+            }
+            _audioSource.Play();
+            _sfxIsPlaying = true;
+
+
         }
     
         private void OnWaterEnd()
         {
             if (_particle.isPlaying) _particle.Stop();
+            if (!_sfxIsPlaying) return;
+            _audioSource.Stop();
+            _sfxIsPlaying = false;
+
         }
     
     }

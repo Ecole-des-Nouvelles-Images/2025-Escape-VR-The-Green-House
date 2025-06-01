@@ -1,9 +1,11 @@
 using System;
+using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.GameFSM.States;
 using UnityEngine;
 
 namespace Code.Scripts.Source.Gameplay.GreenHouse
 {
+    [RequireComponent(typeof(AudioSource))]
     public class PlantSlot : MonoBehaviour
     {
         public Action OnPlantCut;
@@ -15,6 +17,15 @@ namespace Code.Scripts.Source.Gameplay.GreenHouse
         private GameObject CurrentPlantPrefab;
         private bool SeedPlanted;
         private string _currentPlantName;
+        private AudioSource _audioSource;
+
+        private void Awake()
+        {
+            _audioSource = GetComponent<AudioSource>();
+            _audioSource.outputAudioMixerGroup = AudioManager.Instance.SFXMixerModule;
+            _audioSource.playOnAwake = false;
+            _audioSource.clip = AudioManager.Instance.ClipsIndex.GrownPlant;
+        }
 
         private void OnEnable()
         {
@@ -38,11 +49,13 @@ namespace Code.Scripts.Source.Gameplay.GreenHouse
 
         private void GrownPlant()
         {
-            PlantGrowed = true;
             Debug.Log("Water Plant");
+            PlantGrowed = true;
             Instantiate(CurrentPlantPrefab,_plantSpawnPoint);
-            //PlantPuzzle.OnPlantGrown?.Invoke();
+            _audioSource.Play();
+            
             GameStateGreenhouseInProgress.OnPlantGrown?.Invoke();
+            //PlantPuzzle.OnPlantGrown?.Invoke();
         }
 
         public string GetPlantLatinName()
