@@ -14,7 +14,7 @@ namespace Code.Scripts.Source.Audio
 
         [Header("Initial Mix")]
         [SerializeField] [Range(0, 1)] private float _initialMasterVolume = 0.5f;
-        [SerializeField] [Range(0, 1)] private float _initialAmbienVolume = 1f;
+        [SerializeField] [Range(0, 1)] private float _initialAmbientVolume = 1f;
         [SerializeField] [Range(0, 1)] private float _initialSFXVolume = 1f;
 
         [Header("Mixer Groups")]
@@ -98,7 +98,7 @@ namespace Code.Scripts.Source.Audio
         private void Awake()
         {
             MasterVolume = _initialMasterVolume;
-            AmbientVolume = _initialAmbienVolume;
+            AmbientVolume = _initialAmbientVolume;
             SFXVolume = _initialSFXVolume;
         }
 

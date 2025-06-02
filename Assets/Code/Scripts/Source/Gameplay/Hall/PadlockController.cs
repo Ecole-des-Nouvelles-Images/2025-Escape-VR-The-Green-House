@@ -1,4 +1,3 @@
-using System;
 using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.GameFSM.States;
 using Code.Scripts.Source.Managers;

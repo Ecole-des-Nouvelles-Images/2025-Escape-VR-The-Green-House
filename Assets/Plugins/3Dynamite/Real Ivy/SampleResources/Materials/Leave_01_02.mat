@@ -152,7 +152,7 @@ Material:
     - _OcclusionStrength: 1
     - _Offset: 0
     - _Parallax: 0.02
-    - _ParallaxIntensity: 0.0362
+    - _ParallaxIntensity: 0
     - _Radius: 0.2
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
@@ -188,7 +188,7 @@ Material:
     - __ParallaxIntensity: 0.01
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.5943396, g: 0.5747152, b: 0.5747152, a: 1}
+    - _Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
     - _DoubleSidedConstants: {r: -1, g: -1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Vector0: {r: 0, g: 0, b: 0, a: 0}

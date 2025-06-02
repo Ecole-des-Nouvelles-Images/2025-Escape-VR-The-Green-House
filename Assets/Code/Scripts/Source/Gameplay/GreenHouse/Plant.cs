@@ -1,28 +1,31 @@
 using UnityEngine;
 
-public class Plant : MonoBehaviour
+namespace Code.Scripts.Source.Gameplay.GreenHouse
 {
-    [SerializeField] private ParticleSystem _cuttingVfx;
-    [SerializeField] private PlantSlot _plantSlot;
-
-    private void Awake()
+    public class Plant : MonoBehaviour
     {
-        _plantSlot = GetComponentInParent<PlantSlot>();
-    }
+        [SerializeField] private ParticleSystem _cuttingVfx;
+        [SerializeField] private PlantSlot _plantSlot;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Shears"))
+        private void Awake()
         {
-            _plantSlot.OnPlantCut?.Invoke();
-            CutPlant();
+            _plantSlot = GetComponentInParent<PlantSlot>();
         }
-    }
 
-    private void CutPlant()
-    {
-        Instantiate(_cuttingVfx,transform.parent);
-        Destroy(gameObject);
-    }
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Shears"))
+            {
+                _plantSlot.OnPlantCut?.Invoke();
+                CutPlant();
+            }
+        }
+
+        private void CutPlant()
+        {
+            Instantiate(_cuttingVfx,transform.parent);
+            Destroy(gameObject);
+        }
     
+    }
 }

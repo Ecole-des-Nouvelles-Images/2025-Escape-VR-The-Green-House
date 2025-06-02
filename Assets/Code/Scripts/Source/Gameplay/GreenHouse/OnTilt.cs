@@ -1,53 +1,56 @@
 using UnityEngine;
 
-public class OnTilt : MonoBehaviour
+namespace Code.Scripts.Source.Gameplay.GreenHouse
 {
-    private enum ToolType
+    public class OnTilt : MonoBehaviour
     {
-        WateringCan,
-        SeedBag
-    }
-    
-    [SerializeField] private ParticleSystem _particle;
-    [SerializeField] private ToolType _toolType;
-    [Range(0,180)] [SerializeField] private float _orientationTreshold = 40f;
-    private float angle;
-
-    private void Update()
-    {
-        CheckOrientation();
-    }
-
-    private void CheckOrientation()
-    {
-        switch (_toolType)
+        private enum ToolType
         {
-            case ToolType.SeedBag:
-                angle = Vector3.Angle(transform.up, Vector3.down);
-                break;
-            case ToolType.WateringCan:
-                angle = Vector3.Angle(transform.forward, Vector3.down);
-                break;
+            WateringCan,
+            SeedBag
+        }
+    
+        [SerializeField] private ParticleSystem _particle;
+        [SerializeField] private ToolType _toolType;
+        [Range(0,180)] [SerializeField] private float _orientationTreshold = 40f;
+        private float angle;
+
+        private void Update()
+        {
+            CheckOrientation();
         }
 
-        if (angle < _orientationTreshold)
+        private void CheckOrientation()
         {
-           OnWaterBegin();
+            switch (_toolType)
+            {
+                case ToolType.SeedBag:
+                    angle = Vector3.Angle(transform.up, Vector3.down);
+                    break;
+                case ToolType.WateringCan:
+                    angle = Vector3.Angle(transform.forward, Vector3.down);
+                    break;
+            }
+
+            if (angle < _orientationTreshold)
+            {
+                OnWaterBegin();
+            }
+            else
+            {
+                OnWaterEnd();
+            }
         }
-        else
+    
+        private void OnWaterBegin()
         {
-           OnWaterEnd();
+            if (!_particle.isPlaying) _particle.Play();
         }
-    }
     
-    private void OnWaterBegin()
-    {
-        if (!_particle.isPlaying) _particle.Play();
-    }
+        private void OnWaterEnd()
+        {
+            if (_particle.isPlaying) _particle.Stop();
+        }
     
-    private void OnWaterEnd()
-    {
-        if (_particle.isPlaying) _particle.Stop();
     }
-    
 }
