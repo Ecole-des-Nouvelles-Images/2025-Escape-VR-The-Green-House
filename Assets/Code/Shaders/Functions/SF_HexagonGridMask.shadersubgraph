@@ -2219,7 +2219,7 @@
     },
     "m_Path": "Sub Graphs",
     "m_GraphPrecision": 0,
-    "m_PreviewMode": 2,
+    "m_PreviewMode": 1,
     "m_OutputNode": {
         "m_Id": "cebb1e54bde04c75aa9983b223ea590a"
     },
@@ -2946,8 +2946,8 @@
     "m_ObjectId": "11bca8aa88be4643b47ca29027cf5ac2",
     "m_Title": "Grid IDs",
     "m_Position": {
-        "x": -15.000000953674317,
-        "y": 493.0
+        "x": -15.000041961669922,
+        "y": 493.00006103515627
     }
 }
 
@@ -4519,8 +4519,8 @@
     "m_ObjectId": "3d80b74edc0e4ef5b616af865781dbef",
     "m_Title": "Maps ID debug view",
     "m_Position": {
-        "x": 1599.999755859375,
-        "y": 829.9999389648438
+        "x": 1600.0001220703125,
+        "y": 830.0001220703125
     }
 }
 
@@ -4602,7 +4602,7 @@
     "m_Title": "Hexagonal Grid and RGB Combination",
     "m_Position": {
         "x": -243.0,
-        "y": -650.9999389648438
+        "y": -651.0000610351563
     }
 }
 
@@ -7238,7 +7238,7 @@
     "synonyms": [
         "scalar product"
     ],
-    "m_Precision": 0,
+    "m_Precision": 2,
     "m_PreviewExpanded": true,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
@@ -7385,7 +7385,7 @@
     "m_ObjectId": "7ca311e008624468b6e37bef9b61694f",
     "m_Title": "UV Input",
     "m_Position": {
-        "x": -4088.0,
+        "x": -4088.000732421875,
         "y": -440.0001220703125
     }
 }
@@ -11137,8 +11137,8 @@
     "m_ObjectId": "d65272d328fa415da600219a9b431478",
     "m_Title": "Procedural RGB Checker",
     "m_Position": {
-        "x": -2031.0,
-        "y": -346.0
+        "x": -2031.0001220703125,
+        "y": -346.0000305175781
     }
 }
 
@@ -11825,8 +11825,8 @@
     "m_ObjectId": "e50d3a549e574ef4bec80304d9f3004a",
     "m_Title": "UV Adjustments",
     "m_Position": {
-        "x": -3348.0,
-        "y": -738.0
+        "x": -3348.00048828125,
+        "y": -738.0001220703125
     }
 }
 
@@ -12445,7 +12445,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 5.0,
+    "m_Value": 15.0,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -12956,7 +12956,7 @@
         "reorder",
         "component mask"
     ],
-    "m_Precision": 0,
+    "m_Precision": 1,
     "m_PreviewExpanded": true,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
