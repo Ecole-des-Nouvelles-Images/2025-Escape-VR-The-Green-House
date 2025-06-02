@@ -5,37 +5,145 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff7f65ba-5e09-4db8-94ad-31a7ad8aac47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Coquelicot.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Coquelicot.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Lavande.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Lavande.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Lupine.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Lupine.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Muguet.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Muguet.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Pissenlit.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Pissenlit.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Zinnia.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Coquelicot.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Coquelicot.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Lavande.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Lavande.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Lupin.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Lupin.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Muguet.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Muguet.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Pissenlit.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Pissenlit.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Zinnia.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Cut/A_Cut_Zinnia.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_Coquelicot.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_Lavande.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_Lavande.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_Lupine.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_Lupine.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_Pissenlit.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_Pissenlit.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_Zinnia.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_muguet.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_muguet.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_CutShears_1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_CutShears_1.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_CutShears_2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_CutShears_2.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_CutShears_3.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_CutShears_3.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_CutShears_4.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_CutShears_4.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_Plant_Grow.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_Plant_Grow.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_Seed_Drop.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_Seed_Drop.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_WaterCan.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/GreenHouse/SFX_WaterCan.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Clips/Lounge.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/GreenHouse/shears.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/GreenHouse/shears.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Coquelicot/NS_Sliced_Coquelicot.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Coquelicot/NS_Sliced_Coquelicot.glb.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Lavande/NS_Sliced_Lavande.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Lavande/NS_Sliced_Lavande.glb.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Lupine/NS_Sliced_Lupine.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Lupine/NS_Sliced_Lupine.glb.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Muguet/NS_Sliced_Muguet.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Muguet/NS_Sliced_Muguet.glb.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Pissenlit/NS_Sliced_Pissenlit.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Pissenlit/NS_Sliced_Pissenlit.glb.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Pissenlit/S_Sliced_Red_Pissenlit.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Pissenlit/S_Sliced_Red_Pissenlit.glb.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Coquelicot.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Coquelicot.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Lavande.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Lupine.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Lupine.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Muguet.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Muguet.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Pissenlit.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Pissenlit.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Zinnia_Red.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFX/Materials/M_Fly_Particules.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFX/Materials/M_Fly_Particules.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFX/Materials/S_Fly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFX/Materials/S_Fly.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Generic.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Greenhouse.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Greenhouse/S_Seed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Greenhouse/S_Seed.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Greenhouse/seed.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Greenhouse/seed.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025-Escape-VR-TheGreenHouse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/XR/Door.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/XR/Door.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/CorridorA/Materials/M_BordureWall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/CorridorA/Materials/M_BordureWall.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_Carpet.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_Carpet.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_DoorBuffet_G.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_DoorBuffet_G.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_Wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_Wall.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_Windows.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Hall/Materials/M_Windows.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Plugins/Flooded_Grounds/Content/Materials/BLD_WindowGlass1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Plugins/Flooded_Grounds/Content/Materials/BLD_WindowGlass1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Hall/P_LowTable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Hall/P_LowTable.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/LightingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/LightingData.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/Lightmap-0_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/Lightmap-0_comp_dir.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/Lightmap-0_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/Lightmap-0_comp_light.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/ReflectionProbe-0.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/CorridorA/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/GreenHouse/AC_Flower.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/GreenHouse/AC_Flower.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/AC_Zinnia.controller.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/GreenHouse/A_GrownPlant.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_Coquelicot.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/GreenHouse/A_GrownPlant.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/Flowers/Grow/A_Grown_Zinnia.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/GreenHouse/A_ShearsCut.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/GreenHouse/A_ShearsCut.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/TV.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Clips/Lounge/TV.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/TV/SFX_VHS_Insertion.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Clips/Lounge/TV/SFX_VHS_Insertion.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/TV/SFX_VHS_Insertion.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Clips/Lounge/TV/SFX_VHS_Insertion.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Mixers/SMX_Application.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Mixers/SMX_Application.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Audio/AudioClipsIndex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Audio/AudioClipsIndex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateGreenhouseInProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateGreenhouseInProgress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateLoungeIntro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateLoungeIntro.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateLoungePhase2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/GameFSM/States/GameStateLoungePhase2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/BaseDoor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/BaseDoor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/CorridorDoor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/CorridorDoor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/Door.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/GreenHouse/OnTilt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/GreenHouse/OnTilt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/GreenHouse/Plant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/GreenHouse/Plant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/GreenHouse/PlantPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/GreenHouse/PlantPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/GreenHouse/PlantSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Scripts/Source/Gameplay/GreenHouse/PlantSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Bac Potager/S_BacPotager.glb" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Bac Potager/S_BacPotager.glb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Pissenlit/M_Pissenlit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Pissenlit/M_Pissenlit.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Pissenlit/M_TigePlante.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Rooms/Greenhouse/Textures/Flowers/Pissenlit/M_TigePlante.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Placeholders/Farming_game_FX/Prefabs/Farming/Materials/wing.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Placeholders/Farming_game_FX/Prefabs/Farming/Materials/wing.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Fonts/Dreamy Notes Sans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Test Terrain Menu/Fonts/Dreamy Notes Sans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/P_Flower_TEST.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Lavande.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/P_Flower_TEST.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/Flowers/P_Zinnia_Red.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/P_SeedBag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/P_SeedBag.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/P_Shears.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/P_Shears.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/P_WateringCan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Greenhouse/P_WateringCan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/XR/P_Custom_XR_Origin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/XR/P_Custom_XR_Origin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Greenhouse.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Greenhouse.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/LightingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/LightingData.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_dir.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_dir.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_light.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/Lightmap-0_comp_light.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-1.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-1.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-1.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Hall/ReflectionProbe-1.exr.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Lounge.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Lounge.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Integration/Setup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Integration/Setup.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 Android Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 Android Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 VR Template.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Meta Quest3 VR Template.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Project Configuration/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Project Configuration/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Particules/PS_Dust.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Generic/PS_Dust.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Particules/PS_Dust.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Generic/PS_Dust.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Particules/PS_GodRay.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Generic/PS_GodRay.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Particules/PS_GodRay.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Generic/PS_GodRay.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Particules/PS_Rain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Generic/PS_Rain.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Particules/PS_Rain.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Generic/PS_Rain.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Particules/PS_Respawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Generic/PS_Respawn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Particules/PS_Respawn.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Particules/Generic/PS_Respawn.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +188,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "integration-unity/gameplay",
+    "git-widget-placeholder": "Merging integration-unity/gameplay",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

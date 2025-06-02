@@ -7,7 +7,7 @@ namespace Code.Scripts.Source.Gameplay.GreenHouse
 {
    public class PlantPuzzle : MonoBehaviour
    {
-      public static Action OnPlantGrown;
+     // public static Action OnPlantGrown;
       public bool PuzzleSolved { get; private set; }
    
       [SerializeField] private List<PlantSlot> _plantSlots;
@@ -15,12 +15,12 @@ namespace Code.Scripts.Source.Gameplay.GreenHouse
 
       private void OnEnable()
       {
-         OnPlantGrown += CheckPuzzle;
+        // OnPlantGrown += CheckPuzzle;
       }
 
       private void OnDisable()
       {
-         OnPlantGrown -= CheckPuzzle;
+        // OnPlantGrown -= CheckPuzzle;
       }
 
       private void CheckPuzzle()
