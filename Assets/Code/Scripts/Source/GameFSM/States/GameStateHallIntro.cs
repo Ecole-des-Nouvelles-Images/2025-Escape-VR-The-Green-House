@@ -16,7 +16,6 @@ namespace Code.Scripts.Source.GameFSM.States
             AudioManager.Instance.ChangeRain(AudioManager.Instance.ClipsIndex.RainInDoor);
             AudioManager.Instance.ChangeMusic(AudioManager.Instance.ClipsIndex.GameMusic);
             context.SwitchState(context.GameStates.HallInProgress);
-            Narrator.Narrator.Instance.PlayVoiceLine(_voiceLineSO);
         }
 
         public override void UpdateState(GameStateManager context)
@@ -26,7 +25,6 @@ namespace Code.Scripts.Source.GameFSM.States
 
         public override void ExitState(GameStateManager context)
         {
-
         }
     }
 }

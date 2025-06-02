@@ -294,6 +294,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 372758986}
     - target: {fileID: 1539064653356413357, guid: 742799b207525b04eaabc71ed4ea37ca, type: 3}
+      propertyPath: <GameStates>k__BackingField.<HallInProgress>k__BackingField._voiceLineSO
+      value: 
+      objectReference: {fileID: 11400000, guid: c5652cc848cbe4e45af04a4b5d7d8c82, type: 2}
+    - target: {fileID: 1539064653356413357, guid: 742799b207525b04eaabc71ed4ea37ca, type: 3}
       propertyPath: <GameStates>k__BackingField.<HallIntro>k__BackingField._shakingCaseAsset
       value: 
       objectReference: {fileID: 11400000, guid: b31ead7fd1f28ef48bdf00a3aa56cc29, type: 2}
@@ -610,10 +614,6 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 286631217}
-    - target: {fileID: 7087850341020174106, guid: ccdc829352e42a74798e70f532e11dd2, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2030,15 +2030,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6543245325958720316, guid: 81a7e95364286064189b99ced552fdd2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6543245325958720316, guid: 81a7e95364286064189b99ced552fdd2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6543245325958720316, guid: 81a7e95364286064189b99ced552fdd2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6543245325958720316, guid: 81a7e95364286064189b99ced552fdd2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2090,5 +2090,5 @@ SceneRoots:
   - {fileID: 1794916255}
   - {fileID: 1828933465}
   - {fileID: 1554851784}
-  - {fileID: 372758987}
   - {fileID: 5841492092984896472}
+  - {fileID: 372758987}

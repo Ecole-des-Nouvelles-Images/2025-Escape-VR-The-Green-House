@@ -11,7 +11,7 @@ namespace Code.Scripts.Source.Narrator
         
         private void OnTriggerEnter(Collider other)
         {
-            if (CompareTag("MainCamera"))
+            if (other.CompareTag("MainCamera"))
             {
                 Narrator.Instance.PlayVoiceLine(_proximityNarratorVoiceLine);
             }
