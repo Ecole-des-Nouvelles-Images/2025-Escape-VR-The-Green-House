@@ -30,6 +30,17 @@ namespace Code.Scripts.Source.Audio
         
         [Header("Lounge")]
         
+        [Header("Drawers/Doors")]
+        [field:SerializeField] public AudioClip OpenDrawer1 { get; private set; }
+        [field:SerializeField] public AudioClip CloseDrawer1 { get; private set; }
+        [field:SerializeField] public AudioClip OpenDrawer2 { get; private set; }
+        [field:SerializeField] public AudioClip CloseDrawer2 { get; private set; }
+        [field:SerializeField] public AudioClip OpenDrawer3 { get; private set; }
+        [field:SerializeField] public AudioClip CloseDrawer3 { get; private set; }
+        [field:SerializeField] public AudioClip OpenDrawer4 { get; private set; }
+        [field:SerializeField] public AudioClip CloseDrawer4 { get; private set; }
+        [field:SerializeField] public AudioClip OpenDoor1 { get; private set; }
+        [field:SerializeField] public AudioClip CloseDoor1 { get; private set; }
         
         [Header("GreenHouse")]
         [field:SerializeField] public List<AudioClip> ShearsCut { get; private set; }
