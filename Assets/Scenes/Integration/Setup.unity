@@ -301,7 +301,7 @@ Transform:
   m_GameObject: {fileID: 912324788}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -686,6 +686,22 @@ PrefabInstance:
       propertyPath: <GameStates>k__BackingField.<Pause>k__BackingField._postRenderVolume
       value: 
       objectReference: {fileID: 1024762123}
+    - target: {fileID: 1539064653356413357, guid: 742799b207525b04eaabc71ed4ea37ca, type: 3}
+      propertyPath: <GameStates>k__BackingField.<GreenhouseInProgress>k__BackingField._correctPlants.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539064653356413357, guid: 742799b207525b04eaabc71ed4ea37ca, type: 3}
+      propertyPath: '<GameStates>k__BackingField.<GreenhouseInProgress>k__BackingField._correctPlants.Array.data[0]'
+      value: Coquelicot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539064653356413357, guid: 742799b207525b04eaabc71ed4ea37ca, type: 3}
+      propertyPath: '<GameStates>k__BackingField.<GreenhouseInProgress>k__BackingField._correctPlants.Array.data[1]'
+      value: Pissenlit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539064653356413357, guid: 742799b207525b04eaabc71ed4ea37ca, type: 3}
+      propertyPath: '<GameStates>k__BackingField.<GreenhouseInProgress>k__BackingField._correctPlants.Array.data[2]'
+      value: Lavande
+      objectReference: {fileID: 0}
     - target: {fileID: 6401190555539163379, guid: 742799b207525b04eaabc71ed4ea37ca, type: 3}
       propertyPath: m_Name
       value: P_GameManager

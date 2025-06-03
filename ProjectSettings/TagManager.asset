@@ -17,6 +17,7 @@ TagManager:
   - LoungeBookSocketsContainer
   - GameArea
   - PlantSlotContainer
+  - Bag
   layers:
   - Default
   - TransparentFX

@@ -6,70 +6,55 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 namespace Code.Scripts.Source.XR
 {
     public class XRCustomAffordance : MonoBehaviour
-    { 
-        [SerializeField] private Material highlightMaterial;
-
+    {
         private XRBaseInteractable interactable;
-        private MeshRenderer originalRenderer;
-        private GameObject highlightClone;
+        private Renderer _renderer;
+        private MaterialPropertyBlock _materialPropertyBlock;
+        private string _highlightProperty = "_isHighLighted";
 
         void Awake()
         {
             interactable = GetComponentInParent<XRBaseInteractable>();
-            originalRenderer = GetComponentInParent<MeshRenderer>();
+            _renderer = GetComponentInParent<Renderer>();
+            _materialPropertyBlock = new MaterialPropertyBlock();
 
-            CreateHighlightMesh();
-            highlightClone.SetActive(false);
+            ApplyHighlight(false); 
         }
 
         void OnEnable()
         {
-            interactable.hoverEntered.AddListener(OnHoverEnter);
-            interactable.hoverExited.AddListener(OnHoverExit);
+            if (interactable != null)
+            {
+                interactable.hoverEntered.AddListener(OnHoverEnter);
+                interactable.hoverExited.AddListener(OnHoverExit);
+            }
         }
 
         void OnDisable()
         {
-            interactable.hoverEntered.RemoveListener(OnHoverEnter);
-            interactable.hoverExited.RemoveListener(OnHoverExit);
-        }
-
-        void OnHoverEnter(HoverEnterEventArgs args)
-        {
-            if (highlightClone != null)
-                highlightClone.SetActive(true);
-        }
-
-        void OnHoverExit(HoverExitEventArgs args)
-        {
-            if (highlightClone != null)
-                highlightClone.SetActive(false);
-        }
-
-        void CreateHighlightMesh()
-        {
-            if (originalRenderer == null) return;
-
-            highlightClone = new GameObject("HighlighMesh");
-            highlightClone.transform.SetParent(originalRenderer.transform, false);
-            highlightClone.transform.localPosition = Vector3.zero;
-            highlightClone.transform.localRotation = Quaternion.identity;
-            highlightClone.transform.localScale = Vector3.one;
-
-            MeshFilter meshFilter = highlightClone.AddComponent<MeshFilter>();
-            MeshRenderer meshRenderer = highlightClone.AddComponent<MeshRenderer>();
-
-            meshFilter.sharedMesh = originalRenderer.GetComponent<MeshFilter>().sharedMesh;
-            Material mat = new Material(highlightMaterial);
-
-            // Récupération de la texture du material initial
-            if (originalRenderer.material.HasProperty("_Albedo"))
+            if (interactable != null)
             {
-                Texture albedoTexture = originalRenderer.material.GetTexture("_Albedo");
-                mat.SetTexture("_Texture", albedoTexture);
-                // texture initial dans le highlightMaterial
+                interactable.hoverEntered.RemoveListener(OnHoverEnter);
+                interactable.hoverExited.RemoveListener(OnHoverExit);
             }
-            meshRenderer.material = mat;
+        }
+
+        private void OnHoverEnter(HoverEnterEventArgs args)
+        {
+            ApplyHighlight(true);
+        }
+
+        private void OnHoverExit(HoverExitEventArgs args)
+        {
+            ApplyHighlight(false);
+        }
+
+        private void ApplyHighlight(bool enable)
+        {
+            _renderer.GetPropertyBlock(_materialPropertyBlock);
+            _materialPropertyBlock.SetFloat(_highlightProperty, enable ? 1f : 0f);
+            _renderer.SetPropertyBlock(_materialPropertyBlock);
         }
     }
+    
 }
