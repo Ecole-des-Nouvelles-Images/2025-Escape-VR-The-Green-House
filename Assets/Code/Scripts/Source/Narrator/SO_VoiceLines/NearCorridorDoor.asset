@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86003470c2a24dfea6af8ce3eedcd5c3, type: 3}
-  m_Name: PadlockFirstInteraction
+  m_Name: NearCorridorDoor
   m_EditorClassIdentifier: 
   <Record>k__BackingField: {fileID: 8300000, guid: 4885bb3bfe406a44ab63462c4440da59, type: 3}
-  <Subtitle>k__BackingField: "Hmm... un code \xE0 4 chiffres. Il doit forc\xE9ment
-    y avoir quelque chose d'int\xE9ressant \xE0 l'int\xE9rieur de cette valise."
+  <Subtitle>k__BackingField: "Cette porte est bloqu\xE9e... Il me faut sans doute
+    une cl\xE9."

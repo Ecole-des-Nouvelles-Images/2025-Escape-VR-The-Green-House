@@ -9,7 +9,7 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStateHallInProgress: GameBaseState
     {
-        [SerializeField] private VoiceLineSO _voiceLineSO;
+        [SerializeField] private VoiceLineSO _spawnVoiceLine;
 
         public Action<GameBaseState, bool, bool> OnCodeFound;
         public Action<string, int> OnRotated;
@@ -85,7 +85,7 @@ namespace Code.Scripts.Source.GameFSM.States
                 yield return null;
             }
             
-            Narrator.Narrator.Instance.PlayVoiceLine(_voiceLineSO);
+            Narrator.Narrator.Instance.PlayVoiceLine(_spawnVoiceLine);
 
         }
     }

@@ -22,7 +22,6 @@ namespace Code.Scripts.Source.Narrator
             _audioSource.Play();
             
              subtitleModule.ShowSubtitle(voiceLine.Subtitle, voiceLine.Record.length + 5f);
-             Debug.Log(voiceLine.Subtitle);
         }
     }
 }

@@ -9,8 +9,6 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStateHallIntro : GameBaseState
     {
-        [SerializeField] private VoiceLineSO _voiceLineSO;
-        
         public override void EnterState(GameStateManager context)
         {
             AudioManager.Instance.ChangeRain(AudioManager.Instance.ClipsIndex.RainInDoor);
