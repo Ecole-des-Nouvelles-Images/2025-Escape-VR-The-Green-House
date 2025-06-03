@@ -702,9 +702,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1447ac06b1647539510e7ff13283503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _root: {fileID: 7146325470587616326}
+  _root: {fileID: 3827376911206377253}
   _mainPanel: {fileID: 8473113483073811054}
   _pausePanel: {fileID: 7115998389244081973}
+  _scale: {x: 0.0005, y: 0.0005, z: 0.0005}
   _slideAnimationDuration: 1.5
   _slideAnimationEasing: 16
   _mainButtonResume: {fileID: 7897555891284265667}
