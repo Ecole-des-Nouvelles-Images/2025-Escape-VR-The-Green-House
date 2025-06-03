@@ -48,7 +48,7 @@ namespace Code.Scripts.Source.UI
         {
             HideAllPanels();
             GameStateManager.Instance.SwitchState(GameStateManager.Instance.GameStates.Launch);
-            SceneLoader.Instance.SwitchScene(SceneType.Hall);
+            SceneLoader.Instance.SwitchScene(SceneType.Greenhouse);
         }
 
         private void QuitGame()

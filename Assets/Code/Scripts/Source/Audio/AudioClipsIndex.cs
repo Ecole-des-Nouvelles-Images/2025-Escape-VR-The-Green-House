@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Code.Scripts.Source.Audio
@@ -26,5 +27,14 @@ namespace Code.Scripts.Source.Audio
         [Header("Hall")]
         [field:SerializeField] public AudioClip PadlockWheel { get; private set; }
         [field:SerializeField] public AudioClip PadlockZoom { get; private set; }
+        
+        [Header("Lounge")]
+        
+        
+        [Header("GreenHouse")]
+        [field:SerializeField] public List<AudioClip> ShearsCut { get; private set; }
+        [field:SerializeField] public AudioClip WaterCan { get; private set; }
+        [field:SerializeField] public AudioClip GrownPlant { get; private set; }
+        [field:SerializeField] public AudioClip Seed { get; private set; }
     }
 }
