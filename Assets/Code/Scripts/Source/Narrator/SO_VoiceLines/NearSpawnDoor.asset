@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86003470c2a24dfea6af8ce3eedcd5c3, type: 3}
   m_Name: NearSpawnDoor
   m_EditorClassIdentifier: 
-  <Record>k__BackingField: {fileID: 8300000, guid: 4885bb3bfe406a44ab63462c4440da59, type: 3}
-  <Subtitle>k__BackingField: "Impossible d'ouvrir cette porte \xE0 cause de ces racines.
-    Je dois trouver un moyen de les \xE9liminer pour pouvoir sortir d'ici."
+  <Record>k__BackingField: {fileID: 8300000, guid: bf3f2329ed62a5e4986256f153aa182c, type: 3}
+  <Subtitle>k__BackingField: "Impossible d'ouvrir cette porte \xE0 cause de ces racines."

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86003470c2a24dfea6af8ce3eedcd5c3, type: 3}
   m_Name: NearCorridorDoor
   m_EditorClassIdentifier: 
-  <Record>k__BackingField: {fileID: 8300000, guid: 4885bb3bfe406a44ab63462c4440da59, type: 3}
-  <Subtitle>k__BackingField: "Cette porte est bloqu\xE9e... Il me faut sans doute
+  <Record>k__BackingField: {fileID: 8300000, guid: d30ede7be1211e74d84913c8033f7e87, type: 3}
+  <Subtitle>k__BackingField: "Cette porte semble bloqu\xE9e... Il me faut sans doute
     trouver une clef."

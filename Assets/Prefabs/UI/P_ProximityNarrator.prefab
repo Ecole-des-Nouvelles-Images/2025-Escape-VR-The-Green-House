@@ -52,7 +52,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.25, y: 2, z: 0.25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1641477673374853871
 MonoBehaviour:
@@ -66,4 +66,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e8e52f6a552b044b63f9341b127bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _proximityNarratorMessage: {fileID: 0}
+  _proximityNarratorVoiceLine: {fileID: 0}
