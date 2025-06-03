@@ -19,9 +19,9 @@ namespace Code.Scripts.Source.GameFSM.States
         private Action<GameBaseState, bool, bool> _onPuzzleSolved;
 
         private GameStateManager _ctx;
-        private Transform _bookSocketsContainer;
-        private List<XRSocketInteractor> _bookSockets = new(5);
-        private Animator _biblioAnimator;
+        [SerializeField]private Transform _bookSocketsContainer;
+        [SerializeField] private List<XRSocketInteractor> _bookSockets = new(5);
+        [SerializeField]private Animator _biblioAnimator;
 
         private bool _initialized;
         private bool _fusePlugged;
@@ -35,9 +35,7 @@ namespace Code.Scripts.Source.GameFSM.States
                 Initialize(context);
 
             _ctx = context;
-
-            _biblioAnimator = _bookSocketsContainer.parent.GetComponent<Animator>();
-
+            
             _onPuzzleSolved += context.SwitchState;
             OnSocketChanged += CheckPuzzle;
             OnFusePlugged += PlugFuseCheck;
@@ -73,6 +71,7 @@ namespace Code.Scripts.Source.GameFSM.States
             if (!_bookSocketsContainer)
             {
                 _bookSocketsContainer = GameObject.FindGameObjectWithTag("LoungeBookSocketsContainer").transform;
+                _biblioAnimator = _bookSocketsContainer.parent.GetComponent<Animator>();
 
                 if (!_bookSocketsContainer)
                     throw new Exception("[GameStateLoungePhase2] Book sockets container not found.");

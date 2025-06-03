@@ -56,9 +56,9 @@ namespace Code.Scripts.Source.XR
 
         private void DoorHandleUpdate(float value)
         {
-           // if (!Mathf.Approximately(value, 0.7f)) return;
+            if (!Mathf.Approximately(value, 0f)) return;
             if (_isLocked) return;
-            if (!Mathf.Approximately(value, 0.7f)) return;
+            if (!Mathf.Approximately(value, 0f)) return;
 
             
             if (_isOpen) return;

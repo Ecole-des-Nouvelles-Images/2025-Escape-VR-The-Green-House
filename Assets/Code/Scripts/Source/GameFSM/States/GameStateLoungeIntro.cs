@@ -10,7 +10,7 @@ namespace Code.Scripts.Source.GameFSM.States
         {
             base.EnterState(context);
 
-            context.SwitchState(context.GameStates.LoungePhase2);
+            context.SwitchState(context.GameStates.LoungePhase2); // phase 1 dans version finale
         }
 
         public override void UpdateState(GameStateManager context)
