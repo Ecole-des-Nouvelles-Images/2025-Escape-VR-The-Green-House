@@ -288,7 +288,7 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: -89
+    min: -150
     max: 0
     bounciness: 0
     bounceMinVelocity: 0
@@ -1216,7 +1216,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5219710979249085652
 Transform:
@@ -2348,7 +2348,7 @@ HingeJoint:
   m_UseAcceleration: 0
   m_Limits:
     min: 0
-    max: 89
+    max: 150
     bounciness: 0
     bounceMinVelocity: 0
     contactDistance: 0
