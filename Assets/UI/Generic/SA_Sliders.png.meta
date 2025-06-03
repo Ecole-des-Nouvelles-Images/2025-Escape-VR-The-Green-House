@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: a47b950ac1f19b64483c4a7cc14029d2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: S_Slider_Mask
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1672
+        width: 2202
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461fcd23202b6204cac099e5121f96b4
+      internalID: -189625045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Slider_Handle
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1721
+        width: 274
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad121679fe1d4644b3ab049e21b0994
+      internalID: 189867398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Slider
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 1130
+        width: 2202
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa0ee7e64a28e1438a5c542919e4df2
+      internalID: 1369631100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Slider_Fill
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 757
+        width: 2139
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a668e63935def8449b760d0915361ffd
+      internalID: 110046501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 351c5145a9a84a846bcaf9e875a1748a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SA_Sliders_0: -455878724
+      SA_Sliders_1: 293474602
+      SA_Sliders_11: -1014522633
+      SA_Sliders_12: 136124763
+      SA_Sliders_13: 257242686
+      SA_Sliders_14: 1156388412
+      SA_Sliders_15: 1346681840
+      SA_Sliders_16: -433047303
+      SA_Sliders_17: -1247483348
+      SA_Sliders_18: -914764828
+      SA_Sliders_19: -2060794066
+      SA_Sliders_2: -158920557
+      SA_Sliders_20: 1272952595
+      SA_Sliders_21: -259014120
+      SA_Sliders_22: -174794759
+      SA_Sliders_23: 1878491986
+      SA_Sliders_24: -1959329602
+      SA_Sliders_25: -1914440499
+      SA_Sliders_26: -422569393
+      SA_Sliders_27: -856558072
+      SA_Sliders_28: 1923625397
+      SA_Sliders_29: 1143950841
+      SA_Sliders_3: -813428720
+      SA_Sliders_30: 1278863773
+      SA_Sliders_31: -1112765901
+      SA_Sliders_32: -1113915250
+      SA_Sliders_33: 594613132
+      SA_Sliders_34: 1819872829
+      SA_Sliders_35: -1150343627
+      SA_Sliders_36: 1529678443
+      SA_Sliders_37: -57305339
+      SA_Sliders_38: -1199044216
+      SA_Sliders_39: 255375214
+      SA_Sliders_4: -1651759403
+      SA_Sliders_40: 488221608
+      SA_Sliders_41: 1539552132
+      SA_Sliders_42: 567860681
+      SA_Sliders_43: 94694355
+      SA_Sliders_44: 87599037
+      SA_Sliders_45: -545084317
+      SA_Sliders_46: -154997599
+      SA_Sliders_47: -1295035762
+      SA_Sliders_48: 1585302134
+      SA_Sliders_49: 1427241058
+      SA_Sliders_5: 131344653
+      SA_Sliders_50: 1528058933
+      SA_Sliders_51: 1933291636
+      SA_Sliders_52: 1139899874
+      SA_Sliders_53: 1052127148
+      SA_Sliders_54: 1950661624
+      SA_Sliders_55: 2117759039
+      SA_Sliders_56: 1490736359
+      SA_Sliders_57: -1313038028
+      SA_Sliders_58: 2005954777
+      SA_Sliders_59: 301923535
+      SA_Sliders_6: -1766431259
+      SA_Sliders_8: -893912862
+      SA_Sliders_9: -1529192672
+      S_Slider: 1369631100
+      S_Slider_Fill: 110046501
+      S_Slider_Handle: 189867398
+      S_Slider_Mask: -189625045
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
