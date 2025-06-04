@@ -35,4 +35,6 @@ namespace Code.Scripts.Source.GameFSM
         [field: SerializeField] public GameStateEscapeRun Escape { get; private set; } = new();
         [field: SerializeField] public GameStateGameOver GameOver { get; private set; } = new();
     }
+    
+    
 }

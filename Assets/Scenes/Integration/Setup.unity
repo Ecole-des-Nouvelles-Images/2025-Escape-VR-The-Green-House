@@ -368,6 +368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_UIPause
       objectReference: {fileID: 0}
+    - target: {fileID: 2060494539283627857, guid: 7560de644dbfea546bdacc5470bf9143, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2217238678864249446, guid: 7560de644dbfea546bdacc5470bf9143, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -24,6 +24,7 @@ namespace Code.Scripts.Source.Types
                     "Lounge" => SceneType.Lounge,
                     "Greenhouse" => SceneType.Greenhouse,
                     "Laboratory" => SceneType.Laboratory,
+                    "Credits" => SceneType.Credits,
 
                     _ => SceneType.Invalid
                 };

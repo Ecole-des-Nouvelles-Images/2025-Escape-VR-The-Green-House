@@ -8,7 +8,7 @@ namespace Code.Scripts.Source.GameFSM.States
     {
         public override void UpdateState(GameStateManager context)
         {
-
+            
         }
 
         public override void ExitState(GameStateManager context)

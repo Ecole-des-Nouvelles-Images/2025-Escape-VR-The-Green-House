@@ -1,6 +1,7 @@
 using System;
 using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.GameFSM.States;
+using Code.Scripts.Source.Managers;
 using UnityEngine;
 
 namespace Code.Scripts.Source.Gameplay.GreenHouse
@@ -54,7 +55,7 @@ namespace Code.Scripts.Source.Gameplay.GreenHouse
             Instantiate(CurrentPlantPrefab,_plantSpawnPoint);
             _audioSource.Play();
             
-            GameStateGreenhouseInProgress.OnPlantGrown?.Invoke();
+            GameStateManager.Instance.GameStates.GreenhouseInProgress.OnPlantGrown?.Invoke();
             //PlantPuzzle.OnPlantGrown?.Invoke();
         }
 

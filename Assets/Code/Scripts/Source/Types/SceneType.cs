@@ -9,7 +9,7 @@ namespace Code.Scripts.Source.Types
         Lounge,
         CorridorB,
         Greenhouse,
-        Laboratory
-       
+        Laboratory,
+        Credits
     }
 }

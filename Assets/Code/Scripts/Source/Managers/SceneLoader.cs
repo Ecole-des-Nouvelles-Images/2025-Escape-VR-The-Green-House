@@ -68,6 +68,7 @@ namespace Code.Scripts.Source.Managers
                     case "Laboratory": type = SceneType.Laboratory; break;
                     case "CorridorA":  type = SceneType.CorridorA;  break;
                     case "CorridorB":  type = SceneType.CorridorB;  break;
+                    case "Credits":    type = SceneType.Credits;  break;
                     default:           type = SceneType.Invalid;    break;
                 }
 
