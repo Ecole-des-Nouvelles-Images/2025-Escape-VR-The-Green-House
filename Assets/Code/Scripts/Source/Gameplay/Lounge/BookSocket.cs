@@ -1,4 +1,5 @@
 using Code.Scripts.Source.Managers;
+using Code.Scripts.Source.Narrator;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
@@ -8,6 +9,8 @@ namespace Code.Scripts.Source.Gameplay.Lounge
     public class BookSocket : MonoBehaviour
     {
         private XRSocketInteractor _socket;
+        [SerializeField] private ProximityNarrator _generatorNarrator;
+
 
         private void Awake()
         {
@@ -32,6 +35,7 @@ namespace Code.Scripts.Source.Gameplay.Lounge
             {
                 Debug.Log("Fuse placed");
                 GameStateManager.Instance.GameStates.LoungePhase2.OnFusePlugged?.Invoke();
+                _generatorNarrator.enabled = false;
             }
             GameStateManager.Instance.GameStates.LoungePhase2.OnSocketChanged?.Invoke();
         }

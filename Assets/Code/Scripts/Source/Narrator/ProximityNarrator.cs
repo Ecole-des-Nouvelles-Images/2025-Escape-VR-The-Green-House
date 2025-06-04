@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Code.Scripts.Source.Narrator
 {
@@ -8,12 +7,24 @@ namespace Code.Scripts.Source.Narrator
     public class ProximityNarrator : MonoBehaviour
     {
         [SerializeField] private VoiceLineSO _proximityNarratorVoiceLine;
+        [SerializeField] private bool _hasToBePlayedOnce;
 
+        private bool _hasBeenPlayed;
         private bool _isStopped;
-        
+
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("MainCamera") && !_isStopped)
+            if (!other.CompareTag("MainCamera") || _isStopped) return;
+
+            if (_hasToBePlayedOnce)
+            {
+                if (_hasBeenPlayed) return;
+
+                Narrator.Instance.PlayVoiceLine(_proximityNarratorVoiceLine);
+                _isStopped = true;
+                _hasBeenPlayed = true;
+            }
+            else
             {
                 Narrator.Instance.PlayVoiceLine(_proximityNarratorVoiceLine);
                 _isStopped = true;

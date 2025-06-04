@@ -24,8 +24,9 @@ namespace Code.Scripts.Source.GameFSM.States
         [SerializeField]private Animator _biblioAnimator;
 
         private bool _initialized;
-        private bool _fusePlugged;
+        public bool _fusePlugged;
         private bool _puzzleSolved;
+
 
         public override void EnterState(GameStateManager context)
         {
