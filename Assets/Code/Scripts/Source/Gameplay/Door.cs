@@ -1,3 +1,4 @@
+using System;
 using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.Types;
@@ -39,6 +40,7 @@ namespace Code.Scripts.Source.XR
             if (!_keySocket && _isLocked)
                 throw new System.Exception($"[Door] Key socket not found on locked door : {gameObject.name}");
         }
+        
 
         private void OnEnable()
         {

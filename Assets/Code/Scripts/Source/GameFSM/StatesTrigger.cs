@@ -10,6 +10,7 @@ namespace Code.Scripts.Source.GameFSM
     public class StatesTrigger : MonoBehaviour
     {
 
+        public Animator animator;
         public UnityEvent OnTrigered;
         private bool _isTriggered = false;
         private void OnTriggerEnter(Collider other)
@@ -34,6 +35,8 @@ namespace Code.Scripts.Source.GameFSM
             if ( GameStateManager.Instance.CurrentState == GameStateManager.Instance.GameStates.HallResolved) 
             {
                 SwitchStates(GameStateManager.Instance.GameStates.LoungeIntro);
+                animator?.SetTrigger("Run");
+                GameStateManager.Instance.GreenHouseIsLocked = false; 
             }
         }
         

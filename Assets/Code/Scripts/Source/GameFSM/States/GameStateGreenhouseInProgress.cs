@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Code.Scripts.Source.Gameplay.GreenHouse;
 using UnityEngine.Assertions;
+using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 namespace Code.Scripts.Source.GameFSM.States
@@ -17,7 +18,7 @@ namespace Code.Scripts.Source.GameFSM.States
         public bool PuzzleSolved { get; private set; }
 
         [SerializeField] private List<PlantSlot> _plantSlots = new(3);
-         
+        [FormerlySerializedAs("_animators")] [SerializeField] private List<Animator> _ivyAnimators;
         [SerializeField] private List<string> _correctPlants;
         [SerializeField]private Transform _PlantSlotContainer;
         private GameStateManager _ctx;
@@ -110,9 +111,16 @@ namespace Code.Scripts.Source.GameFSM.States
                 foreach (Transform child in _PlantSlotContainer)
                 {
                     PlantSlot slot = child.GetComponent<PlantSlot>();
-                    if (slot)
-                        _plantSlots.Add(slot);
+                    if (slot) _plantSlots.Add(slot);
+                    
+                    Animator ivyAnimator = child.GetComponent<Animator>();
+                    if (ivyAnimator) _ivyAnimators.Add(ivyAnimator);
                 }
+            }
+
+            foreach (Animator ivyAnimator in _ivyAnimators)
+            {
+                ivyAnimator.SetTrigger("Sleep");
             }
         }
     }

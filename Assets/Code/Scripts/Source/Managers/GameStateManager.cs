@@ -28,6 +28,9 @@ namespace Code.Scripts.Source.Managers
         public InputAction MenuButtonInteraction { get; private set; }
 
         private List<NearFarInteractor> _xrNearFarInteractors;
+        
+        public bool GreenHouseIsLocked = true;
+        
 
         // ---
 
