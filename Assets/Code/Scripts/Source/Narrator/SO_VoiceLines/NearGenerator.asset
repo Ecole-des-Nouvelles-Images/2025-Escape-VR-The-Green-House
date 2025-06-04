@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86003470c2a24dfea6af8ce3eedcd5c3, type: 3}
   m_Name: NearGenerator
   m_EditorClassIdentifier: 
-  <Record>k__BackingField: {fileID: 8300000, guid: 51b8e0a35bcded446801d900ef9e769b, type: 3}
-  <Subtitle>k__BackingField: "Il semble que le courant ait \xE9t\xE9 coup\xE9 ici.
-    Ca devait s\xFBrement activer un m\xE9canisme."
+  <Record>k__BackingField: {fileID: 8300000, guid: ffcd228273b611441a83731ccfb327c7, type: 3}
+  <Subtitle>k__BackingField: "La cr\xE9ature a vol\xE9 le fusible du g\xE9n\xE9rateur.
+    Je dois aller le r\xE9cup\xE9rer."

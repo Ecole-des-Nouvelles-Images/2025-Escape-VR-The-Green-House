@@ -8,13 +8,21 @@ namespace Code.Scripts.Source.Narrator
     public class ProximityNarrator : MonoBehaviour
     {
         [SerializeField] private VoiceLineSO _proximityNarratorVoiceLine;
+
+        private bool _isStopped;
         
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("MainCamera"))
+            if (other.CompareTag("MainCamera") && !_isStopped)
             {
                 Narrator.Instance.PlayVoiceLine(_proximityNarratorVoiceLine);
+                _isStopped = true;
             }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            _isStopped = false;
         }
     }
 }

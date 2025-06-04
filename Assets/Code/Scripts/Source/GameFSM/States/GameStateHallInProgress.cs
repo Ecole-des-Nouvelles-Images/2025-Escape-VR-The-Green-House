@@ -10,7 +10,6 @@ namespace Code.Scripts.Source.GameFSM.States
     public class GameStateHallInProgress: GameBaseState
     {
         [SerializeField] private VoiceLineSO _spawnVoiceLine;
-
         public Action<GameBaseState, bool, bool> OnCodeFound;
         public Action<string, int> OnRotated;
 
@@ -21,8 +20,7 @@ namespace Code.Scripts.Source.GameFSM.States
         public override void EnterState(GameStateManager context)
         {
             base.EnterState(context);
-            context.StartCoroutine(DelayVoiceLinePlayback(2.5f));
-
+            Narrator.Narrator.Instance.StartCoroutine(Narrator.Narrator.Instance.PlayVoiceLineWithDelay(_spawnVoiceLine, 2.5f));
             _ctx = context;
             _currentCode = new [] {0, 0, 0, 0};
 
@@ -74,19 +72,6 @@ namespace Code.Scripts.Source.GameFSM.States
             OnCodeFound?.Invoke(_ctx.GameStates.HallResolved, false, false);
             //animation
             //disable padlock
-        }
-
-        IEnumerator DelayVoiceLinePlayback(float delay)
-        {
-            float t = 0f;
-            while (t < 1)
-            {
-                t += Time.deltaTime / delay;
-                yield return null;
-            }
-            
-            Narrator.Narrator.Instance.PlayVoiceLine(_spawnVoiceLine);
-
         }
     }
 }
