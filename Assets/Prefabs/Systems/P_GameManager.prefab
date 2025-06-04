@@ -53,6 +53,7 @@ MonoBehaviour:
       _exposureAnimationDuration: 2
       _exposureToneDownIntensity: -3.5
     <HallInProgress>k__BackingField:
+      _spawnVoiceLine: {fileID: 11400000, guid: c5652cc848cbe4e45af04a4b5d7d8c82, type: 2}
       _correctCode: 02000000070000000300000006000000
     <HallResolved>k__BackingField:
       _openCaseAsset: {fileID: 11400000, guid: 8427ed4ff154bd2449bf6a212df5d291, type: 2}
@@ -63,9 +64,16 @@ MonoBehaviour:
       - Mutation
       - Conscience
       - "R\xE9volte"
+      _bookSocketsContainer: {fileID: 0}
+      _bookSockets: []
+      _biblioAnimator: {fileID: 0}
     <GreenhouseInProgress>k__BackingField:
       _plantSlots: []
-      _correctPlants: []
+      _correctPlants:
+      - Coquelicot
+      - Pissenlit
+      - Lavande
+      _PlantSlotContainer: {fileID: 0}
 --- !u!114 &2704735089963445191
 MonoBehaviour:
   m_ObjectHideFlags: 0

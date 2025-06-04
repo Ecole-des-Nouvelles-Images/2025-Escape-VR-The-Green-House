@@ -2,31 +2,31 @@ namespace Code.Scripts.Source.GameFSM.States
 {
     public enum GameStatesIndex
     {
-        Uninitialized = 0,
-        MainMenu,
-        Launch,
-        Pause,
+        GameStateUninitialized,
+        GameStateMainMenu,
+        GameStateLaunch,
+        GameStatePause,
 
-        HallIntro,
-        HallInProgress,
-        HallResolved,
+        GameStateHallIntro,
+        GameStateHallInProgress,
+        GameStateHallResolved,
 
-        LoungeIntro,
-        LoungePhase1,
-        LoungePhase2,
-        LoungeResolved,
+        GameStateLoungeIntro,
+        GameStateLoungePhase1,
+        GameStateLoungePhase2,
+        GameStateLoungeResolved,
 
-        BackyardTransition,
-        GreenhouseIntro,
-        GreenhouseInProgress,
-        GreenhouseResolved,
+        GameStateBackyardTransition,
+        GameStateGreenhouseIntro,
+        GameStateGreenhouseInProgress,
+        GameStateGreenhouseResolved,
 
-        LaboratoryIntro,
-        LaboratoryPhase1,
-        LaboratoryPhase2,
-        LaboratoryResolved,
+        GameStateLaboratoryIntro,
+        GameStateLaboratoryPhase1,
+        GameStateLaboratoryPhase2,
+        GameStateLaboratoryResolved,
 
-        EscapeRun,
-        GameOver
+        GameStateEscapeRun,
+        GameStateGameOver
     }
 }

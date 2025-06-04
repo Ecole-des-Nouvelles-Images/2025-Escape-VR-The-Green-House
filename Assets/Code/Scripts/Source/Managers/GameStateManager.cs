@@ -69,7 +69,7 @@ namespace Code.Scripts.Source.Managers
             {
                 if (CurrentState != GameStates.MainMenu)
                 {
-                    PauseGame(); 
+                    PauseGame();
                 }
                 return;
             }
@@ -158,6 +158,11 @@ namespace Code.Scripts.Source.Managers
         {
             _playerXROrigin.MatchOriginUpOriginForward(_playerXROrigin.transform.up, _playerXROrigin.transform.forward);
             Debug.Log("[GameStateManager] Player XROrigin re-centered.");
+        }
+
+        public bool IsCurrentStateMatch(GameStatesIndex stateIndex)
+        {
+            return CurrentState.GetType().Name == stateIndex.ToString();
         }
     }
 }

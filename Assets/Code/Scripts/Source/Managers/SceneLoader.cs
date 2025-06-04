@@ -43,7 +43,7 @@ namespace Code.Scripts.Source.Managers
         private void Awake()
         {
             BuildSceneDatabase();
-            _transitionManager = new(_fadeDuration, _fadeCurve);
+            _transitionManager = new SceneTransitionManager(_fadeDuration, _fadeCurve);
         }
 
         private void Start()
@@ -193,6 +193,7 @@ namespace Code.Scripts.Source.Managers
                 SceneManager.SetActiveScene(SceneManager.GetSceneByName(scene));
                 Debug.Log($"[SceneLoader] Scene {{{SceneManager.GetActiveScene().name}}} is now active.");
             }
+
             _transitionManager.Crossfade.FadeOut();
 
             OnSceneChanged?.Invoke();
