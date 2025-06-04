@@ -56,7 +56,7 @@ Material:
     m_Floats:
     - _Clip: 0.864
     - _DecayPultiply: 7.2
-    - _Grown: 0
+    - _Grown: 1
     - _Metallic: 0.055
     - _NormalStrenght: 1
     - _QueueControl: 0

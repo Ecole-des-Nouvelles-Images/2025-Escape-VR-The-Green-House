@@ -1102,6 +1102,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8398763493689499815, guid: c10e07d28e2b0a943b1fb5dfb00a4013, type: 3}
+      propertyPath: ClipsIndex.<Seed>k__BackingField
+      value: 
+      objectReference: {fileID: 8300000, guid: 65d1e8069150d3840a95e35471db405d, type: 3}
+    - target: {fileID: 8398763493689499815, guid: c10e07d28e2b0a943b1fb5dfb00a4013, type: 3}
+      propertyPath: ClipsIndex.<Impact>k__BackingField
+      value: 
+      objectReference: {fileID: 8300000, guid: 5fd510b83415f1d4b88e9401a93a3e6a, type: 3}
+    - target: {fileID: 8398763493689499815, guid: c10e07d28e2b0a943b1fb5dfb00a4013, type: 3}
+      propertyPath: ClipsIndex.<WaterCan>k__BackingField
+      value: 
+      objectReference: {fileID: 8300000, guid: 081724f531bd03748b0c25e24ee0c40a, type: 3}
+    - target: {fileID: 8398763493689499815, guid: c10e07d28e2b0a943b1fb5dfb00a4013, type: 3}
+      propertyPath: ClipsIndex.<GrownPlant>k__BackingField
+      value: 
+      objectReference: {fileID: 8300000, guid: 84096edb1ff2a32408165ec4bab050c7, type: 3}
+    - target: {fileID: 8398763493689499815, guid: c10e07d28e2b0a943b1fb5dfb00a4013, type: 3}
+      propertyPath: ClipsIndex.<ObjectDrop>k__BackingField
+      value: 
+      objectReference: {fileID: 8300000, guid: 8034fe915f819a742899aea2718a63eb, type: 3}
+    - target: {fileID: 8398763493689499815, guid: c10e07d28e2b0a943b1fb5dfb00a4013, type: 3}
+      propertyPath: ClipsIndex.<ObjectGrab>k__BackingField
+      value: 
+      objectReference: {fileID: 8300000, guid: 93dc7df2265939a45bed1ff4c24ed7a3, type: 3}
+    - target: {fileID: 8398763493689499815, guid: c10e07d28e2b0a943b1fb5dfb00a4013, type: 3}
+      propertyPath: ClipsIndex.<PadlockZoom>k__BackingField
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c499023a13be694cb6bfee5e2a496c1, type: 3}
     - target: {fileID: 8874438760460186290, guid: c10e07d28e2b0a943b1fb5dfb00a4013, type: 3}
       propertyPath: m_Name
       value: P_AudioManager

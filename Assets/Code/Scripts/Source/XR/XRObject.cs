@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 namespace Code.Scripts.Source.XR
 {
@@ -6,6 +7,7 @@ namespace Code.Scripts.Source.XR
     public class XRObject : XRObjectBase
     {
         [SerializeField] private ParticleSystem _respawnParticules;
+       
         private void Awake()
         {
             Init();
@@ -21,5 +23,7 @@ namespace Code.Scripts.Source.XR
             if (_respawnParticules) { _respawnParticules.Play(); }
             base.Respawn();
         }
+        
+        
     }
 }

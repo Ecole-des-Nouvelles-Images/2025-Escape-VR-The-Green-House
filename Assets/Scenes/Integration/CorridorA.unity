@@ -1157,8 +1157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _drawerType: 0
-  _openThreshold: 0.1
-  _deadZone: 0.005
+  _soundDelay: 2
+  _movementThreshold: 0.001
 --- !u!82 &615902095
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2066,7 +2066,7 @@ Transform:
   m_GameObject: {fileID: 1577538427}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.238, y: 1.162, z: -1.595}
+  m_LocalPosition: {x: 0.176, y: 1.162, z: -1.595}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2106,7 +2106,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0.7924528, g: 0.5903542, b: 0.31025273, a: 1}
-  m_Intensity: 0.1
+  m_Intensity: 0.05
   m_Range: 2.78
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

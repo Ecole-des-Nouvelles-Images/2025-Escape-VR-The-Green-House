@@ -23,6 +23,8 @@ namespace Code.Scripts.Source.Audio
         [field:SerializeField] public AudioClip OpenDoor { get; private set; }
         [field:SerializeField] public AudioClip InsertKey { get; private set; }
         [field:SerializeField] public AudioClip ObjectDrop { get; private set; }
+        [field:SerializeField] public AudioClip ObjectGrab { get; private set; }
+        [field:SerializeField] public AudioClip Impact { get; private set; }
 
         [Header("Hall")]
         [field:SerializeField] public AudioClip PadlockWheel { get; private set; }
