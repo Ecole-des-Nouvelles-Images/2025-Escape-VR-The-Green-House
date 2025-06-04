@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using Code.Scripts.Utils;
 using UnityEngine;
 
@@ -21,7 +23,20 @@ namespace Code.Scripts.Source.Narrator
             _audioSource.clip = voiceLine.Record;
             _audioSource.Play();
             
-             subtitleModule.ShowSubtitle(voiceLine.Subtitle, voiceLine.Record.length + 5f);
+             subtitleModule.ShowSubtitle(voiceLine.Subtitle, voiceLine.Record.length);
+        }
+        
+        
+        public IEnumerator PlayVoiceLineWithDelay(VoiceLineSO voiceLine, float delay)
+        {
+            float t = 0f;
+            while (t < 1)
+            {
+                t += Time.deltaTime / delay;
+                yield return null;
+            }
+            PlayVoiceLine(voiceLine);
         }
     }
+    
 }

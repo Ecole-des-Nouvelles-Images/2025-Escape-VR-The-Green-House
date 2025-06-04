@@ -457,7 +457,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _drawerType: 0
   _soundDelay: 2
-  _movementThreshold: 0.001
+  _movementThreshold: 0.05
+  _useXAxis: 1
 --- !u!1 &664052723042597417
 GameObject:
   m_ObjectHideFlags: 0

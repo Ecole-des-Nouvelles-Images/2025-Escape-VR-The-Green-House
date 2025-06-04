@@ -714,9 +714,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1024762123}
     - target: {fileID: 1539064653356413357, guid: 742799b207525b04eaabc71ed4ea37ca, type: 3}
-      propertyPath: <GameStates>k__BackingField.<HallInProgress>k__BackingField._spawnVoiceLine
+      propertyPath: <GameStates>k__BackingField.<HallInProgress>k__BackingField._walletOpenVoiceLine
       value: 
-      objectReference: {fileID: 11400000, guid: c5652cc848cbe4e45af04a4b5d7d8c82, type: 2}
+      objectReference: {fileID: 11400000, guid: f917d165eb517684fb90092bbba4333a, type: 2}
     - target: {fileID: 1539064653356413357, guid: 742799b207525b04eaabc71ed4ea37ca, type: 3}
       propertyPath: <GameStates>k__BackingField.<GreenhouseInProgress>k__BackingField._correctPlants.Array.size
       value: 3
