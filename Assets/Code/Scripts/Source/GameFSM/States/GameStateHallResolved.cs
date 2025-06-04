@@ -1,7 +1,9 @@
 using System;
 using Code.Scripts.Source.Managers;
+using Code.Scripts.Source.Narrator;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Serialization;
 
 
 namespace Code.Scripts.Source.GameFSM.States
@@ -10,6 +12,7 @@ namespace Code.Scripts.Source.GameFSM.States
     public class GameStateHallResolved: GameBaseState
     {
         private PlayableDirector _playableDirector;
+        [SerializeField] private VoiceLineSO _openWalletVoiceLine;
         [SerializeField] private PlayableAsset _openCaseAsset;
         public override void EnterState(GameStateManager context)
         {
@@ -20,6 +23,7 @@ namespace Code.Scripts.Source.GameFSM.States
                 throw new NullReferenceException("HallPlayableDirector not found");
             }
             OpenCase();
+            Narrator.Narrator.Instance.StartCoroutine(Narrator.Narrator.Instance.PlayVoiceLineWithDelay(_openWalletVoiceLine, 1f));
         }
 
         public override void UpdateState(GameStateManager context)

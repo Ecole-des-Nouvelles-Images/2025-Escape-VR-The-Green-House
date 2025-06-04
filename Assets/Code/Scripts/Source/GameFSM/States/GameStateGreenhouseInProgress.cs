@@ -5,13 +5,15 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using Code.Scripts.Source.Gameplay.GreenHouse;
+using UnityEngine.Assertions;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 namespace Code.Scripts.Source.GameFSM.States
 {
     [Serializable]
     public class GameStateGreenhouseInProgress : GameBaseState
     {
-        public static Action OnPlantGrown;
+        public Action OnPlantGrown;
         public bool PuzzleSolved { get; private set; }
 
         [SerializeField] private List<PlantSlot> _plantSlots = new(3);
@@ -20,16 +22,19 @@ namespace Code.Scripts.Source.GameFSM.States
         [SerializeField]private Transform _PlantSlotContainer;
         private GameStateManager _ctx;
         private Action<GameBaseState, bool, bool> OnPuzzleSolved;
+        private XRGrabInteractable _fuse;
         
-        private bool _initialized;
+        private bool _initialized = false;
 
         public override void EnterState(GameStateManager context)
         {
             base.EnterState(context);
 
+            Debug.Log($"[GameStateGreehouseInProgress] Initialized state = {_initialized}");
+            
+            _initialized = false;
             if (!_initialized)
                 Initialize(context);
-            
             
             _ctx = context;
             OnPuzzleSolved += context.SwitchState;
@@ -64,39 +69,51 @@ namespace Code.Scripts.Source.GameFSM.States
                 // puzlle solved
                 Debug.Log("puzzle slved");
                 OnPuzzleSolved.Invoke(_ctx.GameStates.GreenhouseResolved, false, false);
+                PuzzleSolved = true;
+                _fuse.enabled = true;
+
             }
         }
         
         
         private void Initialize(GameStateManager ctx)
         {
-            ctx.StartCoroutine(GetPlantSlots());
+            ctx.StopAllCoroutines();
+            Coroutine c = ctx.StartCoroutine(GetPlantSlots());
+            
             _initialized = true;
         }
-        
-        
+
+
         private IEnumerator GetPlantSlots()
         {
-            while (SceneLoader.Instance.ActiveScene.name != "Lounge")
+            while (SceneLoader.Instance.ActiveScene.name != "Greenhouse")
             {
                 yield return null;
             }
 
+            Debug.Log("[GameStateGreehouseInProgress] Active scene valid");
+
             if (!_PlantSlotContainer)
             {
-              _PlantSlotContainer = GameObject.FindGameObjectWithTag("PlantSlotContainer").transform;
-              //  _biblioAnimator = _bookSocketsContainer.parent.GetComponent<Animator>();
+                _PlantSlotContainer = GameObject.FindGameObjectWithTag("PlantSlotContainer").transform;
+                _fuse = _PlantSlotContainer.GetComponentInChildren<XRGrabInteractable>();
+                
+                _fuse.enabled = false;
 
                 if (!_PlantSlotContainer)
-                    throw new Exception("[GameStateLoungePhase2] Book sockets container not found.");
+                    Debug.LogError("[GameStateGreehouseInProgress] Could not find plant slot container");
             }
 
-            if (_plantSlots.Count == 0)
+            if (_plantSlots.Count <= 0)
             {
                 foreach (Transform child in _PlantSlotContainer)
-                    _plantSlots.Add(child.GetComponent<PlantSlot>());
+                {
+                    PlantSlot slot = child.GetComponent<PlantSlot>();
+                    if (slot)
+                        _plantSlots.Add(slot);
+                }
             }
         }
-        
     }
 }

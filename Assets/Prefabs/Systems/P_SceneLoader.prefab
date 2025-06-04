@@ -52,6 +52,7 @@ MonoBehaviour:
   - CorridorB
   - Greenhouse
   - Laboratory
+  - Credits
   _fadeDuration: 2
   _fadeCurve:
     serializedVersion: 2

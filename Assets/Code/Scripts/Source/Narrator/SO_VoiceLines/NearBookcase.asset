@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86003470c2a24dfea6af8ce3eedcd5c3, type: 3}
   m_Name: NearBookcase
   m_EditorClassIdentifier: 
-  <Record>k__BackingField: {fileID: 0}
-  <Subtitle>k__BackingField: "J'ai l'impression qu'il manque des livres sur cette
-    \xE9tag\xE8re."
+  <Record>k__BackingField: {fileID: 8300000, guid: 6f29a5cd5f69e2140866f188d77d45ab, type: 3}
+  <Subtitle>k__BackingField: "Bizarre... J'ai l'impression qu'il manque des livres
+    sur cette \xE9tag\xE8re."

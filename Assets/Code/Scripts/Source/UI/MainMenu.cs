@@ -99,7 +99,7 @@ namespace Code.Scripts.Source.UI
         private void StartGame()
         {
             HideAllPanels();
-            GameStateManager.Instance.SwitchState(GameStateManager.Instance.GameStates.Launch);
+            GameStateManager.Instance.SwitchState(GameStateManager.Instance.GameStates.HallIntro);
             SceneLoader.Instance.SwitchScene(SceneType.Hall);
         }
 

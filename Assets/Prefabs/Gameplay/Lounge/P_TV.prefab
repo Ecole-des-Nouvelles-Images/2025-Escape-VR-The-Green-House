@@ -55,6 +55,7 @@ MonoBehaviour:
   _remoteInteractable: {fileID: 0}
   _tvlight: {fileID: 0}
   _tvTapeAudioSource: {fileID: 1861997999924035656}
+  _tvOffVoiceLine: {fileID: 0}
 --- !u!95 &2719646747124396024
 Animator:
   serializedVersion: 7
@@ -359,7 +360,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 20b76645160230441b0a24a7e35a9e4a, type: 3}
   m_Resource: {fileID: 8300000, guid: 20b76645160230441b0a24a7e35a9e4a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

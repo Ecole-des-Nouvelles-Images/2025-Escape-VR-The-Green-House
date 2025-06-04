@@ -1,8 +1,11 @@
+using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.XR;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using Code.Scripts.Source.Narrator;
+
 
 namespace Code.Scripts.Source.Gameplay.Lounge
 {
@@ -21,6 +24,7 @@ namespace Code.Scripts.Source.Gameplay.Lounge
     
         [Header("Sound Effect")]
         [SerializeField] private AudioSource _tvTapeAudioSource;
+        [SerializeField] private VoiceLineSO _tvOffVoiceLine;
         
         private VideoPlayer _videoPlayer;
         private Animator _animator;
@@ -63,11 +67,18 @@ namespace Code.Scripts.Source.Gameplay.Lounge
         [ContextMenu("Turn On Tv")]
         private void TurnOnTv()
         {
-            _tvlight.enabled = true;
-            _tvOn = true;
-            _videoPlayer.isLooping = true;
-            PlayVideo(_cassetteInserted ? _VhsVideoClip : _TvStaticVideoClip);
-            _tvScreenMaterial.color = _tvOnColor;
+            if (GameStateManager.Instance.GameStates.LoungePhase2._fusePlugged)
+            {
+                _tvlight.enabled = true;
+                _tvOn = true;
+                _videoPlayer.isLooping = true;
+                PlayVideo(_cassetteInserted ? _VhsVideoClip : _TvStaticVideoClip);
+                _tvScreenMaterial.color = _tvOnColor;
+            }
+            else
+            {
+                Narrator.Narrator.Instance.PlayVoiceLine(_tvOffVoiceLine);
+            }
         }
     
         private void TurnOffTv()

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Code.Scripts.Source.Audio
 {
@@ -8,11 +7,12 @@ namespace Code.Scripts.Source.Audio
     {
         [SerializeField] private DrawerType _drawerType;
         [SerializeField] private float _soundDelay = 2f;
-        [SerializeField] private float _movementThreshold = 0.001f;
+        [SerializeField] private float _movementThreshold = 0.05f;
+        [SerializeField] private bool _useXAxis;
 
         private AudioSource _audioSource;
         private AudioClip _moveSound;
-        private float _lastZ;
+        private float _lastPos;
         private float _nextSoundTime;
 
         private enum DrawerType
@@ -26,7 +26,7 @@ namespace Code.Scripts.Source.Audio
         private void Start()
         {
             _audioSource = GetComponent<AudioSource>();
-            _lastZ = transform.localPosition.z;
+            _lastPos = GetAxisPosition();
 
             switch (_drawerType)
             {
@@ -49,8 +49,8 @@ namespace Code.Scripts.Source.Audio
 
         private void Update()
         {
-            float currentZ = transform.localPosition.z;
-            float movement = Mathf.Abs(currentZ - _lastZ);
+            float currentPos = GetAxisPosition();
+            float movement = Mathf.Abs(currentPos - _lastPos);
 
             if (movement > _movementThreshold && Time.time >= _nextSoundTime)
             {
@@ -58,7 +58,12 @@ namespace Code.Scripts.Source.Audio
                 _nextSoundTime = Time.time + _soundDelay;
             }
 
-            _lastZ = currentZ;
+            _lastPos = currentPos;
+        }
+
+        private float GetAxisPosition()
+        {
+            return _useXAxis ? transform.localPosition.x : transform.localPosition.z;
         }
     }
 }
