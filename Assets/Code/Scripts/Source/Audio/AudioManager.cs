@@ -110,7 +110,7 @@ namespace Code.Scripts.Source.Audio
         /// <param name="value">Normalized volume (automatically clamped between [0,1])</param>
         private void UpdateVolume(string mixerParameter, float value)
         {
-            float decibels = -80 * (1 - Mathf.Clamp(value, 0, 1));
+            float decibels = -40 * (1 - Mathf.Clamp(value, 0, 1));
 
             _mixerSystem.SetFloat(mixerParameter, decibels);
         }
@@ -123,7 +123,7 @@ namespace Code.Scripts.Source.Audio
         /// <param name="value">Unclamped normalized volume</param>
         public void UpdateVolumeUnclamped(string mixerParameter, float value)
         {
-            float decibels = -80 * (1 - value);
+            float decibels = -40 * (1 - value);
 
             _mixerSystem.SetFloat(mixerParameter, decibels);
         }

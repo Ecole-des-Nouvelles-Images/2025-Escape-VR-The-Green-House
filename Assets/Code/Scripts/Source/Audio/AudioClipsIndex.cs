@@ -31,6 +31,7 @@ namespace Code.Scripts.Source.Audio
         [field:SerializeField] public AudioClip PadlockZoom { get; private set; }
         
         [Header("Lounge")]
+        [field:SerializeField] public AudioClip BiblioOpen { get; private set; }
         
         [Header("Drawers/Doors")]
         [field:SerializeField] public AudioClip OpenDrawer1 { get; private set; }

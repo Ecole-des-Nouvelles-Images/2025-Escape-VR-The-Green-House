@@ -13,6 +13,7 @@ namespace Code.Scripts.Source.GameFSM
         public Animator animator;
         public UnityEvent OnTrigered;
         private bool _isTriggered = false;
+        
         private void OnTriggerEnter(Collider other)
         {
             if (_isTriggered) return;

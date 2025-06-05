@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Armature|Armature|mixamo_com|Layer0
+  m_Name: RunToWindow
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -4791504522942941401, guid: 974acef71cf0b7f4d8d40af77d56e992, type: 3}
+  m_Motion: {fileID: 7400000, guid: 5dccf1ffd5cd9d241b94b48886e515ba, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

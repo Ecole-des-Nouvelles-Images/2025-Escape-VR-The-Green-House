@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86003470c2a24dfea6af8ce3eedcd5c3, type: 3}
   m_Name: NearCorridorBDoor
   m_EditorClassIdentifier: 
-  <Record>k__BackingField: {fileID: 8300000, guid: ffcd228273b611441a83731ccfb327c7, type: 3}
-  <Subtitle>k__BackingField: "La cr\xE9ature a vol\xE9 le fusible du g\xE9n\xE9rateur.
-    Je dois aller le r\xE9cup\xE9rer."
+  <Record>k__BackingField: {fileID: 8300000, guid: 82d6280722bbd8441a002d6b5c470912, type: 3}
+  <Subtitle>k__BackingField: "Je devrais plut\xF4t explorer la salle pr\xE9c\xE9dente
+    avant d'aller l\xE0-bas. "

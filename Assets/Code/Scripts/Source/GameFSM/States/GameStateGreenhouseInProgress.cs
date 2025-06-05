@@ -72,7 +72,12 @@ namespace Code.Scripts.Source.GameFSM.States
                 OnPuzzleSolved.Invoke(_ctx.GameStates.GreenhouseResolved, false, false);
                 PuzzleSolved = true;
                 _fuse.enabled = true;
+                _fuse.GetComponent<Rigidbody>().isKinematic = false;
 
+                foreach (Animator ivyAnimator in _ivyAnimators)
+                {
+                    ivyAnimator.SetTrigger("Sleep");
+                }
             }
         }
         
@@ -116,11 +121,6 @@ namespace Code.Scripts.Source.GameFSM.States
                     Animator ivyAnimator = child.GetComponent<Animator>();
                     if (ivyAnimator) _ivyAnimators.Add(ivyAnimator);
                 }
-            }
-
-            foreach (Animator ivyAnimator in _ivyAnimators)
-            {
-                ivyAnimator.SetTrigger("Sleep");
             }
         }
     }

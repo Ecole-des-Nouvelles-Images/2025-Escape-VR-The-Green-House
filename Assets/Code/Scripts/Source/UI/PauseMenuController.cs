@@ -116,13 +116,13 @@ namespace Code.Scripts.Source.UI
 
         public void ShowPausePanel()
         {
-            //_root.DOScale(1 * _scale, 1f).SetEase(Ease.OutBounce);
+            _root.DOScale(1 * _scale, 1f).SetEase(Ease.OutBounce);
             _root.gameObject.SetActive(true);
         }
 
         public void HidePausePanel()
         {
-            //_root.DOScale(0 * _scale, 1f).SetEase(Ease.InBounce);
+            _root.DOScale(0 * _scale, 1f).SetEase(Ease.InBounce);
             _root.gameObject.SetActive(false);
         }
 

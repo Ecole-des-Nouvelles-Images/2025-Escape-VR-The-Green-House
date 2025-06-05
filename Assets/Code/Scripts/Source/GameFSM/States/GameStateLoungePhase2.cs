@@ -22,6 +22,7 @@ namespace Code.Scripts.Source.GameFSM.States
         [SerializeField]private Transform _bookSocketsContainer;
         [SerializeField] private List<XRSocketInteractor> _bookSockets = new(5);
         [SerializeField]private Animator _biblioAnimator;
+        [SerializeField]private AudioSource _biblioAudio;
 
         private bool _initialized;
         public bool _fusePlugged;
@@ -73,6 +74,7 @@ namespace Code.Scripts.Source.GameFSM.States
             {
                 _bookSocketsContainer = GameObject.FindGameObjectWithTag("LoungeBookSocketsContainer").transform;
                 _biblioAnimator = _bookSocketsContainer.parent.GetComponent<Animator>();
+                _biblioAudio = _biblioAnimator.GetComponent<AudioSource>();
 
                 if (!_bookSocketsContainer)
                     throw new Exception("[GameStateLoungePhase2] Book sockets container not found.");
@@ -102,6 +104,7 @@ namespace Code.Scripts.Source.GameFSM.States
             _puzzleSolved = true;
             _onPuzzleSolved.Invoke(_ctx.GameStates.LaboratoryPhase1, false, false);
             _biblioAnimator.SetTrigger("Open");
+            _biblioAudio.Play();
             Debug.Log("[GameStateLoungePhase2] Puzzle solved!");
         }
 

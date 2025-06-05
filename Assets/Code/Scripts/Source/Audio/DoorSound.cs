@@ -21,6 +21,7 @@ namespace Code.Scripts.Source.Audio
             _audioSource = GetComponent<AudioSource>();
             _openSound = AudioManager.Instance.ClipsIndex.OpenDoor1;
             _closeSound = AudioManager.Instance.ClipsIndex.CloseDoor1;
+            _audioSource.outputAudioMixerGroup = AudioManager.Instance.SFXMixerModule;
         }
 
         private void Update()
