@@ -113,30 +113,30 @@ namespace Code.Scripts.Source.UI
 
         private void HideAllPanels()
         {
-            _mainMenuPanel.DOFade(0, _fadeDuration);
-            _optionsPanel.DOFade(0, _fadeDuration);
-            _creditsPanel.DOFade(0, _fadeDuration);
+            _mainMenuPanel.gameObject.SetActive(false);
+            _optionsPanel.gameObject.SetActive(false);
+            _creditsPanel.gameObject.SetActive(false);
         }
 
         private void EnableMainMenuPanel()
         {
-            _mainMenuPanel.DOFade(1, _fadeDuration);
-            _optionsPanel.DOFade(0, _fadeDuration);
-            _creditsPanel.DOFade(0, _fadeDuration);
+            _mainMenuPanel.gameObject.SetActive(true);
+            _optionsPanel.gameObject.SetActive(false);
+            _creditsPanel.gameObject.SetActive(false);
         }
 
         private void EnableOptionsPanel()
         {
-            _mainMenuPanel.DOFade(0, _fadeDuration);
-            _optionsPanel.DOFade(1, _fadeDuration);
-            _creditsPanel.DOFade(0, _fadeDuration);
+            _mainMenuPanel.gameObject.SetActive(false);
+            _optionsPanel.gameObject.SetActive(true);
+            _creditsPanel.gameObject.SetActive(false);
         }
 
         private void EnableCreditsPanel()
         {
-            _mainMenuPanel.DOFade(0, _fadeDuration);
-            _optionsPanel.DOFade(0, _fadeDuration);
-            _creditsPanel.DOFade(1, _fadeDuration);
+            _mainMenuPanel.gameObject.SetActive(false);
+            _optionsPanel.gameObject.SetActive(false);
+            _creditsPanel.gameObject.SetActive(true);
         }
 
         // ---

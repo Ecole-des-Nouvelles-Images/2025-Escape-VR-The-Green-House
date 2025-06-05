@@ -67,18 +67,11 @@ namespace Code.Scripts.Source.Gameplay.Lounge
         [ContextMenu("Turn On Tv")]
         private void TurnOnTv()
         {
-            if (GameStateManager.Instance.GameStates.LoungePhase2._fusePlugged)
-            {
                 _tvlight.enabled = true;
                 _tvOn = true;
                 _videoPlayer.isLooping = true;
                 PlayVideo(_cassetteInserted ? _VhsVideoClip : _TvStaticVideoClip);
                 _tvScreenMaterial.color = _tvOnColor;
-            }
-            else
-            {
-                Narrator.Narrator.Instance.PlayVoiceLine(_tvOffVoiceLine);
-            }
         }
     
         private void TurnOffTv()
@@ -94,15 +87,24 @@ namespace Code.Scripts.Source.Gameplay.Lounge
       
         private void ToggleTvPower(ActivateEventArgs args)
         {
-            _tvOn = !_tvOn;
-            if (_tvOn)
-            { 
-                TurnOnTv();
+            if (GameStateManager.Instance.GameStates.LoungePhase2._fusePlugged)
+            {
+                _tvOn = !_tvOn;
+                if (_tvOn)
+                { 
+                    TurnOnTv();
+                }
+                else
+                { 
+                    TurnOffTv();
+                }
             }
             else
             { 
-                TurnOffTv();
+                Narrator.Narrator.Instance.PlayVoiceLine(_tvOffVoiceLine);
             }
+
+           
         }
 
         private void PlayVideo(VideoClip clip)
