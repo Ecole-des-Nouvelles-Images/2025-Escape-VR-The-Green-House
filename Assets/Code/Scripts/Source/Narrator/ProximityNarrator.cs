@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Code.Scripts.Source.Narrator
 {
     [RequireComponent(typeof(BoxCollider))]
     public class ProximityNarrator : MonoBehaviour
     {
+        [SerializeField] private UnityEvent _onTrigered;
         [SerializeField] private VoiceLineSO _proximityNarratorVoiceLine;
         [SerializeField] private bool _hasToBePlayedOnce;
 
@@ -23,6 +25,8 @@ namespace Code.Scripts.Source.Narrator
                 Narrator.Instance.PlayVoiceLine(_proximityNarratorVoiceLine);
                 _isStopped = true;
                 _hasBeenPlayed = true;
+               
+                _onTrigered?.Invoke();
             }
             else
             {

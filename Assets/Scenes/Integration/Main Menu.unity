@@ -15990,6 +15990,10 @@ PrefabInstance:
       propertyPath: m_Spacing
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 7741138978655754356, guid: 40b5c5f8989010d489874612906fc22d, type: 3}
+      propertyPath: m_text
+      value: SFX
+      objectReference: {fileID: 0}
     - target: {fileID: 7751494300816856150, guid: 40b5c5f8989010d489874612906fc22d, type: 3}
       propertyPath: m_Name
       value: SFXSlider
