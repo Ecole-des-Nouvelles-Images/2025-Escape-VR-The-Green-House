@@ -43,8 +43,8 @@ namespace Code.Scripts.Source.UI
         [Header("Miscellaneous")]
         [SerializeField] private TMP_Text _appVersion;
 
-        [Header("Animations")]
-        [SerializeField] private float _fadeDuration = 1.5f;
+       [Header("Animations")]
+       [SerializeField] private float _fadeDuration = 1.5f;
 
         private void OnEnable()
         {
@@ -120,23 +120,35 @@ namespace Code.Scripts.Source.UI
 
         private void EnableMainMenuPanel()
         {
-            _mainMenuPanel.gameObject.SetActive(true);
+           /* _mainMenuPanel.gameObject.SetActive(true);
             _optionsPanel.gameObject.SetActive(false);
-            _creditsPanel.gameObject.SetActive(false);
+            _creditsPanel.gameObject.SetActive(false);*/
+
+           _mainMenuPanel.gameObject.transform.DOScale(1, _fadeDuration);
+           _optionsPanel.gameObject.transform.DOScale(0, _fadeDuration);
+           _creditsPanel.gameObject.transform.DOScale(0, _fadeDuration);
         }
 
         private void EnableOptionsPanel()
         {
-            _mainMenuPanel.gameObject.SetActive(false);
+           /* _mainMenuPanel.gameObject.SetActive(false);
             _optionsPanel.gameObject.SetActive(true);
-            _creditsPanel.gameObject.SetActive(false);
+            _creditsPanel.gameObject.SetActive(false);*/
+           
+           _mainMenuPanel.gameObject.transform.DOScale(0, _fadeDuration);
+           _optionsPanel.gameObject.transform.DOScale(1, _fadeDuration);
+           _creditsPanel.gameObject.transform.DOScale(0, _fadeDuration);
         }
 
         private void EnableCreditsPanel()
         {
-            _mainMenuPanel.gameObject.SetActive(false);
+           /* _mainMenuPanel.gameObject.SetActive(false);
             _optionsPanel.gameObject.SetActive(false);
-            _creditsPanel.gameObject.SetActive(true);
+            _creditsPanel.gameObject.SetActive(true);*/
+           
+           _mainMenuPanel.gameObject.transform.DOScale(0, _fadeDuration);
+           _optionsPanel.gameObject.transform.DOScale(0, _fadeDuration);
+           _creditsPanel.gameObject.transform.DOScale(1, _fadeDuration);
         }
 
         // ---

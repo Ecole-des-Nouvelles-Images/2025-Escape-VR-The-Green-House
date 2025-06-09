@@ -1,3 +1,4 @@
+using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.XR;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine.Video;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using Code.Scripts.Source.Narrator;
+using UnityEngine.Audio;
 
 
 namespace Code.Scripts.Source.Gameplay.Lounge
@@ -24,6 +26,7 @@ namespace Code.Scripts.Source.Gameplay.Lounge
     
         [Header("Sound Effect")]
         [SerializeField] private AudioSource _tvTapeAudioSource;
+        [SerializeField] private AudioSource _VideoAudioSource;
         [SerializeField] private VoiceLineSO _tvOffVoiceLine;
         
         private VideoPlayer _videoPlayer;
@@ -61,7 +64,11 @@ namespace Code.Scripts.Source.Gameplay.Lounge
             Destroy(_socketTagInteractor.firstInteractableSelected.transform.gameObject);
             _cassetteInserted = true;
             _tvTapeAudioSource.Play();
-            Invoke("TurnOnTv",2f);
+
+            if (GameStateManager.Instance.GameStates.LoungePhase2._fusePlugged)
+            {
+                Invoke(nameof(TurnOnTv),2f);
+            }
         }
         
         [ContextMenu("Turn On Tv")]
@@ -70,7 +77,16 @@ namespace Code.Scripts.Source.Gameplay.Lounge
                 _tvlight.enabled = true;
                 _tvOn = true;
                 _videoPlayer.isLooping = true;
-                PlayVideo(_cassetteInserted ? _VhsVideoClip : _TvStaticVideoClip);
+
+                if (_cassetteInserted)
+                {
+                    PlayVideo(_VhsVideoClip, AudioManager.Instance.VoicesMixerModule);
+                }
+                else 
+                {
+                    PlayVideo(_TvStaticVideoClip, AudioManager.Instance.SFXMixerModule);
+                }
+             
                 _tvScreenMaterial.color = _tvOnColor;
         }
     
@@ -79,7 +95,7 @@ namespace Code.Scripts.Source.Gameplay.Lounge
             _tvlight.enabled = false;
             _tvOn = false;
             _videoPlayer.isLooping = false;
-            PlayVideo(_turnOffVideoClip);
+            PlayVideo(_turnOffVideoClip,AudioManager.Instance.SFXMixerModule);
             _tvScreenMaterial.color = _tvOffColor;
         }
 
@@ -107,8 +123,9 @@ namespace Code.Scripts.Source.Gameplay.Lounge
            
         }
 
-        private void PlayVideo(VideoClip clip)
+        private void PlayVideo(VideoClip clip, AudioMixerGroup mixer)
         {
+            _VideoAudioSource.outputAudioMixerGroup = mixer;
             _videoPlayer.clip = clip;
             _videoPlayer.Play();
         }

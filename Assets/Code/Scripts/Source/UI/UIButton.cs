@@ -36,7 +36,7 @@ namespace Code.Scripts.Source.UI
         public void OnPointerClick(PointerEventData eventData)
         {
             if (AudioManager.Instance.gameObject.activeSelf)
-                _audio.PlayOneShot(AudioManager.Instance.ClipsIndex.UIButtonHoverEnter);
+                _audio.PlayOneShot(AudioManager.Instance.ClipsIndex.UIButtonSelected);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -49,7 +49,7 @@ namespace Code.Scripts.Source.UI
                 _title.DOColor(_hoverColor, 0.5f);
 
             if (AudioManager.Instance.gameObject.activeSelf)
-                _audio.PlayOneShot(AudioManager.Instance.ClipsIndex.UIButtonSelected);
+                _audio.PlayOneShot(AudioManager.Instance.ClipsIndex.UIButtonHoverEnter);
         }
 
         public void OnPointerExit(PointerEventData eventData)

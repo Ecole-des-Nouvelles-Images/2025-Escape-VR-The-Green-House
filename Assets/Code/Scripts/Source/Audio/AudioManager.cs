@@ -16,11 +16,13 @@ namespace Code.Scripts.Source.Audio
         [SerializeField] [Range(0, 1)] private float _initialMasterVolume = 0.5f;
         [SerializeField] [Range(0, 1)] private float _initialAmbientVolume = 1f;
         [SerializeField] [Range(0, 1)] private float _initialSFXVolume = 1f;
+        [SerializeField] [Range(0, 1)] private float _initialVoicesVolume = 1f;
 
         [Header("Mixer Groups")]
         [field:SerializeField] public AudioMixerGroup MasterMixerModule;
         [field:SerializeField] public AudioMixerGroup AmbientMixerModule;
         [field:SerializeField] public AudioMixerGroup SFXMixerModule;
+        [field:SerializeField] public AudioMixerGroup VoicesMixerModule;
 
         [Header("Ambient Audio Sources")]
         [SerializeField] private AudioSource _musicAudioSource;
@@ -29,6 +31,7 @@ namespace Code.Scripts.Source.Audio
         private static readonly string MasterVolumeParameter = "VolumeMaster";
         private static readonly string AmbientVolumeParameter = "VolumeAmbient";
         private static readonly string SFXVolumeParameter = "VolumeSFX";
+        private static readonly string VoicesVolumeParameter = "VolumeVoices";
         private static readonly string LowpassParameter = "LowPassFreqMaster";
 
         private float _masterVolume;
@@ -40,6 +43,19 @@ namespace Code.Scripts.Source.Audio
                 UpdateVolume(MasterVolumeParameter, value);
             }
         }
+        
+        
+        private float _voicesVolume;
+        public float VoicesVolume {
+            get => _voicesVolume;
+
+            set {
+                _voicesVolume = value;
+                UpdateVolume(VoicesVolumeParameter, value);
+            }
+        }
+        
+        
 
         private float _ambientVolume;
         public float AmbientVolume {
@@ -64,13 +80,14 @@ namespace Code.Scripts.Source.Audio
         private bool _masterVolumeMuted;
         private bool _ambientVolumeMuted;
         private bool _sfxVolumeMuted;
+        private bool _voicesVolumeMuted;
         public bool MasterVolumeMuted {
             get => _masterVolumeMuted;
             set {
                 if (value)
                     UpdateVolume(MasterVolumeParameter, 0);
                 else
-                    UpdateVolume(MasterVolumeParameter, MasterVolume);
+                    UpdateVolume(MasterVolumeParameter, _initialMasterVolume);
                 _masterVolumeMuted = value;
             }
         }
@@ -80,7 +97,7 @@ namespace Code.Scripts.Source.Audio
                 if (value)
                     UpdateVolume(AmbientVolumeParameter, 0);
                 else
-                    UpdateVolume(AmbientVolumeParameter, AmbientVolume);
+                    UpdateVolume(AmbientVolumeParameter, _initialAmbientVolume);
                 _ambientVolumeMuted = value;
             }
         }
@@ -90,8 +107,19 @@ namespace Code.Scripts.Source.Audio
                 if (value)
                     UpdateVolume(SFXVolumeParameter, 0);
                 else
-                    UpdateVolume(SFXVolumeParameter, SFXVolume);
+                    UpdateVolume(SFXVolumeParameter, _initialSFXVolume);
                 _sfxVolumeMuted = value;
+            }
+        }
+        
+        public bool VoicesVolumeMuted {
+            get => _voicesVolumeMuted;
+            set {
+                if (value)
+                    UpdateVolume(VoicesVolumeParameter, 0);
+                else
+                    UpdateVolume(VoicesVolumeParameter, _initialVoicesVolume);
+                _voicesVolumeMuted = value;
             }
         }
 
@@ -100,6 +128,7 @@ namespace Code.Scripts.Source.Audio
             MasterVolume = _initialMasterVolume;
             AmbientVolume = _initialAmbientVolume;
             SFXVolume = _initialSFXVolume;
+            VoicesVolume = _initialVoicesVolume;
         }
 
         /// <summary>
@@ -110,9 +139,17 @@ namespace Code.Scripts.Source.Audio
         /// <param name="value">Normalized volume (automatically clamped between [0,1])</param>
         private void UpdateVolume(string mixerParameter, float value)
         {
-            float decibels = -40 * (1 - Mathf.Clamp(value, 0, 1));
+          /*  float decibels = -80 * (1 - Mathf.Clamp(value, 0, 1));
+
+            _mixerSystem.SetFloat(mixerParameter, decibels);*/
+          
+            // Clamp l'entrée entre un seuil minimum très faible (mais non nul) et 1
+            float clampedValue = Mathf.Clamp(value, 0.0001f, 1f);
+            // Converti en décibels : 0 dB = volume max, -80 dB = quasi silence
+            float decibels = Mathf.Log10(clampedValue) * 20f;
 
             _mixerSystem.SetFloat(mixerParameter, decibels);
+            
         }
 
         /// <summary>
