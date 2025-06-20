@@ -5,8 +5,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using Code.Scripts.Source.Gameplay.GreenHouse;
-using UnityEngine.Assertions;
-using UnityEngine.Serialization;
+using Code.Scripts.Utils;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 namespace Code.Scripts.Source.GameFSM.States
@@ -14,114 +13,114 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStateGreenhouseInProgress : GameBaseState
     {
+        private static readonly int Sleep = Animator.StringToHash("Sleep");
+
+        public override GameStatesIndex StateIndex { get; protected set; } = GameStatesIndex.GameStateGreenhouseInProgress;
+
         public Action OnPlantGrown;
         public bool PuzzleSolved { get; private set; }
 
         [SerializeField] private List<PlantSlot> _plantSlots = new(3);
-        [FormerlySerializedAs("_animators")] [SerializeField] private List<Animator> _ivyAnimators;
+        [SerializeField] private List<Animator> _ivyAnimators;
         [SerializeField] private List<string> _correctPlants;
-        [SerializeField]private Transform _PlantSlotContainer;
+        [SerializeField] private Transform _plantSlotContainer;
+
         private GameStateManager _ctx;
-        private Action<GameBaseState, bool, bool> OnPuzzleSolved;
+        private Action<GameBaseState, bool, bool> _onPuzzleSolved;
         private XRGrabInteractable _fuse;
-        
+
         private bool _initialized = false;
 
         public override void EnterState(GameStateManager context)
         {
-            base.EnterState(context);
+            CustomLogger.LogInfo($"[GameStateGreehouseInProgress] Initialized state = {_initialized}");
 
-            Debug.Log($"[GameStateGreehouseInProgress] Initialized state = {_initialized}");
-            
             _initialized = false;
             if (!_initialized)
                 Initialize(context);
-            
+
             _ctx = context;
-            OnPuzzleSolved += context.SwitchState;
+            _onPuzzleSolved += context.SwitchState;
             OnPlantGrown += CheckPuzzle;
         }
 
         public override void UpdateState(GameStateManager context)
         {
-
         }
 
         public override void ExitState(GameStateManager context)
         {
             OnPlantGrown -= CheckPuzzle;
-            OnPuzzleSolved -= context.SwitchState;
+            _onPuzzleSolved -= context.SwitchState;
         }
 
         private void CheckPuzzle()
         {
+            List<string> grownPlants = new();
+            bool anyNotGrown = false;
+
             if (PuzzleSolved) return;
 
-            if(_plantSlots.Any(slot => !slot.PlantGrowed)) return;
+            foreach (PlantSlot slot in _plantSlots)
+            {
+                if (!slot.PlantGrowed) {
+                    anyNotGrown = true;
+                    break;
+                }
+            }
 
-            var grownPlants = _plantSlots
-                .Select(slot => slot.GetPlantLatinName())
-                .ToList();
+            if (anyNotGrown) return;
+
+            foreach (PlantSlot slot in _plantSlots)
+                grownPlants.Add(slot.GetPlantLatinName());
 
             bool allCorrect = new HashSet<string>(grownPlants).SetEquals(_correctPlants);
 
             if (allCorrect)
             {
-                // puzlle solved
-                Debug.Log("puzzle slved");
-                OnPuzzleSolved.Invoke(_ctx.GameStates.GreenhouseResolved, false, false);
+                _onPuzzleSolved.Invoke(_ctx.GameStates.GreenhouseResolved, false, false);
                 PuzzleSolved = true;
                 _fuse.enabled = true;
                 _fuse.GetComponent<Rigidbody>().isKinematic = false;
 
                 foreach (Animator ivyAnimator in _ivyAnimators)
-                {
-                    ivyAnimator.SetTrigger("Sleep");
-                }
+                    ivyAnimator.SetTrigger(Sleep);
             }
         }
-        
-        
+
         private void Initialize(GameStateManager ctx)
         {
             ctx.StopAllCoroutines();
             Coroutine c = ctx.StartCoroutine(GetPlantSlots());
-            
+
             _initialized = true;
         }
 
 
         private IEnumerator GetPlantSlots()
         {
-            while (SceneLoader.Instance.ActiveScene.name != "Greenhouse")
-            {
-                yield return null;
-            }
+            while (SceneLoader.Instance.ActiveScene.name != "Greenhouse") yield return null;
 
-            Debug.Log("[GameStateGreehouseInProgress] Active scene valid");
-
-            if (!_PlantSlotContainer)
+            if (!_plantSlotContainer)
             {
-                _PlantSlotContainer = GameObject.FindGameObjectWithTag("PlantSlotContainer").transform;
-                _fuse = _PlantSlotContainer.GetComponentInChildren<XRGrabInteractable>();
-                
+                _plantSlotContainer = GameObject.FindGameObjectWithTag("PlantSlotContainer").transform;
+                _fuse = _plantSlotContainer.GetComponentInChildren<XRGrabInteractable>();
+
                 _fuse.enabled = false;
 
-                if (!_PlantSlotContainer)
-                    Debug.LogError("[GameStateGreehouseInProgress] Could not find plant slot container");
+                if (!_plantSlotContainer)
+                    CustomLogger.LogInfo("[GameStateGreehouseInProgress] Could not find plant slot container");
             }
 
             if (_plantSlots.Count <= 0)
-            {
-                foreach (Transform child in _PlantSlotContainer)
+                foreach (Transform child in _plantSlotContainer)
                 {
                     PlantSlot slot = child.GetComponent<PlantSlot>();
                     if (slot) _plantSlots.Add(slot);
-                    
+
                     Animator ivyAnimator = child.GetComponent<Animator>();
                     if (ivyAnimator) _ivyAnimators.Add(ivyAnimator);
                 }
-            }
         }
     }
 }

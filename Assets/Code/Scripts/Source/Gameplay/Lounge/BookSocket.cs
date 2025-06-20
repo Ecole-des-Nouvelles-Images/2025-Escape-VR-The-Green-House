@@ -10,7 +10,7 @@ namespace Code.Scripts.Source.Gameplay.Lounge
     {
         [SerializeField] private VoiceLineSO _fuseWantedVoiceLine;
         private XRSocketInteractor _socket;
-       
+
 
         private void Awake()
         {
@@ -32,15 +32,11 @@ namespace Code.Scripts.Source.Gameplay.Lounge
         private void OnBookPlaced(SelectEnterEventArgs args)
         {
             if (_socket.firstInteractableSelected.transform.CompareTag("Fuse"))
-            {
-                Debug.Log("Fuse placed");
                 GameStateManager.Instance.GameStates.LoungePhase2.OnFusePlugged?.Invoke();
-            }
 
-            else if (!GameStateManager.Instance.GameStates.LoungePhase2._fusePlugged)
-            {
+            else if (!GameStateManager.Instance.GameStates.LoungePhase2.FusePlugged)
                 Narrator.Narrator.Instance.PlayVoiceLine(_fuseWantedVoiceLine);
-            }
+
             GameStateManager.Instance.GameStates.LoungePhase2.OnSocketChanged?.Invoke();
         }
 

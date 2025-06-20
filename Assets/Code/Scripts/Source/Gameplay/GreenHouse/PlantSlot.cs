@@ -1,6 +1,5 @@
 using System;
 using Code.Scripts.Source.Audio;
-using Code.Scripts.Source.GameFSM.States;
 using Code.Scripts.Source.Managers;
 using UnityEngine;
 
@@ -40,7 +39,6 @@ namespace Code.Scripts.Source.Gameplay.GreenHouse
 
         private void PlantSeed(SeedBag seedBag)
         {
-            Debug.Log("seed Plant");
             _DirtHill.SetActive(true);
             _currentSeed = seedBag;
             _currentPlantName = _currentSeed.PlantName;
@@ -50,11 +48,10 @@ namespace Code.Scripts.Source.Gameplay.GreenHouse
 
         private void GrownPlant()
         {
-            Debug.Log("Water Plant");
             PlantGrowed = true;
             Instantiate(CurrentPlantPrefab,_plantSpawnPoint);
             _audioSource.Play();
-            
+
             GameStateManager.Instance.GameStates.GreenhouseInProgress.OnPlantGrown?.Invoke();
             //PlantPuzzle.OnPlantGrown?.Invoke();
         }

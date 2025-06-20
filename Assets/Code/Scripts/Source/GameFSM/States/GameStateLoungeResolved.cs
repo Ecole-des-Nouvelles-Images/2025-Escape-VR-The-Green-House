@@ -6,6 +6,10 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStateLoungeResolved: GameBaseState
     {
+        public override GameStatesIndex StateIndex { get; protected set; } = GameStatesIndex.GameStateLoungeResolved;
+
+        public override void EnterState(GameStateManager context) {}
+
         public override void UpdateState(GameStateManager context)
         {
 

@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.Narrator;
 using UnityEngine;
@@ -9,17 +8,20 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStateHallInProgress: GameBaseState
     {
-        [SerializeField] private VoiceLineSO _spawnVoiceLine;
         public Action<GameBaseState, bool, bool> OnCodeFound;
         public Action<string, int> OnRotated;
 
+        [SerializeField] private VoiceLineSO _spawnVoiceLine;
         [SerializeField] private int[] _correctCode;
-        private int[] _currentCode;
+
         private GameStateManager _ctx;
+
+        private int[] _currentCode;
+
+        public override GameStatesIndex StateIndex { get; protected set; } = GameStatesIndex.GameStateHallInProgress;
 
         public override void EnterState(GameStateManager context)
         {
-            base.EnterState(context);
             Narrator.Narrator.Instance.StartCoroutine(Narrator.Narrator.Instance.PlayVoiceLineWithDelay(_spawnVoiceLine, 2.5f));
             _ctx = context;
             _currentCode = new [] {0, 0, 0, 0};
@@ -35,7 +37,7 @@ namespace Code.Scripts.Source.GameFSM.States
 
         public override void ExitState(GameStateManager context)
         {
-            
+
             OnRotated -= CheckResults;
             OnCodeFound -= context.SwitchState;
         }

@@ -1,49 +1,35 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 namespace Code.Scripts.Source.Gameplay.GreenHouse
 {
-   public class PlantPuzzle : MonoBehaviour
-   {
-     // public static Action OnPlantGrown;
-      public bool PuzzleSolved { get; private set; }
-   
-      [SerializeField] private List<PlantSlot> _plantSlots;
-      [SerializeField] private List<string> _correctPlants;
+    public class PlantPuzzle : MonoBehaviour
+    {
+        public bool PuzzleSolved { get; private set; }
 
-      private void OnEnable()
-      {
-        // OnPlantGrown += CheckPuzzle;
-      }
+        [SerializeField] private List<PlantSlot> _plantSlots;
+        [SerializeField] private List<string> _correctPlants;
 
-      private void OnDisable()
-      {
-        // OnPlantGrown -= CheckPuzzle;
-      }
+        private void CheckPuzzle()
+        {
+            if (PuzzleSolved) return;
 
-      private void CheckPuzzle()
-      {
-         if (PuzzleSolved) return;
-     
-         if(_plantSlots.Any(slot => !slot.PlantGrowed)) return;
-      
-         var grownPlants = _plantSlots
-            .Select(slot => slot.GetPlantLatinName())
-            .ToList();
+            foreach (PlantSlot slot in _plantSlots)
+            {
+                if (!slot.PlantGrowed)
+                    return;
+            }
 
-         bool allCorrect = new HashSet<string>(grownPlants).SetEquals(_correctPlants);
+            List<string> grownPlants = new();
 
-         if (allCorrect)
-         {
-            // puzlle solved
-            Debug.Log("puzzle slved");
-            PuzzleSolved = true;
-         }
-      }
+            foreach (PlantSlot slot in _plantSlots)
+                grownPlants.Add(slot.GetPlantLatinName());
 
-   
+            bool allCorrect = new HashSet<string>(grownPlants).SetEquals(_correctPlants);
 
-   }
+            if (allCorrect)
+                PuzzleSolved = true;
+        }
+    }
 }

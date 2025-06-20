@@ -5,41 +5,44 @@ using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(AudioSource))]
-public class shears : MonoBehaviour
+namespace Code.Scripts.Source.Gameplay.GreenHouse
 {
-    
-    private XRBaseInteractable interactable; 
-    private AudioSource _audioSource;
-    private List<AudioClip> _shearsClips; 
-    private Animator _animator;
-    
-    private void Awake()
+    [RequireComponent(typeof(AudioSource))]
+    public class shears : MonoBehaviour
     {
-       interactable = GetComponent<XRBaseInteractable>();
-       _audioSource = GetComponent<AudioSource>();
-       _animator = GetComponent<Animator>();
-       _audioSource.outputAudioMixerGroup = AudioManager.Instance.SFXMixerModule;
-       _audioSource.playOnAwake = false;
-       _shearsClips = AudioManager.Instance.ClipsIndex.ShearsCut;
-      
+
+        private XRBaseInteractable interactable;
+        private AudioSource _audioSource;
+        private List<AudioClip> _shearsClips;
+        private Animator _animator;
+
+        private void Awake()
+        {
+            interactable = GetComponent<XRBaseInteractable>();
+            _audioSource = GetComponent<AudioSource>();
+            _animator = GetComponent<Animator>();
+            _audioSource.outputAudioMixerGroup = AudioManager.Instance.SFXMixerModule;
+            _audioSource.playOnAwake = false;
+            _shearsClips = AudioManager.Instance.ClipsIndex.ShearsCut;
+
+        }
+
+        void OnEnable()
+        {
+            interactable.activated.AddListener(CutPlant);
+        }
+
+        void OnDisable()
+        {
+            interactable.activated.RemoveListener(CutPlant);
+        }
+
+
+        private void CutPlant(ActivateEventArgs arg0)
+        {
+            _animator.SetTrigger("Cut");
+            _audioSource.clip = _shearsClips[Random.Range(0, _shearsClips.Count)];
+            _audioSource.Play();
+        }
     }
-      
-   void OnEnable()
-   {
-       interactable.activated.AddListener(CutPlant);
-   }
-
-   void OnDisable() 
-   { 
-       interactable.activated.RemoveListener(CutPlant);
-   }
-
-     
-   private void CutPlant(ActivateEventArgs arg0)
-   {
-       _animator.SetTrigger("Cut");
-       _audioSource.clip = _shearsClips[Random.Range(0, _shearsClips.Count)];
-       _audioSource.Play();
-   }
 }

@@ -64,7 +64,7 @@ namespace VRTemplateAssets.Scripts
 #if UNITY_ANDROID
             for (m_CurrentPermissionIdx = 0; m_CurrentPermissionIdx < m_PermissionRequests.Count;)
             {
-                var permission = m_PermissionRequests[m_CurrentPermissionIdx];
+                PermissionRequest permission = m_PermissionRequests[m_CurrentPermissionIdx];
                 if (!permission.m_Enabled)
                 {
                     m_CurrentPermissionIdx++;
@@ -85,7 +85,7 @@ namespace VRTemplateAssets.Scripts
 
             if (permissions.Count > 0)
             {
-                var callbacks = new PermissionCallbacks();
+                PermissionCallbacks callbacks = new PermissionCallbacks();
                 callbacks.PermissionDenied += OnPermissionDenied;
                 callbacks.PermissionGranted += OnPermissionGranted;
 

@@ -65,7 +65,7 @@ namespace Code.Scripts.Source.Gameplay.Lounge
             _cassetteInserted = true;
             _tvTapeAudioSource.Play();
 
-            if (GameStateManager.Instance.GameStates.LoungePhase2._fusePlugged)
+            if (GameStateManager.Instance.GameStates.LoungePhase2.FusePlugged)
             {
                 Invoke(nameof(TurnOnTv),2f);
             }
@@ -103,7 +103,7 @@ namespace Code.Scripts.Source.Gameplay.Lounge
       
         private void ToggleTvPower(ActivateEventArgs args)
         {
-            if (GameStateManager.Instance.GameStates.LoungePhase2._fusePlugged)
+            if (GameStateManager.Instance.GameStates.LoungePhase2.FusePlugged)
             {
                 _tvOn = !_tvOn;
                 if (_tvOn)

@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: bdbc12a8302624446bdf30b4f8aedbf2
+AssetOrigin:
+  serializedVersion: 1
+  productId: 299224
+  packageName: Candle VFX - URP
+  packageVersion: 1.0.01
+  assetPath: Assets/Vefects/Candle VFX URP/Candles/Melted Candle/Meshes/SM_Melted_Candle_02_No_Wick.fbx
+  uploadId: 708942
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -105,10 +112,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 299224
-  packageName: Candle VFX - URP
-  packageVersion: 1.0.01
-  assetPath: Assets/Vefects/Candle VFX URP/Candles/Melted Candle/Meshes/SM_Melted_Candle_02_No_Wick.fbx
-  uploadId: 708942

@@ -1,36 +1,37 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class PersistantObject : MonoBehaviour
+namespace Code.Scripts.Source.XR
 {
-   
-    private XRGrabInteractable grab;
-    void Awake()
+    public class PersistantObject : MonoBehaviour
     {
-        grab = GetComponent<XRGrabInteractable>();
-        grab.selectEntered.AddListener(OnGrab);
-        grab.selectExited.AddListener(OnRelease);
-    }
 
-    void OnDestroy()
-    {
-        grab.selectEntered.RemoveListener(OnGrab);
-        grab.selectExited.RemoveListener(OnRelease);
-    }
-    
-    void OnGrab(SelectEnterEventArgs args)
-    {
-        SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
-        DontDestroyOnLoad(gameObject);
-    }
+        private XRGrabInteractable grab;
+        void Awake()
+        {
+            grab = GetComponent<XRGrabInteractable>();
+            grab.selectEntered.AddListener(OnGrab);
+            grab.selectExited.AddListener(OnRelease);
+        }
 
-    void OnRelease(SelectExitEventArgs args)
-    {
-        //SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
+        void OnDestroy()
+        {
+            grab.selectEntered.RemoveListener(OnGrab);
+            grab.selectExited.RemoveListener(OnRelease);
+        }
+
+        void OnGrab(SelectEnterEventArgs args)
+        {
+            SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
+            DontDestroyOnLoad(gameObject);
+        }
+
+        void OnRelease(SelectExitEventArgs args)
+        {
+            //SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
+        }
+
     }
-    
 }
-

@@ -1,14 +1,14 @@
 using System;
 using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.Managers;
-using Code.Scripts.Source.Narrator;
-using UnityEngine;
 
 namespace Code.Scripts.Source.GameFSM.States
 {
     [Serializable]
     public class GameStateHallIntro : GameBaseState
     {
+        public override GameStatesIndex StateIndex { get; protected set; } = GameStatesIndex.GameStateHallIntro;
+
         public override void EnterState(GameStateManager context)
         {
             AudioManager.Instance.ChangeRain(AudioManager.Instance.ClipsIndex.RainInDoor);

@@ -1,4 +1,5 @@
 ﻿using System;
+using Code.Scripts.Utils;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -36,8 +37,11 @@ namespace Code.Scripts.Source.Types
             _sceneAsset = asset;
             SceneName = asset.name;
 
-            if (SceneType == SceneType.Invalid)
-                Debug.LogError($"Unable to determine the SceneType of scene: {SceneName}. " + $"Verify that scene '{SceneName}' is correctly named.");
+            CustomLogger.Assert(
+                SceneType != SceneType.Invalid,
+                $"Unable to determine the SceneType of scene: {SceneName}. " + $"Verify that scene '{SceneName}' is correctly named.",
+                true
+            );
         }
 
         public static implicit operator string(SceneField sceneField)

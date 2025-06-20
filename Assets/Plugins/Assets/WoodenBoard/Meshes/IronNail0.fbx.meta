@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: d1abc29936fc5654895f071ed87d9fff
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292025
+  packageName: WoodenBoard
+  packageVersion: 1.01
+  assetPath: Assets/PRJ0818_Murakami/WoodenBoard/Meshes/IronNail0.fbx
+  uploadId: 695539
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -26,8 +33,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -117,10 +122,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 292025
-  packageName: WoodenBoard
-  packageVersion: 1.01
-  assetPath: Assets/PRJ0818_Murakami/WoodenBoard/Meshes/IronNail0.fbx
-  uploadId: 695539

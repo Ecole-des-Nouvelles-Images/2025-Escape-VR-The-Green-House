@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
@@ -24,7 +23,7 @@ namespace Code.Scripts.Source.Narrator
         {
             if (subtitleRoutine != null)
             {
-                StopCoroutine(subtitleRoutine); 
+                StopCoroutine(subtitleRoutine);
                 DOTween.Kill(canvasGroup);
             }
             subtitleRoutine = StartCoroutine(HandleSubtitle(subtitle, displayDuration));

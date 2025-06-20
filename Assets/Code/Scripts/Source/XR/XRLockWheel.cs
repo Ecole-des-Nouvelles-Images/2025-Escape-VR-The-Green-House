@@ -70,7 +70,7 @@ namespace Code.Scripts.Source.XR
             public void SetTargetFromVector(Vector3 direction)
             {
                 // Set the target angle
-                var targetAngle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
+                float targetAngle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
 
                 // Return the offset
                 m_CurrentOffset = ShortestAngleDistance(m_BaseAngle, targetAngle, 360.0f);
@@ -260,21 +260,21 @@ namespace Code.Scripts.Source.XR
         void UpdateRotation(bool freshCheck = false)
         {
             // Are we in position offset or direction rotation mode?
-            var interactorTransform = m_Interactor.GetAttachTransform(this);
+            Transform interactorTransform = m_Interactor.GetAttachTransform(this);
 
             // We cache the three potential sources of rotation - the position offset, the forward vector of the controller, and up vector of the controller
             // We store any data used for determining which rotation to use, then flatten the vectors to the local xz plane
-            var localOffset = transform.InverseTransformVector(interactorTransform.position - m_Handle.position);
+            Vector3 localOffset = transform.InverseTransformVector(interactorTransform.position - m_Handle.position);
             localOffset.y = 0.0f;
-            var radiusOffset = transform.TransformVector(localOffset).magnitude;
+            float radiusOffset = transform.TransformVector(localOffset).magnitude;
             localOffset.Normalize();
 
-            var localForward = transform.InverseTransformDirection(interactorTransform.forward);
-            var localY = Math.Abs(localForward.y);
+            Vector3 localForward = transform.InverseTransformDirection(interactorTransform.forward);
+            float localY = Math.Abs(localForward.y);
             localForward.y = 0.0f;
             localForward.Normalize();
 
-            var localUp = transform.InverseTransformDirection(interactorTransform.up);
+            Vector3 localUp = transform.InverseTransformDirection(interactorTransform.up);
             localUp.y = 0.0f;
             localUp.Normalize();
 
@@ -330,7 +330,7 @@ namespace Code.Scripts.Source.XR
                 m_ForwardVectorAngles.SetTargetFromVector(localForward);
 
             // Apply offset to base knob rotation to get new knob rotation
-            var knobRotation = m_BaseKnobRotation - ((m_UpVectorAngles.totalOffset + m_ForwardVectorAngles.totalOffset) * m_TwistSensitivity) - m_PositionAngles.totalOffset;
+            float knobRotation = m_BaseKnobRotation - ((m_UpVectorAngles.totalOffset + m_ForwardVectorAngles.totalOffset) * m_TwistSensitivity) - m_PositionAngles.totalOffset;
 
             // Clamp to range
             if (m_ClampedMotion)
@@ -339,7 +339,7 @@ namespace Code.Scripts.Source.XR
             SetKnobRotation(knobRotation);
 
             // Reverse to get value
-            var knobValue = (knobRotation - m_MinAngle) / (m_MaxAngle - m_MinAngle);
+            float knobValue = (knobRotation - m_MinAngle) / (m_MaxAngle - m_MinAngle);
             SetValue(knobValue);
         }
 
@@ -347,7 +347,7 @@ namespace Code.Scripts.Source.XR
         {
             if (m_AngleIncrement > 0)
             {
-                var normalizeAngle = angle - m_MinAngle;
+                float normalizeAngle = angle - m_MinAngle;
                 angle = (Mathf.Round(normalizeAngle / m_AngleIncrement) * m_AngleIncrement) + m_MinAngle;
             }
 
@@ -362,8 +362,8 @@ namespace Code.Scripts.Source.XR
 
             if (m_AngleIncrement > 0)
             {
-                var angleRange = m_MaxAngle - m_MinAngle;
-                var angle = Mathf.Lerp(0.0f, angleRange, newValue);
+                float angleRange = m_MaxAngle - m_MinAngle;
+                float angle = Mathf.Lerp(0.0f, angleRange, newValue);
                 angle = Mathf.Round(angle / m_AngleIncrement) * m_AngleIncrement;
                 newValue = Mathf.InverseLerp(0.0f, angleRange, angle);
             }
@@ -384,8 +384,8 @@ namespace Code.Scripts.Source.XR
 
         static float ShortestAngleDistance(float start, float end, float max)
         {
-            var angleDelta = end - start;
-            var angleSign = Mathf.Sign(angleDelta);
+            float angleDelta = end - start;
+            float angleSign = Mathf.Sign(angleDelta);
 
             angleDelta = Math.Abs(angleDelta) % max;
             if (angleDelta > (max * 0.5f))
@@ -403,24 +403,24 @@ namespace Code.Scripts.Source.XR
             if (m_PositionTrackedRadius <= Mathf.Epsilon)
                 return;
 
-            var knobTransform = transform;
+            Transform knobTransform = transform;
 
             // Draw a circle from the handle point at size of position tracked radius
-            var circleCenter = knobTransform.position;
+            Vector3 circleCenter = knobTransform.position;
 
             if (m_Handle != null)
                 circleCenter = m_Handle.position;
 
-            var circleX = knobTransform.right;
-            var circleY = knobTransform.forward;
+            Vector3 circleX = knobTransform.right;
+            Vector3 circleY = knobTransform.forward;
 
             Gizmos.color = Color.green;
-            var segmentCounter = 0;
+            int segmentCounter = 0;
             while (segmentCounter < k_CircleSegments)
             {
-                var startAngle = segmentCounter * k_SegmentRatio * 2.0f * Mathf.PI;
+                float startAngle = segmentCounter * k_SegmentRatio * 2.0f * Mathf.PI;
                 segmentCounter++;
-                var endAngle = segmentCounter * k_SegmentRatio * 2.0f * Mathf.PI;
+                float endAngle = segmentCounter * k_SegmentRatio * 2.0f * Mathf.PI;
 
                 Gizmos.DrawLine(circleCenter + (Mathf.Cos(startAngle) * circleX + Mathf.Sin(startAngle) * circleY) * m_PositionTrackedRadius,
                     circleCenter + (Mathf.Cos(endAngle) * circleX + Mathf.Sin(endAngle) * circleY) * m_PositionTrackedRadius);

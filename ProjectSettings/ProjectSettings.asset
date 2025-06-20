@@ -140,7 +140,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: v0.12.1-alpha
+  bundleVersion: v0.15.0
   preloadedAssets:
   - {fileID: 102900000, guid: 621bd90d71210124f878ff4f3395a37a, type: 3}
   - {fileID: 102900000, guid: c09c9cfe868f7f44ab0d31f26385fd25, type: 3}
@@ -156,6 +156,7 @@ PlayerSettings:
   - {fileID: 11400000, guid: fd42a132493b1f143a4963adcd530ef1, type: 2}
   - {fileID: 11400000, guid: 53a413327819a984d8ab1618c9e90a10, type: 2}
   - {fileID: 20000000, guid: 44b3f83419d3b404c92de9acf530597d, type: 2}
+  - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -191,7 +192,7 @@ PlayerSettings:
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
   aotOptions: 
-  stripEngineCode: 1
+  stripEngineCode: 0
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
   ForceInternetPermission: 0
@@ -199,7 +200,7 @@ PlayerSettings:
   CreateWallpaper: 0
   androidSplitApplicationBinary: 0
   keepLoadedShadersAlive: 1
-  StripUnusedMeshComponents: 0
+  StripUnusedMeshComponents: 1
   strictShaderVariantMatching: 0
   VertexChannelCompressionMask: 6
   iPhoneSdkVersion: 988
@@ -932,10 +933,10 @@ PlayerSettings:
   il2cppCompilerConfiguration:
     Android: 2
   il2cppCodeGeneration:
-    Android: 0
+    Android: 1
   il2cppStacktraceInformation: {}
   managedStrippingLevel:
-    Android: 4
+    Android: 2
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
   allowUnsafeCode: 0

@@ -1,16 +1,19 @@
+using TMPro;
 using UnityEngine;
 
-public class VersionBinding : MonoBehaviour
+namespace Code.Scripts.Source.UI
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [RequireComponent(typeof(TMP_Text))]
+    public class VersionBinding : MonoBehaviour
     {
-        
-    }
+        private TMP_Text _appVersion;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void Awake()
+        {
+            _appVersion = GetComponentInChildren<TMP_Text>();
+
+            if (_appVersion)
+                _appVersion.text = Application.version;
+        }
     }
 }

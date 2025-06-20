@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: e572ca50d660eba40bd21d07e093c64e
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292025
+  packageName: WoodenBoard
+  packageVersion: 1.01
+  assetPath: Assets/PRJ0818_Murakami/WoodenBoard/Meshes/Poster2.fbx
+  uploadId: 695539
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -21,8 +28,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -112,10 +117,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 292025
-  packageName: WoodenBoard
-  packageVersion: 1.01
-  assetPath: Assets/PRJ0818_Murakami/WoodenBoard/Meshes/Poster2.fbx
-  uploadId: 695539

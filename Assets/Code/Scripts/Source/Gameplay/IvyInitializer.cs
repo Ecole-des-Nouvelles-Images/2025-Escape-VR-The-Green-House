@@ -1,8 +1,7 @@
-using System;
 using Code.Scripts.Source.Managers;
 using UnityEngine;
 
-namespace Code.Scripts.Source.XR
+namespace Code.Scripts.Source.Gameplay
 {
     public class IvyInitializer : MonoBehaviour
     {
@@ -20,14 +19,14 @@ namespace Code.Scripts.Source.XR
 
             if (_ivyType == IvyType.Lounge)
             {
-                if (GameStateManager.Instance.CurrentState == GameStateManager.Instance.GameStates.HallResolved) 
+                if (GameStateManager.Instance.CurrentState == GameStateManager.Instance.GameStates.HallResolved)
                 {
                     gameObject.SetActive(true);
                 }
             }
             else if (_ivyType == IvyType.GreenHouse)
             {
-                if (GameStateManager.Instance.CurrentState == GameStateManager.Instance.GameStates.LoungePhase1) 
+                if (GameStateManager.Instance.CurrentState == GameStateManager.Instance.GameStates.LoungePhase1)
                 {
                     gameObject.SetActive(true);
                 }

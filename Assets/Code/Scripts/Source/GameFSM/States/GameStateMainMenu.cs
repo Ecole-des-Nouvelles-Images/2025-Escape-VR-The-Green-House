@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.Types;
-using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 namespace Code.Scripts.Source.GameFSM.States
@@ -13,14 +12,14 @@ namespace Code.Scripts.Source.GameFSM.States
     {
         List<NearFarInteractor> _xrNearFarInteractors;
 
+        public override GameStatesIndex StateIndex { get; protected set; } = GameStatesIndex.GameStateMainMenu;
+
         public override void EnterState(GameStateManager context)
         {
             context.ChangeNearFarInteractionMode(NearFarMode.Far);
-            
+
            AudioManager.Instance.ChangeRain(AudioManager.Instance.ClipsIndex.RainOutDoor);
            AudioManager.Instance.ChangeMusic(AudioManager.Instance.ClipsIndex.MenuMusic);
-            
-            Debug.Log("[GameStateMainMenu] MainMenu successfully loaded.");
         }
 
         public override void UpdateState(GameStateManager context)

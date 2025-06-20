@@ -192,7 +192,6 @@ namespace Code.Scripts.Source.Managers
 
             if (loadAsActive) {
                 SceneManager.SetActiveScene(SceneManager.GetSceneByName(scene));
-                Debug.Log($"[SceneLoader] Scene {{{SceneManager.GetActiveScene().name}}} is now active.");
             }
 
             _transitionManager.Crossfade.FadeOut();

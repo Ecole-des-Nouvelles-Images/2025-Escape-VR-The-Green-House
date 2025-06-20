@@ -28,9 +28,9 @@ namespace Code.Scripts.Source.Managers
         public InputAction MenuButtonInteraction { get; private set; }
 
         private List<NearFarInteractor> _xrNearFarInteractors;
-        
+
         public bool GreenHouseIsLocked = true;
-        
+
 
         // ---
 
@@ -83,7 +83,7 @@ namespace Code.Scripts.Source.Managers
 
         private void InitializeFSM()
         {
-            Debug.Log("[GameStateManager] Initializing FSM...");
+            CustomLogger.LogInfo("[GameStateManager] Initializing FSM...");
             Instance.SwitchState(Instance.GameStates.MainMenu);
         }
 
@@ -94,15 +94,11 @@ namespace Code.Scripts.Source.Managers
         {
             PreviousState = CurrentState;
 
-            if (newState == null || CurrentState == newState)
-            {
-                Debug.LogWarning("[GameStateManager] Warning: switching to " + (newState == null ? "null state" : $"same state {{{CurrentState}}}"));
-                return;
-            }
+            CustomLogger.Assert(newState != null, $"Unexpected state switch to null state, previous state was {PreviousState}", true);
 
             if (!bypassExit && CurrentState != null)
             {
-                Debug.Log($"[Manual] Current exiting state: {CurrentState.GetType().Name}");
+                CustomLogger.LogInfo($"[Manual] Current exiting state: {CurrentState.GetType().Name}");
                 CurrentState.ExitState(this);
             }
 
@@ -117,7 +113,7 @@ namespace Code.Scripts.Source.Managers
             if (!GamePaused)
                 SwitchState(GameStates.Pause, false, true);
             else if (PreviousState == GameStates.Pause)
-                throw new Exception($"[GameStateManager] Previous stored state is still in \"Pause\". Please verify transition from and before {CurrentState}.");
+                CustomLogger.Raise<Exception>("[GameStateManager] Previous stored state is still in \"Pause\". Please verify transition from and before {CurrentState}.");
             else
                 SwitchState(PreviousState, true, false);
         }
@@ -153,19 +149,16 @@ namespace Code.Scripts.Source.Managers
                 interactor.enableNearCasting = enableNearCast;
                 interactor.enableFarCasting = enableFarCast;
             }
-
-            Debug.Log($">> NearFar interaction mode changed to {mode}");
         }
 
         public void RecenterPlayerXROrigin()
         {
             _playerXROrigin.MatchOriginUpOriginForward(_playerXROrigin.transform.up, _playerXROrigin.transform.forward);
-            Debug.Log("[GameStateManager] Player XROrigin re-centered.");
         }
 
         public bool IsCurrentStateMatch(GameStatesIndex stateIndex)
         {
-            return CurrentState.GetType().Name == stateIndex.ToString();
+            return CurrentState != null && CurrentState.StateIndex == stateIndex;
         }
     }
 }

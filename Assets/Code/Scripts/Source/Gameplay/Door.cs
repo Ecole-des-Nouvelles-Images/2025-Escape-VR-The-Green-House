@@ -1,13 +1,13 @@
-using System;
 using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.Types;
+using Code.Scripts.Source.XR;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit;
 using VRTemplateAssets.Scripts;
 
-namespace Code.Scripts.Source.XR
+namespace Code.Scripts.Source.Gameplay
 {
     [RequireComponent(typeof(Animator))]
     [RequireComponent(typeof(AudioSource))]
@@ -22,7 +22,7 @@ namespace Code.Scripts.Source.XR
         [Header("Animation")]
         [SerializeField] private string _triggerDoorAnimation;
         private Animator _doorAnimator;
-        
+
         [Header("Sound")]
         private AudioSource _doorAudioSource;
 
@@ -40,7 +40,7 @@ namespace Code.Scripts.Source.XR
             if (!_keySocket && _isLocked)
                 throw new System.Exception($"[Door] Key socket not found on locked door : {gameObject.name}");
         }
-        
+
 
         private void OnEnable()
         {
@@ -62,9 +62,9 @@ namespace Code.Scripts.Source.XR
             if (_isLocked) return;
             if (!Mathf.Approximately(value, 0f)) return;
 
-            
+
             if (_isOpen) return;
-          
+
             OpenDoor(_destination);
         }
 
@@ -79,7 +79,7 @@ namespace Code.Scripts.Source.XR
             _cloneKey.SetActive(true);
             _isLocked = false;
             _keySocket.socketActive = false;
-            
+
             PlayDoorSound( AudioManager.Instance.ClipsIndex.InsertKey);
         }
 

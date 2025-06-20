@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 0c4db07160ca2ec408ec0feff53110a6
+AssetOrigin:
+  serializedVersion: 1
+  productId: 299224
+  packageName: Candle VFX - URP
+  packageVersion: 1.0.01
+  assetPath: Assets/Vefects/Candle VFX URP/Smoke/Meshes/SM_VFX_Candle_Smoke_01.fbx
+  uploadId: 708942
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -105,10 +112,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 299224
-  packageName: Candle VFX - URP
-  packageVersion: 1.0.01
-  assetPath: Assets/Vefects/Candle VFX URP/Smoke/Meshes/SM_VFX_Candle_Smoke_01.fbx
-  uploadId: 708942
