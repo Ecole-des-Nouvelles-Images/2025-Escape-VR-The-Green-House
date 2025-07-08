@@ -140,7 +140,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: v0.15.0
+  bundleVersion: v0.16.0-pre
   preloadedAssets:
   - {fileID: 102900000, guid: 621bd90d71210124f878ff4f3395a37a, type: 3}
   - {fileID: 102900000, guid: c09c9cfe868f7f44ab0d31f26385fd25, type: 3}
@@ -155,8 +155,29 @@ PlayerSettings:
   - {fileID: -6465566751694194690, guid: 26f1868e812ffba46b9cd162c7d6abfb, type: 3}
   - {fileID: 11400000, guid: fd42a132493b1f143a4963adcd530ef1, type: 2}
   - {fileID: 11400000, guid: 53a413327819a984d8ab1618c9e90a10, type: 2}
-  - {fileID: 20000000, guid: 44b3f83419d3b404c92de9acf530597d, type: 2}
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  - {fileID: 1532437575054449829, guid: 5b2c4155b3c239a41a988ce38a51ce12, type: 3}
+  - {fileID: 687421314086800211, guid: 8b14f30b0433417458ce545f14b724ec, type: 3}
+  - {fileID: 8791429132414757778, guid: 04370a4d024a94e4a84107868bd9bb4a, type: 3}
+  - {fileID: 2326865649675787374, guid: 50574f8ab22358d479ab8b73ce32c01e, type: 3}
+  - {fileID: 7488189701397163984, guid: 8d170a8a0cdee7e4d87f5d7590c82b47, type: 3}
+  - {fileID: 1664775750528848671, guid: 25afaaf8621d1094ebbdfb1a15cd6e75, type: 3}
+  - {fileID: 1664775750528848671, guid: f66d5f9571cbba747a399bb7b4138444, type: 3}
+  - {fileID: 463647563366403704, guid: 731ae2ef211c4ea4e841f848be83eca1, type: 3}
+  - {fileID: 8874438760460186290, guid: c10e07d28e2b0a943b1fb5dfb00a4013, type: 3}
+  - {fileID: 6401190555539163379, guid: 742799b207525b04eaabc71ed4ea37ca, type: 3}
+  - {fileID: 1133507643551949512, guid: 69ddb6428e6fdec43b32d00d63c66b1b, type: 3}
+  - {fileID: 2094566269425567374, guid: ccdc829352e42a74798e70f532e11dd2, type: 3}
+  - {fileID: 821515440144396492, guid: add540483fb088f4b973fdedb7bdf65f, type: 3}
+  - {fileID: 5217804769922198115, guid: 02b77fc2f75db9347bbb31be9832083b, type: 3}
+  - {fileID: 5639031000888046782, guid: f31c254ccdfc0c942979390f913c4683, type: 3}
+  - {fileID: 1273461104566352740, guid: fa855f36535913b47a8b7c152389bcb8, type: 3}
+  - {fileID: 2058683884009739457, guid: 09a28b6185680cb42bbdd130027c231f, type: 3}
+  - {fileID: 1891190080358089694, guid: c8cef391c5c1c6e4e9ca1b4997a9ea7e, type: 3}
+  - {fileID: 8591607884625196293, guid: 2a219884059759648825130296997d02, type: 3}
+  - {fileID: 5611347518347725107, guid: a8af6b90719c8fd488b57ff5fac8c0eb, type: 3}
+  - {fileID: 5611347518347725107, guid: a8af6b90719c8fd488b57ff5fac8c0eb, type: 3}
+  - {fileID: 5611347518347725107, guid: a8af6b90719c8fd488b57ff5fac8c0eb, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -201,7 +222,7 @@ PlayerSettings:
   androidSplitApplicationBinary: 0
   keepLoadedShadersAlive: 1
   StripUnusedMeshComponents: 1
-  strictShaderVariantMatching: 0
+  strictShaderVariantMatching: 1
   VertexChannelCompressionMask: 6
   iPhoneSdkVersion: 988
   iOSSimulatorArchitecture: 0
@@ -602,6 +623,9 @@ PlayerSettings:
   - m_BuildTarget: WebGLSupport
     m_APIs: 0b000000
     m_Automatic: 1
+  - m_BuildTarget: WindowsStandaloneSupport
+    m_APIs: 0200000012000000
+    m_Automatic: 0
   m_BuildTargetVRSettings:
   - m_BuildTarget: Standalone
     m_Enabled: 0
@@ -622,6 +646,7 @@ PlayerSettings:
   - serializedVersion: 2
     m_BuildTarget: Android
     m_EncodingQuality: 1
+  m_BuildTargetGroupHDRCubemapEncodingQuality: []
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding: []
@@ -894,12 +919,12 @@ PlayerSettings:
   webGLMemoryLinearGrowthStep: 16
   webGLMemoryGeometricGrowthStep: 0.2
   webGLMemoryGeometricGrowthCap: 96
-  webGLEnableWebGPU: 0
   webGLPowerPreference: 2
   webGLWebAssemblyTable: 0
   webGLWebAssemblyBigInt: 0
   webGLCloseOnQuit: 0
   webWasm2023: 0
+  webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
     Android: USE_INPUT_SYSTEM_POSE_CONTROL;UNITY_POST_PROCESSING_STACK_V2;USE_STICK_CONTROL_THUMBSTICKS;DOTWEEN
     CloudRendering: UNITY_POST_PROCESSING_STACK_V2
@@ -933,7 +958,7 @@ PlayerSettings:
   il2cppCompilerConfiguration:
     Android: 2
   il2cppCodeGeneration:
-    Android: 1
+    Android: 0
   il2cppStacktraceInformation: {}
   managedStrippingLevel:
     Android: 2
@@ -1042,3 +1067,4 @@ PlayerSettings:
   insecureHttpOption: 0
   androidVulkanDenyFilterList: []
   androidVulkanAllowFilterList: []
+  androidVulkanDeviceFilterListAsset: {fileID: 0}

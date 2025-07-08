@@ -15,13 +15,13 @@ using Screen = UnityEngine.Device.Screen; // To support Device Simulator on Unit
 
 // Receives debug entries and custom events (e.g. Clear, Collapse, Filter by Type)
 // and notifies the recycled list view of changes to the list of debug entries
-//
+// 
 // - Vocabulary -
 // Debug/Log entry: a Debug.Log/LogError/LogWarning/LogException/LogAssertion request made by
 //                   the client and intercepted by this manager object
 // Debug/Log item: a visual (uGUI) representation of a debug entry
-//
-// There can be a lot of debug entries in the system but there will only be a handful of log items
+// 
+// There can be a lot of debug entries in the system but there will only be a handful of log items 
 // to show their properties on screen (these log items are recycled as the list is scrolled)
 
 // An enum to represent filtered log types
@@ -99,7 +99,7 @@ namespace IngameDebugConsole
 		[SerializeField]
 		[HideInInspector]
 		[Tooltip( "If enabled, console window will initially be invisible" )]
-		private bool startMinimized = false;
+		private bool startMinimized = true;
 
 		[SerializeField]
 		[HideInInspector]
@@ -125,6 +125,10 @@ namespace IngameDebugConsole
 		[HideInInspector]
 		[Tooltip( "Width of the canvas determines whether the searchbar will be located inside the menu bar or underneath the menu bar. This way, the menu bar doesn't get too crowded on narrow screens. This value determines the minimum width of the canvas for the searchbar to appear inside the menu bar" )]
 		private float topSearchbarMinWidth = 360f;
+
+        [SerializeField, HideInInspector]
+        [Tooltip("If enabled, clicking the resize button of the console window will copy all logs to clipboard. It'll also play a scale animation to give feedback.")]
+        internal bool copyAllLogsOnResizeButtonClick;
 
 		[SerializeField]
 		[HideInInspector]
@@ -199,9 +203,13 @@ namespace IngameDebugConsole
 		[Tooltip( "If enabled, on Android and iOS devices with notch screens, the console window's popup won't be obscured by the screen cutouts" )]
 		internal bool popupAvoidsScreenCutout = false;
 
-		[SerializeField]
-		[Tooltip( "If a log is longer than this limit, it will be truncated. This helps avoid reaching Unity's 65000 vertex limit for UI canvases" )]
-		internal int maxLogLength = 10000;
+        [SerializeField]
+        [Tooltip("If a log that isn't expanded is longer than this limit, it will be truncated. This greatly optimizes scrolling speed of collapsed logs if their log messages are long.")]
+        internal int maxCollapsedLogLength = 200;
+
+        [SerializeField, UnityEngine.Serialization.FormerlySerializedAs("maxLogLength")]
+        [Tooltip("If an expanded log is longer than this limit, it will be truncated. This optimizes scrolling speed while an expanded log is visible.")]
+        internal int maxExpandedLogLength = 10000;
 
 #if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBGL
 		[SerializeField]
@@ -213,6 +221,9 @@ namespace IngameDebugConsole
 		[Header( "Visuals" )]
 		[SerializeField]
 		private DebugLogItem logItemPrefab;
+
+        [SerializeField]
+        internal TMP_FontAsset logItemFontOverride;
 
 		[SerializeField]
 		private TextMeshProUGUI commandSuggestionPrefab;
@@ -355,7 +366,7 @@ namespace IngameDebugConsole
 		// Dictionary to quickly find if a log already exists in collapsedLogEntries
 		private Dictionary<DebugLogEntry, DebugLogEntry> collapsedLogEntriesMap;
 
-		// The order the collapsedLogEntries are received
+		// The order the collapsedLogEntries are received 
 		// (duplicate entries have the same value)
 		private DynamicCircularBuffer<DebugLogEntry> uncollapsedLogEntries;
 		private DynamicCircularBuffer<DebugLogEntryTimestamp> uncollapsedLogEntriesTimestamps;
@@ -407,6 +418,12 @@ namespace IngameDebugConsole
 		// StringBuilder used by various functions
 		internal StringBuilder sharedStringBuilder;
 
+        /// <summary>
+        /// Used for <see cref="TMP_Text.SetText(char[])"/>.
+        /// </summary>
+        [System.NonSerialized]
+        internal char[] textBuffer = new char[4096];
+
 		// Offset of DateTime.Now from DateTime.UtcNow
 		private System.TimeSpan localTimeUtcOffset;
 
@@ -440,8 +457,6 @@ namespace IngameDebugConsole
 
 		private void Awake()
 		{
-			Instance = null;
-
 			// Only one instance of debug console is allowed
 			if( !Instance )
 			{
@@ -957,7 +972,7 @@ namespace IngameDebugConsole
 
 			popupManager.Hide();
 
-			// Update the recycled list view
+			// Update the recycled list view 
 			// (in case new entries were intercepted while log window was hidden)
 			OnLogEntriesUpdated( true, true );
 
@@ -1714,27 +1729,41 @@ namespace IngameDebugConsole
 			OnLogEntriesUpdated( true, true );
 		}
 
-		public string GetAllLogs()
+        public string GetAllLogs()
+        {
+            return GetAllLogs(int.MaxValue, float.PositiveInfinity);
+        }
+
+        /// <param name="maxLogCount">Maximum allowed log count.</param>
+        /// <param name="maxElapsedTime">Maximum allowed time interval (in seconds) between now and the logs' arrival time (requires <see cref="captureLogTimestamps"/> to be enabled).</param>
+        public string GetAllLogs(int maxLogCount, float maxElapsedTime)
 		{
 			// Process all pending logs since we want to return "all" logs
 			ProcessQueuedLogs( queuedLogEntries.Count );
 
-			int count = uncollapsedLogEntries.Count;
+            int startIndex = uncollapsedLogEntries.Count - Mathf.Min(uncollapsedLogEntries.Count, maxLogCount);
+            if (uncollapsedLogEntriesTimestamps != null)
+            {
+                float currentElapsedSeconds = Time.realtimeSinceStartup;
+                while (startIndex < uncollapsedLogEntries.Count && currentElapsedSeconds - uncollapsedLogEntriesTimestamps[startIndex].elapsedSeconds > maxElapsedTime)
+                    startIndex++;
+            }
+
 			int length = 0;
 			int newLineLength = System.Environment.NewLine.Length;
-			for( int i = 0; i < count; i++ )
+            for (int i = startIndex; i < uncollapsedLogEntries.Count; i++)
 			{
 				DebugLogEntry entry = uncollapsedLogEntries[i];
 				length += entry.logString.Length + entry.stackTrace.Length + newLineLength * 3;
 			}
 
-			if( uncollapsedLogEntriesTimestamps != null )
-				length += count * 30;
+            if (uncollapsedLogEntriesTimestamps != null)
+                length += (uncollapsedLogEntries.Count - startIndex) * 30;
 
 			length += 200; // Just in case...
 
 			StringBuilder sb = new StringBuilder( length );
-			for( int i = 0; i < count; i++ )
+            for (int i = startIndex; i < uncollapsedLogEntries.Count; i++)
 			{
 				DebugLogEntry entry = uncollapsedLogEntries[i];
 
@@ -1757,6 +1786,9 @@ namespace IngameDebugConsole
 		/// <remarks>You mustn't modify the returned buffers in any way.</remarks>
 		public void GetAllLogs( out DynamicCircularBuffer<DebugLogEntry> logEntries, out DynamicCircularBuffer<DebugLogEntryTimestamp> logTimestamps )
 		{
+			// Process all pending logs since we want to return "all" logs
+			ProcessQueuedLogs( queuedLogEntries.Count );
+
 			logEntries = uncollapsedLogEntries;
 			logTimestamps = uncollapsedLogEntriesTimestamps;
 		}

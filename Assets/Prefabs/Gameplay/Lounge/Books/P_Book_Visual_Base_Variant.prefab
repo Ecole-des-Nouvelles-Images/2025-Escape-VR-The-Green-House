@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CustomAffordance
       objectReference: {fileID: 0}
+    - target: {fileID: 821515440144396492, guid: add540483fb088f4b973fdedb7bdf65f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3571206443887880187, guid: add540483fb088f4b973fdedb7bdf65f, type: 3}
       propertyPath: highlightMaterial
       value: 
@@ -120,10 +124,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8265102720595290164, guid: a60e707469d2cbd40a858c4315d6c7de, type: 3}
       propertyPath: m_Name
-      value: S_BookSpecial_Visual
+      value: P_Book_Visual_Base_Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8265102720595290164, guid: a60e707469d2cbd40a858c4315d6c7de, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265102720595290164, guid: a60e707469d2cbd40a858c4315d6c7de, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
