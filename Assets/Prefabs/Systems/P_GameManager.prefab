@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6401190555539163379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1030139240333014359}
+  - component: {fileID: 1539064653356413357}
+  - component: {fileID: 2704735089963445191}
+  m_Layer: 0
+  m_Name: P_GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1030139240333014359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401190555539163379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1539064653356413357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401190555539163379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1eb681a6a64d7aa6d9d5dbedd23939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerXROrigin: {fileID: 0}
+  <GameStates>k__BackingField:
+    <Pause>k__BackingField:
+      _pauseUI: {fileID: 0}
+      _postRenderVolume: {fileID: 0}
+      _exposureAnimationDuration: 2
+      _exposureToneDownIntensity: -3.5
+    <HallInProgress>k__BackingField:
+      _spawnVoiceLine: {fileID: 11400000, guid: c5652cc848cbe4e45af04a4b5d7d8c82, type: 2}
+      _correctCode: 02000000070000000300000006000000
+    <HallResolved>k__BackingField:
+      _openWalletVoiceLine: {fileID: 11400000, guid: f917d165eb517684fb90092bbba4333a, type: 2}
+      _openCaseAsset: {fileID: 11400000, guid: 8427ed4ff154bd2449bf6a212df5d291, type: 2}
+    <LoungePhase2>k__BackingField:
+      _correctBookPlacement:
+      - "D\xE9couverte"
+      - "R\xE9action"
+      - Mutation
+      - Conscience
+      - "R\xE9volte"
+      _bookSocketsContainer: {fileID: 0}
+      _bookSockets: []
+      _biblioAnimator: {fileID: 0}
+      _fusePlugged: 0
+    <GreenhouseInProgress>k__BackingField:
+      _plantSlots: []
+      _ivyAnimators: []
+      _correctPlants:
+      - Coquelicot
+      - Pissenlit
+      - Lavande
+      _PlantSlotContainer: {fileID: 0}
+    <GreenhouseResolved>k__BackingField:
+      _ivyStunnedAsset: {fileID: 0}
+  GreenHouseIsLocked: 1
+--- !u!114 &2704735089963445191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401190555539163379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f9f154c1d0b2942b47a59acef6a662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fontColor: {r: 0.36078432, g: 0.73471296, b: 1, a: 1}
+  backgroundColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}

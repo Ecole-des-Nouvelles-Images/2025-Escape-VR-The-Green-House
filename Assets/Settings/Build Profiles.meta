@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Settings/Build Profiles.meta
+guid: 3e67d6a6ed74b13449829e1a859c2a9d
+========
+guid: 2c9eb3a20ae10bb49a2997ae13cc8111
+>>>>>>>> feature/sequence:Assets/Test sequence.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
