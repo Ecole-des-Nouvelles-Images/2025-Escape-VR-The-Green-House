@@ -3,7 +3,7 @@
     <h1>The GreenHouse</h1>
 </div>
 <div align="center" style="text-align: center;">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Unity%20-%206000.0.34f1%20-%20%231182C3?logo=unity&logoColor=%23FFFFFF&logoSize=auto&link=https%3A%2F%2Funity.com%2F"/>
+    <img alt="Static Badge" src="https://img.shields.io/badge/Unity%20-%206000.1.5f1%20-%20%231182C3?logo=unity&logoColor=%23FFFFFF&logoSize=auto&link=https%3A%2F%2Funity.com%2F"/>
     <img alt="GitHub Downloads (all assets, latest release)" src="https://img.shields.io/github/downloads/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/latest/total?sort=semver&logo=gitlfs&logoColor=%23FFFFFF&logoSize=auto&label=Release"/>
     <img alt="GitHub License" src="https://img.shields.io/github/license/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?label=License"/>
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?label=Size&color=lightgrey"/>
@@ -51,8 +51,9 @@ This game was brought to life by :
 - **Michaël ELIE**: *Gameplay Developer*
 - **Noah MILIANI**: *Gameplay Developer*
 
-<div style="text-align: center;">
-    <img src="https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/Greenhouse-Team.png" alt="Team photo" width="100%"/>
+<div align="center" style="text-align: center;">
+    <br/>
+    <img src="https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/blob/main/.metadata/Greenhouse_Team.png" alt="Team photo" width="auto"/>
 </div>
 
 ---
@@ -98,9 +99,9 @@ As such, the game <u>_**should**_</u> be compatible with most Android-based VR h
 This game is, at this time, unavailable from the Meta Quest Store, which would have been the preferred and easiest method.
 
 >  [!WARNING] 
-> The steps below describe the rather complex process to follow if you still desire to play the game in it's current state. It's assume using a computer that could connect your headset.
-> This should be reserved for experienced users only and involve tweaking your headset's parameters.
-
+> The steps below describe the rather complex process to follow if you still desire to play the game in it's current state.<br/>
+> It involves accessing your headset's data and tweaking its parameters. That assumes using a computer to do so. <br/>
+> This process should be reserved for experienced or aware users only.
 ___
 
 You can find the latest release of the game on the [**Release page**](https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/releases) or use this convenient button to download the archive directly <a href="https://github.com/Ecole-des-Nouvelles-Images/https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse"><img alt="Static Badge" src="https://img.shields.io/badge/Download-.zip-%20%23510ED8?style=plastic"></a>
@@ -111,7 +112,7 @@ Alternatively, you can also use third-party tools like <a href="https://sideques
 
 > [!CAUTION]
 >
-> All users must remember the implications of the <em><u>developer mode</u></em> and the associated risks when installing applications from unknown sources or devices. <span style="color: darkred;">**Always proceed with care and remember to disable the <u>*developer mode*</u> when unnecessary.**</span>
+> All users must remember the implications of the <em><u>developer mode</u></em> and the associated risks when installing applications from unknown sources or authorize unknow devices access. <span style="color: darkred;">**Always proceed with care and remember to disable the <u>*developer mode*</u> when unnecessary.**</span>
 
 ___
 
