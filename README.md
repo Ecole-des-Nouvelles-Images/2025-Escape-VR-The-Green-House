@@ -1,10 +1,10 @@
 <div align="center" style="text-align: center;">
-    <img src="https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/blob/dev/Assets/UI/S_Logo.png" alt="Game Logo" height="300px"/>
+    <img src="https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/blob/main/Assets/UI/S_Logo.png" alt="Game Logo" height="300px"/>
     <h1>The GreenHouse</h1>
 </div>
 <div align="center" style="text-align: center;">
     <img alt="Static Badge" src="https://img.shields.io/badge/Unity%20-%206000.1.5f1%20-%20%231182C3?logo=unity&logoColor=%23FFFFFF&logoSize=auto&link=https%3A%2F%2Funity.com%2F"/>
-    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?include_prereleases&display_name=tag&logo=gitlfs&logoColor=white&link=https%3A%2F%2Fgithub.com%2FEcole-des-Nouvelles-Images%2F2025-Escape-VR-TheGreenHouse%2Freleases%2Ftag%2Flatest">
+    <a href="https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/releases/latest"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?include_prereleases&display_name=tag&logo=gitlfs&logoColor=white"></a>
     <img alt="GitHub License" src="https://img.shields.io/github/license/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?label=License"/>
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?label=Size&color=lightgrey"/>
     <br/><br/>
@@ -13,6 +13,7 @@
         Find a way to free yourself from strange plants while gathering info and clues about this mysterious place and its manifestly absent owner.
     </p>
 </div>
+
 
 
 
