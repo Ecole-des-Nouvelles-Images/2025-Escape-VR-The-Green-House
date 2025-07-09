@@ -4,7 +4,7 @@
 </div>
 <div align="center" style="text-align: center;">
     <img alt="Static Badge" src="https://img.shields.io/badge/Unity%20-%206000.1.5f1%20-%20%231182C3?logo=unity&logoColor=%23FFFFFF&logoSize=auto&link=https%3A%2F%2Funity.com%2F"/>
-    <img alt="GitHub Downloads (all assets, latest release)" src="https://img.shields.io/github/downloads/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/latest/total?sort=semver&logo=gitlfs&logoColor=%23FFFFFF&logoSize=auto&label=Release"/>
+    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?include_prereleases&display_name=tag&logo=gitlfs&logoColor=white&link=https%3A%2F%2Fgithub.com%2FEcole-des-Nouvelles-Images%2F2025-Escape-VR-TheGreenHouse%2Freleases%2Ftag%2Flatest">
     <img alt="GitHub License" src="https://img.shields.io/github/license/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?label=License"/>
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?label=Size&color=lightgrey"/>
     <br/><br/>
@@ -104,7 +104,7 @@ This game is, at this time, unavailable from the Meta Quest Store, which would h
 > This process should be reserved for experienced or aware users only.
 ___
 
-You can find the latest release of the game on the [**Release page**](https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/releases) or use this convenient button to download the archive directly <a href="https://github.com/Ecole-des-Nouvelles-Images/https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse"><img alt="Static Badge" src="https://img.shields.io/badge/Download-.zip-%20%23510ED8?style=plastic"></a>
+You can find the latest release of the game on the [**Release page**](https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/releases) or use this convenient button to download the archive directly <a href="https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/releases/download/v0.16.0-pre/2025-TheGreenhouse-v0.16.0-pre.apk"><img alt="Static Badge" src="https://img.shields.io/badge/Download-.zip-%20%23510ED8?style=plastic"></a>
 
 Meta Quest users are required to create or associate a **Meta developer account** and then enable the **Developer Mode** on their headset in order to access advanced features. Once enabled, you can leverage the [Meta Developer Hub](https://developers.meta.com/horizon/downloads/package/oculus-developer-hub-win) to upload the `.apk` and install it on your device.
 
@@ -117,7 +117,7 @@ Alternatively, you can also use third-party tools like <a href="https://sideques
 ___
 
 
-For other headsets outside Meta Quest platform, that would satisfy the requirements, also download the latest version <a href="https://github.com/Ecole-des-Nouvelles-Images/https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse"><img alt="Static Badge" src="https://img.shields.io/badge/Download-.zip-%20%23510ED8?style=plastic"></a> and refer to your device's official manual or curated tooling in order to upload and install the game's `.apk`.
+For other headsets outside Meta Quest platform, that would satisfy the requirements, also download the latest version <a href="https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/releases/download/v0.16.0-pre/2025-TheGreenhouse-v0.16.0-pre.apk"><img alt="Static Badge" src="https://img.shields.io/badge/Download-.zip-%20%23510ED8?style=plastic"></a> and refer to your device's official manual or curated tooling in order to upload and install the game's `.apk`.
 
 
 
