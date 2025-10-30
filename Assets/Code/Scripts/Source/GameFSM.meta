@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Code/Scripts/Source/GameState.meta
+guid: 15e304484100d45468ba8f9f6c92cfbb
+========
+guid: 31b8ea2a67fb4794f81e62f87d1711f0
+>>>>>>>> feature/game-management:Assets/Code/Scripts/Source/GameFSM.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

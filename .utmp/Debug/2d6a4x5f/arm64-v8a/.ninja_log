@@ -1,0 +1,12 @@
+# ninja log v5
+47	157	7834587482617761	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	6761e6524cd635df
+158	252	7834587483443104	C:/Users/c.boyer/Projets/Unity/The Greenhouse/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/2d6a4x5f/obj/arm64-v8a/libswappywrapper.so	62fdd61a4aa5ccee
+7	732	7834587488320686	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	38cddcd4271e1943
+23	747	7834587488486653	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	b225890f7200c776
+41	766	7834587488674536	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	da7a29e4e09c967c
+28	767	7834587488674536	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	873f32de0404f034
+12	786	7834587488838424	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	5a1e6f4d76c9cec2
+34	827	7834587489285322	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	bdbefc7e0773cb29
+17	837	7834587489371507	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	b1bccb758bbdcab7
+1	880	7834587489767341	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	dc67a851054d010b
+880	948	7834587490454753	C:/Users/c.boyer/Projets/Unity/The Greenhouse/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/2d6a4x5f/obj/arm64-v8a/libgame.so	cb254c4567bfe966
