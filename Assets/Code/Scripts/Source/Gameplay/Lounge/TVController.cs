@@ -83,11 +83,14 @@ namespace Code.Scripts.Source.Gameplay.Lounge
     
         private void TurnOffTv()
         {
-            _tvlight.enabled = false;
-            _tvOn = false;
-            _videoPlayer.isLooping = false;
-            PlayVideo(_turnOffVideoClip);
-            _tvScreenMaterial.color = _tvOffColor;
+            if (GameStateManager.Instance.GameStates.LoungePhase2._fusePlugged)
+            {
+                _tvlight.enabled = false;
+                _tvOn = false;
+                _videoPlayer.isLooping = false;
+                PlayVideo(_turnOffVideoClip);
+                _tvScreenMaterial.color = _tvOffColor;
+            }
         }
 
 

@@ -34,6 +34,8 @@ namespace Code.Scripts.Source.Gameplay.Lounge
             {
                 Debug.Log("Fuse placed");
                 GameStateManager.Instance.GameStates.LoungePhase2.OnFusePlugged?.Invoke();
+                args.interactableObject.colliders[0].enabled = false;
+                
             }
             GameStateManager.Instance.GameStates.LoungePhase2.OnSocketChanged?.Invoke();
         }
