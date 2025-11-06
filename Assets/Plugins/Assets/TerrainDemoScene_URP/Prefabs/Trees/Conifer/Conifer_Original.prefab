@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 4388053584151060432}
   - component: {fileID: 8844894662087583905}
   m_Layer: 0
-  m_Name: Conifer
+  m_Name: Conifer_Original
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

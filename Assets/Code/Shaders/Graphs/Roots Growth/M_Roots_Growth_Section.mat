@@ -57,14 +57,15 @@ Material:
     - _Clip: 0.96
     - _DecayPultiply: 9.77
     - _Grown: 1
-    - _Metallic: 0.51
+    - _Metallic: 0.081
     - _NormalStrenght: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Scale: -0.2
-    - _Smoothness: 0.3
+    - _Smoothness: 0.066
     - _WindPower: 0
     - _WindScale: 10
+    - _XRMotionVectorsPass: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DecayColor: {r: 0, g: 0, b: 0, a: 0}

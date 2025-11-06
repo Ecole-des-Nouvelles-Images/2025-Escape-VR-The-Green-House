@@ -8,7 +8,14 @@
       "hash": "49fd57a9e777b07a5f2904583abf1ee3c6818696"
     },
     "com.meta.xr.sdk.core": {
-      "version": "78.0.0",
+      "version": "81.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.meta.xr.simulator": {
+      "version": "81.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
