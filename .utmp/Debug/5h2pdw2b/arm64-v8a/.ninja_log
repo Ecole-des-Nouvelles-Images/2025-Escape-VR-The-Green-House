@@ -1,12 +1,23 @@
 # ninja log v5
-46	146	7835249237377461	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	5ce1fa0f1d5c73ec
 147	281	7835249238457894	C:/Users/c.boyer/Projets/Unity/2025-Escape-VR-TheGreenHouse/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/5h2pdw2b/obj/arm64-v8a/libswappywrapper.so	8f16885ab5f4ccec
+6	804	7835249243899539	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	463f37e8dc996a37
+46	146	7835249237377461	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	5ce1fa0f1d5c73ec
 16	683	7835249242735458	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	ea667f9feb57f709
+39	739	7835249243299725	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	ae4c3d93ab773531
 0	687	7835249242735458	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6314d786835838a0
 21	689	7835249242800679	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	cdcaf7629d9d7447
-11	713	7835249243038608	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	d170efd4c16abc02
 32	726	7835249243174255	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	53330f6a81fb5c7a
-39	739	7835249243299725	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	ae4c3d93ab773531
+11	713	7835249243038608	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	d170efd4c16abc02
 26	784	7835249243729327	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	2ad46daf1f039bb3
-6	804	7835249243899539	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	463f37e8dc996a37
 804	872	7835249244589419	C:/Users/c.boyer/Projets/Unity/2025-Escape-VR-TheGreenHouse/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/5h2pdw2b/obj/arm64-v8a/libgame.so	7ac08a9948531372
+49	151	7841479830146216	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	5ce1fa0f1d5c73ec
+152	344	7841479831753059	C:/Users/c.boyer/Projets/Unity/2025-Escape-VR-TheGreenHouse/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/5h2pdw2b/obj/arm64-v8a/libswappywrapper.so	8f16885ab5f4ccec
+24	648	7841479835099834	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	cdcaf7629d9d7447
+4	651	7841479835126405	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6314d786835838a0
+30	665	7841479835252573	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	ea667f9feb57f709
+14	666	7841479835268486	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	d170efd4c16abc02
+42	695	7841479835561353	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	53330f6a81fb5c7a
+35	719	7841479835784220	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	ae4c3d93ab773531
+19	739	7841479835995333	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	2ad46daf1f039bb3
+9	791	7841479836486966	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	463f37e8dc996a37
+791	870	7841479837283795	C:/Users/c.boyer/Projets/Unity/2025-Escape-VR-TheGreenHouse/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/5h2pdw2b/obj/arm64-v8a/libgame.so	7ac08a9948531372

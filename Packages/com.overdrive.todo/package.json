@@ -1,0 +1,10 @@
+{
+  "name": "com.overdrive.todo",
+  "displayName": "Overdrive Todo",
+  "version": "1.0.0",
+  "description": "Simple todo list editor tool",
+  "dependencies": {
+    "com.overdrive.shared": "0.0.1"
+  },
+  "author": "Overdrive Toolset"
+}

@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.overdrive.actions/Editor/Resources/UI/Actions_Styling.uss?fileID=7433441132597879392&amp;guid=3377f07482bf208438e8d8a1e1f943be&amp;type=3#Actions_Styling" />
+    <Style src="project://database/Packages/com.overdrive.shared/Editor/Resources/UI/Overdrive_GeneralStyles.uss?fileID=7433441132597879392&amp;guid=975ea3c222eca5749a8e2c9f7b65dcbb&amp;type=3#Overdrive_GeneralStyles" />
+    <ui:ListView name="ActionListView" style="overflow: hidden; max-height: 220px; min-height: 60px; max-width: 200px; min-width: 200px; width: 200px; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px;" />
+</ui:UXML>

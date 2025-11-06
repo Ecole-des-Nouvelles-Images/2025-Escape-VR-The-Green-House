@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.overdrive.shared/Editor/Resources/UI/Overdrive_ClassStyles.uss?fileID=7433441132597879392&amp;guid=6a6746da0d952c043ac60d2621ac3d5f&amp;type=3#Overdrive_ClassStyles" />
+    <Style src="project://database/Packages/com.overdrive.shared/Editor/Resources/UI/Overdrive_GeneralStyles.uss?fileID=7433441132597879392&amp;guid=975ea3c222eca5749a8e2c9f7b65dcbb&amp;type=3#Overdrive_GeneralStyles" />
+    <ui:VisualElement name="root" class="overdrive-styling" style="flex-direction: column; flex-grow: 1; flex-shrink: 1; height: auto;">
+        <ui:VisualElement name="Toolbar" class="grid toolbar add-margin-for-panel" style="flex-wrap: wrap; flex-direction: row; flex-shrink: 0;">
+            <ui:Button text="+" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AddNewTodo" class="spaced-element selectable" tooltip="Add new todo item" />
+        </ui:VisualElement>
+        <ui:VisualElement name="NewTodoCreation" style="flex-direction: row; display: none; flex-shrink: 0; margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px;">
+            <ui:TextField picking-mode="Ignore" value="" placeholder-text="Enter todo item..." name="NewTodoField" style="flex-grow: 1; margin-top: 0; margin-right: 2px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+            <ui:Button text="×" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CancelNewTodo" tooltip="Cancel" />
+        </ui:VisualElement>
+        <ui:Label text="Todo" style="margin-top: 8px; margin-left: 8px; margin-right: 8px; margin-bottom: 4px; -unity-font-style: bold; color: rgb(200, 200, 200);" />
+        <ui:ScrollView name="TodoList" horizontal-scroller-visibility="Hidden" style="margin-top: 0; margin-right: 0; margin-bottom: 8px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-grow: 1;" />
+        <ui:Label text="Done" style="margin-top: 8px; margin-left: 8px; margin-right: 8px; margin-bottom: 4px; -unity-font-style: bold; color: rgb(120, 120, 120);" />
+        <ui:ScrollView name="DoneList" horizontal-scroller-visibility="Hidden" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

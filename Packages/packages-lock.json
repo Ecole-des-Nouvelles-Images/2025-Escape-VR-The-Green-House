@@ -21,6 +21,28 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.overdrive.actions": {
+      "version": "file:com.overdrive.actions",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.overdrive.shared": "1.0.4"
+      }
+    },
+    "com.overdrive.shared": {
+      "version": "file:com.overdrive.shared",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.overdrive.todo": {
+      "version": "file:com.overdrive.todo",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.overdrive.shared": "0.0.1"
+      }
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
