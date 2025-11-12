@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Dynamite3D.RealIvy{
 	public class GrowthBuilder : ScriptableObject {

@@ -1,5 +1,4 @@
-﻿using Dynamite3D.RealIvy;
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace Dynamite3D.RealIvy
