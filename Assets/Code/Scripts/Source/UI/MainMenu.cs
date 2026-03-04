@@ -101,6 +101,7 @@ namespace Code.Scripts.Source.UI
             HideAllPanels();
             GameStateManager.Instance.SwitchState(GameStateManager.Instance.GameStates.HallIntro);
             SceneLoader.Instance.SwitchScene(SceneType.Hall);
+            EnableMainMenuPanel();
         }
 
         private void QuitGame()
@@ -113,30 +114,43 @@ namespace Code.Scripts.Source.UI
 
         private void HideAllPanels()
         {
-            _mainMenuPanel.DOFade(0, _fadeDuration);
-            _optionsPanel.DOFade(0, _fadeDuration);
-            _creditsPanel.DOFade(0, _fadeDuration);
+            _mainMenuPanel.interactable = false;
+            _optionsPanel.interactable = false;
+            _creditsButton.interactable = false;
+            
+            _mainMenuPanel.DOFade(0, 0.1f);
+            _optionsPanel.DOFade(0, 0.1f);
+            _creditsPanel.DOFade(0, 0.1f);
         }
 
         private void EnableMainMenuPanel()
         {
-            _mainMenuPanel.DOFade(1, _fadeDuration);
+            _optionsPanel.interactable = false;
+            _creditsPanel.interactable = false;
+            
+            _mainMenuPanel.DOFade(1, _fadeDuration).OnComplete(() => _mainMenuPanel.interactable = true);
             _optionsPanel.DOFade(0, _fadeDuration);
             _creditsPanel.DOFade(0, _fadeDuration);
         }
 
         private void EnableOptionsPanel()
         {
+            _mainMenuPanel.interactable = false;
+            _creditsPanel.interactable = false;
+
             _mainMenuPanel.DOFade(0, _fadeDuration);
-            _optionsPanel.DOFade(1, _fadeDuration);
+            _optionsPanel.DOFade(1, _fadeDuration).OnComplete(() => _optionsPanel.interactable = true);
             _creditsPanel.DOFade(0, _fadeDuration);
         }
 
         private void EnableCreditsPanel()
         {
+            _mainMenuPanel.interactable = false;
+            _optionsPanel.interactable = false;
+            
             _mainMenuPanel.DOFade(0, _fadeDuration);
             _optionsPanel.DOFade(0, _fadeDuration);
-            _creditsPanel.DOFade(1, _fadeDuration);
+            _creditsPanel.DOFade(1, _fadeDuration).OnComplete(() => _creditsPanel.interactable = true);
         }
 
         // ---
