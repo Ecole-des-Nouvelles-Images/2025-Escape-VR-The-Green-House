@@ -75,7 +75,9 @@ The game features four different rooms and some corridors :
 | **The Greenhouse** | A room filled with plants and tools, where the player can experience many interactions with the environment. |
 | **[REDACTED]**     | The culmination of the player's experience and game's lore where the player may find the solution to escape, if it manages to solve a complex puzzle. |
 
-![Gameplay Screenshot](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/gameplay-screenshot.png)
+<video width="960" height="720" controls>
+  <source src="https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-The-Green-House/blob/main/.metadata/TheGreenhouse_Lounge_and_doors.mp4" type="video/mp4">
+</video>
 
 ---
 
