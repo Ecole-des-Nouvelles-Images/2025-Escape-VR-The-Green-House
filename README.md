@@ -3,7 +3,7 @@
     <h1>The GreenHouse</h1>
 </div>
 <div align="center" style="text-align: center;">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Unity%20-%206000.1.5f1%20-%20%231182C3?logo=unity&logoColor=%23FFFFFF&logoSize=auto&link=https%3A%2F%2Funity.com%2F"/>
+    <img alt="Static Badge" src="https://img.shields.io/badge/Unity%20-%206000.2.9f1%20-%20%231182C3?logo=unity&logoColor=%23FFFFFF&logoSize=auto&link=https%3A%2F%2Funity.com%2F"/>
     <a href="https://github.com/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse/releases/latest"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?include_prereleases&display_name=tag&logo=gitlfs&logoColor=white"></a>
     <img alt="GitHub License" src="https://img.shields.io/github/license/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?label=License"/>
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Ecole-des-Nouvelles-Images/2025-Escape-VR-TheGreenHouse?label=Size&color=lightgrey"/>
