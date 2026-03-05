@@ -1,5 +1,5 @@
 using System;
-using Code.Scripts.Utils;
+using UnityEngine;
 
 namespace Code.Scripts.Source.Gameplay.Labo
 {
@@ -8,13 +8,13 @@ namespace Code.Scripts.Source.Gameplay.Labo
         public int Index { get; private set; }
         public float CorrectDose { get; private set; }
         public float CurrentDose { get; set; }
-
+        
         public PotionProperties(PotionType type)
         {
             CurrentDose = 0.5f;
-
+            
             switch (type)
-            {
+            { 
                 case PotionType.Tulénium :
                     Index = 5;
                     CorrectDose = 0.25f;
@@ -44,8 +44,8 @@ namespace Code.Scripts.Source.Gameplay.Labo
                     CorrectDose = 0f;
                     break;
             }
-
-            CustomLogger.LogInfo($"PotionProperties: Index = {Index}, CorrectDose = {CorrectDose}");
+            
+            Debug.Log($"PotionProperties: Index = {Index}, CorrectDose = {CorrectDose}");
         }
     }
 }

@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.overdrive.shared/Editor/Resources/UI/Overdrive_GeneralStyles.uss?fileID=7433441132597879392&amp;guid=975ea3c222eca5749a8e2c9f7b65dcbb&amp;type=3#Overdrive_GeneralStyles" />
+    <Style src="project://database/Packages/com.overdrive.actions/Editor/Resources/UI/Actions_Styling.uss?fileID=7433441132597879392&amp;guid=3377f07482bf208438e8d8a1e1f943be&amp;type=3#Actions_Styling" />
+    <ui:VisualElement name="ActionRow" class="action-row" style="padding-left: 6px;">
+        <ui:Label name="ActionLabel" text="Action Name with lots of extra long bits just to test" enable-rich-text="true" class="action-label" style="text-overflow: ellipsis; margin-bottom: 3px; margin-top: 3px;" />
+        <ui:Button name="FavoriteToggle" tooltip="&quot;Favorite&quot; actions for quick access" class="icon-only-button remove-button" style="width: 16px; height: 16px; min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; margin-right: 3px; margin-left: 3px;" />
+    </ui:VisualElement>
+</ui:UXML>

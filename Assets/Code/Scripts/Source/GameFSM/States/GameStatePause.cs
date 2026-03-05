@@ -17,8 +17,6 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStatePause : GameBaseState
     {
-        public override GameStatesIndex StateIndex { get; protected set; } = GameStatesIndex.GameStatePause;
-
         [SerializeField] private PauseMenuController _pauseUI;
         [Space]
         [SerializeField] private Volume _postRenderVolume;
@@ -45,6 +43,8 @@ namespace Code.Scripts.Source.GameFSM.States
 
         public override void EnterState(GameStateManager context)
         {
+            base.EnterState(context);
+
             context.GamePaused = true;
 
             context.ChangeNearFarInteractionMode(NearFarMode.Far);
@@ -66,6 +66,8 @@ namespace Code.Scripts.Source.GameFSM.States
 
             _pauseUI.ShowPausePanel();
             AudioManager.Instance.SetLowpassFrequency(400f);
+
+
         }
 
         public override void UpdateState(GameStateManager context)
@@ -91,13 +93,19 @@ namespace Code.Scripts.Source.GameFSM.States
             EnableXRInteractable(true);
 
             context.ChangeNearFarInteractionMode(NearFarMode.Near);
+
+            Debug.Log("[GameStatePause] Exiting...");
         }
 
         // ---
 
         private void EnableXRInteractable(bool enable)
         {
-            if (_currentSceneInteractable is not { Count: > 0 }) return;
+            if (_currentSceneInteractable == null || _currentSceneInteractable.Count <= 0)
+            {
+                Debug.LogWarning($"GameStatePause: No XRBaseInteractable found in scene {SceneLoader.Instance.CurrentScene} but no further problems to report.");
+                return;
+            }
 
             for (int i = 0; i < _currentSceneInteractable.Count; i++)
                 _currentSceneInteractable[i].enabled = enable;

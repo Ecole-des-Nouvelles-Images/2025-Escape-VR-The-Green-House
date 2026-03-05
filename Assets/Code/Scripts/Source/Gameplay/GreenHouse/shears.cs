@@ -10,12 +10,12 @@ namespace Code.Scripts.Source.Gameplay.GreenHouse
     [RequireComponent(typeof(AudioSource))]
     public class shears : MonoBehaviour
     {
-
-        private XRBaseInteractable interactable;
+    
+        private XRBaseInteractable interactable; 
         private AudioSource _audioSource;
-        private List<AudioClip> _shearsClips;
+        private List<AudioClip> _shearsClips; 
         private Animator _animator;
-
+    
         private void Awake()
         {
             interactable = GetComponent<XRBaseInteractable>();
@@ -24,20 +24,20 @@ namespace Code.Scripts.Source.Gameplay.GreenHouse
             _audioSource.outputAudioMixerGroup = AudioManager.Instance.SFXMixerModule;
             _audioSource.playOnAwake = false;
             _shearsClips = AudioManager.Instance.ClipsIndex.ShearsCut;
-
+      
         }
-
+      
         void OnEnable()
         {
             interactable.activated.AddListener(CutPlant);
         }
 
-        void OnDisable()
-        {
+        void OnDisable() 
+        { 
             interactable.activated.RemoveListener(CutPlant);
         }
 
-
+     
         private void CutPlant(ActivateEventArgs arg0)
         {
             _animator.SetTrigger("Cut");

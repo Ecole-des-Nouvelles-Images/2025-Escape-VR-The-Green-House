@@ -5,7 +5,7 @@ using Code.Scripts.Source.XR;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit;
-using VRTemplateAssets.Scripts;
+using XRI.Examples.Scripts;
 
 namespace Code.Scripts.Source.Gameplay
 {
@@ -22,7 +22,7 @@ namespace Code.Scripts.Source.Gameplay
         [Header("Animation")]
         [SerializeField] private string _triggerDoorAnimation;
         private Animator _doorAnimator;
-
+        
         [Header("Sound")]
         private AudioSource _doorAudioSource;
 
@@ -66,9 +66,9 @@ namespace Code.Scripts.Source.Gameplay
             if (_isLocked) return;
             if (!Mathf.Approximately(value, 0f)) return;
 
-
+            
             if (_isOpen) return;
-
+          
             OpenDoor(_destination);
         }
 
@@ -83,7 +83,7 @@ namespace Code.Scripts.Source.Gameplay
             _cloneKey.SetActive(true);
             _isLocked = false;
             _keySocket.socketActive = false;
-
+            
             PlayDoorSound( AudioManager.Instance.ClipsIndex.InsertKey);
         }
 

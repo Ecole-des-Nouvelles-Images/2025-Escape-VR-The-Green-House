@@ -8,7 +8,6 @@ namespace Code.Scripts.Source.Gameplay.Lounge
 {
     public class BookSocket : MonoBehaviour
     {
-        [SerializeField] private VoiceLineSO _fuseWantedVoiceLine;
         private XRSocketInteractor _socket;
 
 
@@ -32,11 +31,12 @@ namespace Code.Scripts.Source.Gameplay.Lounge
         private void OnBookPlaced(SelectEnterEventArgs args)
         {
             if (_socket.firstInteractableSelected.transform.CompareTag("Fuse"))
+            {
+                Debug.Log("Fuse placed");
                 GameStateManager.Instance.GameStates.LoungePhase2.OnFusePlugged?.Invoke();
-
-            else if (!GameStateManager.Instance.GameStates.LoungePhase2.FusePlugged)
-                Narrator.Narrator.Instance.PlayVoiceLine(_fuseWantedVoiceLine);
-
+                args.interactableObject.colliders[0].enabled = false;
+                
+            }
             GameStateManager.Instance.GameStates.LoungePhase2.OnSocketChanged?.Invoke();
         }
 

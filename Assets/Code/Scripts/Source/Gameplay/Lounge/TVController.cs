@@ -1,4 +1,3 @@
-using Code.Scripts.Source.Audio;
 using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.XR;
 using UnityEngine;
@@ -6,7 +5,6 @@ using UnityEngine.Video;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using Code.Scripts.Source.Narrator;
-using UnityEngine.Audio;
 
 
 namespace Code.Scripts.Source.Gameplay.Lounge
@@ -26,7 +24,6 @@ namespace Code.Scripts.Source.Gameplay.Lounge
     
         [Header("Sound Effect")]
         [SerializeField] private AudioSource _tvTapeAudioSource;
-        [SerializeField] private AudioSource _VideoAudioSource;
         [SerializeField] private VoiceLineSO _tvOffVoiceLine;
         
         private VideoPlayer _videoPlayer;
@@ -64,68 +61,55 @@ namespace Code.Scripts.Source.Gameplay.Lounge
             Destroy(_socketTagInteractor.firstInteractableSelected.transform.gameObject);
             _cassetteInserted = true;
             _tvTapeAudioSource.Play();
-
-            if (GameStateManager.Instance.GameStates.LoungePhase2.FusePlugged)
-            {
-                Invoke(nameof(TurnOnTv),2f);
-            }
+            Invoke("TurnOnTv",2f);
         }
         
         [ContextMenu("Turn On Tv")]
         private void TurnOnTv()
         {
+            if (GameStateManager.Instance.GameStates.LoungePhase2._fusePlugged)
+            {
                 _tvlight.enabled = true;
                 _tvOn = true;
                 _videoPlayer.isLooping = true;
-
-                if (_cassetteInserted)
-                {
-                    PlayVideo(_VhsVideoClip, AudioManager.Instance.VoicesMixerModule);
-                }
-                else 
-                {
-                    PlayVideo(_TvStaticVideoClip, AudioManager.Instance.SFXMixerModule);
-                }
-             
+                PlayVideo(_cassetteInserted ? _VhsVideoClip : _TvStaticVideoClip);
                 _tvScreenMaterial.color = _tvOnColor;
+            }
+            else
+            {
+                Narrator.Narrator.Instance.PlayVoiceLine(_tvOffVoiceLine);
+            }
         }
     
         private void TurnOffTv()
         {
-            _tvlight.enabled = false;
-            _tvOn = false;
-            _videoPlayer.isLooping = false;
-            PlayVideo(_turnOffVideoClip,AudioManager.Instance.SFXMixerModule);
-            _tvScreenMaterial.color = _tvOffColor;
+            if (GameStateManager.Instance.GameStates.LoungePhase2._fusePlugged)
+            {
+                _tvlight.enabled = false;
+                _tvOn = false;
+                _videoPlayer.isLooping = false;
+                PlayVideo(_turnOffVideoClip);
+                _tvScreenMaterial.color = _tvOffColor;
+            }
         }
 
 
       
         private void ToggleTvPower(ActivateEventArgs args)
         {
-            if (GameStateManager.Instance.GameStates.LoungePhase2.FusePlugged)
-            {
-                _tvOn = !_tvOn;
-                if (_tvOn)
-                { 
-                    TurnOnTv();
-                }
-                else
-                { 
-                    TurnOffTv();
-                }
+            _tvOn = !_tvOn;
+            if (_tvOn)
+            { 
+                TurnOnTv();
             }
             else
             { 
-                Narrator.Narrator.Instance.PlayVoiceLine(_tvOffVoiceLine);
+                TurnOffTv();
             }
-
-           
         }
 
-        private void PlayVideo(VideoClip clip, AudioMixerGroup mixer)
+        private void PlayVideo(VideoClip clip)
         {
-            _VideoAudioSource.outputAudioMixerGroup = mixer;
             _videoPlayer.clip = clip;
             _videoPlayer.Play();
         }

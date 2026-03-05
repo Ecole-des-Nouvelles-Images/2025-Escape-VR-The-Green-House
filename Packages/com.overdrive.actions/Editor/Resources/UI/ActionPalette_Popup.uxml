@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.overdrive.actions/Editor/Resources/UI/Actions_Styling.uss?fileID=7433441132597879392&amp;guid=3377f07482bf208438e8d8a1e1f943be&amp;type=3#Actions_Styling" />
+    <Style src="project://database/Packages/com.overdrive.shared/Editor/Resources/UI/Overdrive_GeneralStyles.uss?fileID=7433441132597879392&amp;guid=975ea3c222eca5749a8e2c9f7b65dcbb&amp;type=3#Overdrive_GeneralStyles" />
+    <ui:VisualElement name="RootContainer" style="width: 350px; min-height: 60px; max-height: 200px;">
+        <ui:TextField name="SearchField" style="margin-right: 0; margin-bottom: 4px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0;" />
+        <ui:ListView name="ActionListView" style="flex-grow: 1; max-height: 400px;" />
+    </ui:VisualElement>
+</ui:UXML>

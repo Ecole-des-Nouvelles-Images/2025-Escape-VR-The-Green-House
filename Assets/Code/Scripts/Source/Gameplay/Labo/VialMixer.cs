@@ -1,7 +1,6 @@
 using System;
-using Code.Scripts.Utils;
 using UnityEngine;
-using VRTemplateAssets.Scripts;
+using XRI.Examples.Scripts;
 
 namespace Code.Scripts.Source.Gameplay.Labo
 {
@@ -30,7 +29,7 @@ namespace Code.Scripts.Source.Gameplay.Labo
             }
             catch (Exception)
             {
-                CustomLogger.LogWarning("[VialMixer] ERROR");
+                Debug.LogWarning("ERREUR");
             }
         }
 
@@ -61,32 +60,30 @@ namespace Code.Scripts.Source.Gameplay.Labo
         private void OnDialMoved(XRKnob dial, Vial vial, float value)
         {
             value = Mathf.Clamp(value, 0f, 1f);
-
             int stepIndex = Mathf.RoundToInt(value * 4);
-
-            CustomLogger.LogInfo($"stepIndex = {stepIndex}\nvalue = {value}");
-
+            Debug.Log("stepIndex = " + stepIndex);
+            Debug.Log("value = " + value);
             switch (stepIndex)
             {
                 case 0:
                     ChangeDose(vial, dial);
-                    CustomLogger.LogInfo("Le dial : " + dial + "a modifié "+ vial+"en Rien");
+                    Debug.Log("Le dial : " + dial + "a modifié "+ vial+"en Rien");
                     break;
                 case 1:
                     ChangeDose(vial, dial);
-                    CustomLogger.LogInfo("Le dial : " + dial + "a modifié "+ vial+"en Tenu");
+                    Debug.Log("Le dial : " + dial + "a modifié "+ vial+"en Tenu");
                     break;
                 case 2:
                     ChangeDose(vial, dial);
-                    CustomLogger.LogInfo("Le dial : " + dial + "a modifié "+ vial+"en Réactif");
+                    Debug.Log("Le dial : " + dial + "a modifié "+ vial+"en Réactif");
                     break;
                 case 3:
                     ChangeDose(vial, dial);
-                    CustomLogger.LogInfo("Le dial : " + dial + "a modifié "+ vial+"en Volatil");
+                    Debug.Log("Le dial : " + dial + "a modifié "+ vial+"en Volatil");
                     break;
                 case 4:
                     ChangeDose(vial, dial);
-                    CustomLogger.LogInfo("Le dial : " + dial + "a modifié "+ vial+"en Corrosif");
+                    Debug.Log("Le dial : " + dial + "a modifié "+ vial+"en Corrosif");
                     break;
             }
         }

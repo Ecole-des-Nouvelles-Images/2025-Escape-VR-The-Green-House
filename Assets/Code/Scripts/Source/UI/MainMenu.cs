@@ -43,8 +43,8 @@ namespace Code.Scripts.Source.UI
         [Header("Miscellaneous")]
         [SerializeField] private TMP_Text _appVersion;
 
-       [Header("Animations")]
-       [SerializeField] private float _fadeDuration = 1.5f;
+        [Header("Animations")]
+        [SerializeField] private float _fadeDuration = 1.5f;
 
         private void OnEnable()
         {
@@ -101,6 +101,7 @@ namespace Code.Scripts.Source.UI
             HideAllPanels();
             GameStateManager.Instance.SwitchState(GameStateManager.Instance.GameStates.HallIntro);
             SceneLoader.Instance.SwitchScene(SceneType.Hall);
+            EnableMainMenuPanel();
         }
 
         private void QuitGame()
@@ -113,42 +114,43 @@ namespace Code.Scripts.Source.UI
 
         private void HideAllPanels()
         {
-            _mainMenuPanel.gameObject.SetActive(false);
-            _optionsPanel.gameObject.SetActive(false);
-            _creditsPanel.gameObject.SetActive(false);
+            _mainMenuPanel.interactable = false;
+            _optionsPanel.interactable = false;
+            _creditsButton.interactable = false;
+            
+            _mainMenuPanel.DOFade(0, 0.1f);
+            _optionsPanel.DOFade(0, 0.1f);
+            _creditsPanel.DOFade(0, 0.1f);
         }
 
         private void EnableMainMenuPanel()
         {
-           /* _mainMenuPanel.gameObject.SetActive(true);
-            _optionsPanel.gameObject.SetActive(false);
-            _creditsPanel.gameObject.SetActive(false);*/
-
-           _mainMenuPanel.gameObject.transform.DOScale(1, _fadeDuration);
-           _optionsPanel.gameObject.transform.DOScale(0, _fadeDuration);
-           _creditsPanel.gameObject.transform.DOScale(0, _fadeDuration);
+            _optionsPanel.interactable = false;
+            _creditsPanel.interactable = false;
+            
+            _mainMenuPanel.DOFade(1, _fadeDuration).OnComplete(() => _mainMenuPanel.interactable = true);
+            _optionsPanel.DOFade(0, _fadeDuration);
+            _creditsPanel.DOFade(0, _fadeDuration);
         }
 
         private void EnableOptionsPanel()
         {
-           /* _mainMenuPanel.gameObject.SetActive(false);
-            _optionsPanel.gameObject.SetActive(true);
-            _creditsPanel.gameObject.SetActive(false);*/
-           
-           _mainMenuPanel.gameObject.transform.DOScale(0, _fadeDuration);
-           _optionsPanel.gameObject.transform.DOScale(1, _fadeDuration);
-           _creditsPanel.gameObject.transform.DOScale(0, _fadeDuration);
+            _mainMenuPanel.interactable = false;
+            _creditsPanel.interactable = false;
+
+            _mainMenuPanel.DOFade(0, _fadeDuration);
+            _optionsPanel.DOFade(1, _fadeDuration).OnComplete(() => _optionsPanel.interactable = true);
+            _creditsPanel.DOFade(0, _fadeDuration);
         }
 
         private void EnableCreditsPanel()
         {
-           /* _mainMenuPanel.gameObject.SetActive(false);
-            _optionsPanel.gameObject.SetActive(false);
-            _creditsPanel.gameObject.SetActive(true);*/
-           
-           _mainMenuPanel.gameObject.transform.DOScale(0, _fadeDuration);
-           _optionsPanel.gameObject.transform.DOScale(0, _fadeDuration);
-           _creditsPanel.gameObject.transform.DOScale(1, _fadeDuration);
+            _mainMenuPanel.interactable = false;
+            _optionsPanel.interactable = false;
+            
+            _mainMenuPanel.DOFade(0, _fadeDuration);
+            _optionsPanel.DOFade(0, _fadeDuration);
+            _creditsPanel.DOFade(1, _fadeDuration).OnComplete(() => _creditsPanel.interactable = true);
         }
 
         // ---

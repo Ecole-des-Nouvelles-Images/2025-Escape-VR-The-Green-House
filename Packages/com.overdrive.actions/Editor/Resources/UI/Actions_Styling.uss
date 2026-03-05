@@ -1,0 +1,55 @@
+#ActionListView {
+    flex-grow: 1;
+}
+
+.unity-collection-view__item.action-row {
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.action-row:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.action-row:selected {
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+#ActionLabel.action-label {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    color: rgb(180, 180, 180);
+    -unity-text-align: middle-left;
+    margin-left: 2px;
+}
+
+#PathLabel.action-path {
+    color: rgb(125, 125, 125);
+    font-size: 9px;
+    -unity-text-align: middle-left;
+    padding-left: 4px;
+}
+
+.action-row:selected > #ActionLabel {
+    color: rgb(255, 255, 255);
+}
+
+.action-row:selected > #PathLabel {
+    color: rgb(143, 143, 143);
+}
+
+.favorite-on {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    opacity: 0.5;
+}
+
+.favorite-off {
+    opacity: 0.1;
+}

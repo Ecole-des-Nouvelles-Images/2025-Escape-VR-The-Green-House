@@ -60,12 +60,12 @@ SpeedTreeImporter:
   alphaTestRef: 0.33
   enableHueVariation: 0
   enableBumpMapping: 1
-  enableSubsurfaceScattering: 1
+  enableSubsurfaceScattering: 0
   bestWindQuality: 4
   selectedWindQuality: 2
   enableShadowCasting: 1
   enableShadowReceiving: 1
-  enableLightProbes: 1
+  enableLightProbes: 0
   reflectionProbeEnumValue: 1
   hasBillboard: 1
   lODSettings:
@@ -115,8 +115,8 @@ SpeedTreeImporter:
   fadeOutWidth: 0.25
   scaleFactor: 0.3048
   unitConversionEnumValue: 1
-  motionVectorModeEnumValue: 1
-  generateColliders: 1
+  motionVectorModeEnumValue: 2
+  generateColliders: 0
   generateRigidbody: 1
   materialVersion: 3
   materialLocation: 1

@@ -56,15 +56,16 @@ Material:
     m_Floats:
     - _Clip: 0.96
     - _DecayPultiply: 9.77
-    - _Grown: 0
-    - _Metallic: 0.51
+    - _Grown: 1
+    - _Metallic: 0.081
     - _NormalStrenght: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Scale: -0.2
-    - _Smoothness: 0.3
+    - _Smoothness: 0.066
     - _WindPower: 0
     - _WindScale: 10
+    - _XRMotionVectorsPass: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DecayColor: {r: 0, g: 0, b: 0, a: 0}
@@ -85,4 +86,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 9
+  version: 10

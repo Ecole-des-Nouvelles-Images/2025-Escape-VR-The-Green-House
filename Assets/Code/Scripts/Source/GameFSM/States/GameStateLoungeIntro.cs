@@ -6,10 +6,10 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStateLoungeIntro : GameBaseState
     {
-        public override GameStatesIndex StateIndex { get; protected set; } = GameStatesIndex.GameStateLoungeIntro;
-
         public override void EnterState(GameStateManager context)
         {
+            base.EnterState(context);
+
             context.SwitchState(context.GameStates.LoungePhase1); // phase 1 dans version finale
         }
 

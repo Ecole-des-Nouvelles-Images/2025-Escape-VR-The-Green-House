@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Button name="AssetReference" style="flex-direction: row; align-items: center; margin-top: 1px; margin-bottom: 1px; padding: 2px; background-color: rgba(0, 0, 0, 0.2); border-radius: 2px; height: 18px;">
+        <ui:VisualElement name="Icon" style="width: 14px; height: 14px; margin-right: 4px; background-image: none;" />
+        <ui:Label name="Name" text="Asset Name" style="flex-grow: 1; -unity-text-align: middle-left; font-size: 10px;" />
+    </ui:Button>
+</ui:UXML>

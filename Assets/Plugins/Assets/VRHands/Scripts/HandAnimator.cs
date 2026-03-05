@@ -135,7 +135,6 @@ public class HandAnimator : MonoBehaviour
 
     #region Method 2
 
-    #if UNITY_EDITOR
     private void Update()
     {
         //if (m_StickInput != null)
@@ -159,7 +158,6 @@ public class HandAnimator : MonoBehaviour
         //    AnimateActionInput(grippingFingers);
         //}
     }
-    #endif
 
     #endregion Method 2
 

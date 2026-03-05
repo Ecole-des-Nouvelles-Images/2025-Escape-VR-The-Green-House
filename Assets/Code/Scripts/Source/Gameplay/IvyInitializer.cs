@@ -19,14 +19,14 @@ namespace Code.Scripts.Source.Gameplay
 
             if (_ivyType == IvyType.Lounge)
             {
-                if (GameStateManager.Instance.CurrentState == GameStateManager.Instance.GameStates.HallResolved)
+                if (GameStateManager.Instance.CurrentState == GameStateManager.Instance.GameStates.HallResolved) 
                 {
                     gameObject.SetActive(true);
                 }
             }
             else if (_ivyType == IvyType.GreenHouse)
             {
-                if (GameStateManager.Instance.CurrentState == GameStateManager.Instance.GameStates.LoungePhase1)
+                if (GameStateManager.Instance.CurrentState == GameStateManager.Instance.GameStates.LoungePhase1) 
                 {
                     gameObject.SetActive(true);
                 }

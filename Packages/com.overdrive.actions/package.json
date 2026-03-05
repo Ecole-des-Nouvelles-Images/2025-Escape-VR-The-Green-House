@@ -1,0 +1,16 @@
+{
+  "name": "com.overdrive.actions",
+  "displayName": "Overdrive Actions Palette",
+  "version": "1.0.8",
+  "description": "Quick-Access Actions and Favorites",
+  "unity": "6000.0",
+  "keywords": [
+    "actions",
+    "palette",
+    "favorites"
+  ],
+  "dependencies": {
+    "com.overdrive.shared": "1.0.4"
+  },
+  "author": "Overdrive Toolset"
+}

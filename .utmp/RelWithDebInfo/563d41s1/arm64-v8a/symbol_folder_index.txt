@@ -1,0 +1,1 @@
+C:\Users\c.boyer\Projets\Unity\2025-Escape-VR-The-Green-House\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\563d41s1\obj\arm64-v8a

@@ -3,26 +3,25 @@ using Code.Scripts.Source.Managers;
 using Code.Scripts.Source.Narrator;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Serialization;
+
 
 namespace Code.Scripts.Source.GameFSM.States
 {
     [Serializable]
     public class GameStateHallResolved: GameBaseState
     {
+        private PlayableDirector _playableDirector;
         [SerializeField] private VoiceLineSO _openWalletVoiceLine;
         [SerializeField] private PlayableAsset _openCaseAsset;
-
-        private PlayableDirector _playableDirector;
-
-        public override GameStatesIndex StateIndex { get; protected set; } = GameStatesIndex.GameStateHallResolved;
-
         public override void EnterState(GameStateManager context)
         {
+            base.EnterState(context);
             _playableDirector = GameObject.FindGameObjectWithTag("HallPlayableDirector").GetComponent<PlayableDirector>();
-
             if (!_playableDirector)
+            {
                 throw new NullReferenceException("HallPlayableDirector not found");
-
+            }
             OpenCase();
             Narrator.Narrator.Instance.StartCoroutine(Narrator.Narrator.Instance.PlayVoiceLineWithDelay(_openWalletVoiceLine, 1f));
         }
@@ -36,13 +35,13 @@ namespace Code.Scripts.Source.GameFSM.States
         {
 
         }
-
+        
         private void OpenCase()
         {
            _playableDirector.playableAsset = _openCaseAsset;
            _playableDirector.extrapolationMode = DirectorWrapMode.Hold;
            _playableDirector.Play();
         }
-
+        
     }
 }

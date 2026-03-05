@@ -1,5 +1,4 @@
 using Code.Scripts.Source.Audio;
-using Code.Scripts.Utils;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -8,7 +7,7 @@ using UnityEngine.UI;
 
 namespace Code.Scripts.Source.UI
 {
-    [RequireComponent(typeof(Button), typeof(AudioSource))]
+    [RequireComponent(typeof(Button))]
     public class UIButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
         [Header("Animation and feedback")]
@@ -24,8 +23,11 @@ namespace Code.Scripts.Source.UI
         private void Start()
         {
             _audio = GetComponent<AudioSource>();
-
-            CustomLogger.Assert(_audio, $"[UI Button {gameObject.name}] Fail to find AudioSource component", false);
+            if (!_audio)
+            {
+                _audio = gameObject.AddComponent<AudioSource>();
+                _audio.outputAudioMixerGroup = AudioManager.Instance.SFXMixerModule;
+            }
 
             _button = GetComponent<Button>();
             _title = GetComponentInChildren<TMP_Text>();
@@ -33,8 +35,8 @@ namespace Code.Scripts.Source.UI
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            if (AudioManager.Instance.gameObject.activeSelf && _audio)
-                _audio.PlayOneShot(AudioManager.Instance.ClipsIndex.UIButtonSelected);
+            if (AudioManager.Instance.gameObject.activeSelf)
+                _audio.PlayOneShot(AudioManager.Instance.ClipsIndex.UIButtonHoverEnter);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -46,8 +48,8 @@ namespace Code.Scripts.Source.UI
             if (_title)
                 _title.DOColor(_hoverColor, 0.5f);
 
-            if (AudioManager.Instance.gameObject.activeSelf && _audio)
-                _audio.PlayOneShot(AudioManager.Instance.ClipsIndex.UIButtonHoverEnter);
+            if (AudioManager.Instance.gameObject.activeSelf)
+                _audio.PlayOneShot(AudioManager.Instance.ClipsIndex.UIButtonSelected);
         }
 
         public void OnPointerExit(PointerEventData eventData)
@@ -59,7 +61,7 @@ namespace Code.Scripts.Source.UI
             if (_title)
                 _title.DOColor(Color.white, 0.5f);
 
-            if (AudioManager.Instance.gameObject.activeSelf && _audio)
+            if (AudioManager.Instance.gameObject.activeSelf)
                 _audio.PlayOneShot(AudioManager.Instance.ClipsIndex.UIButtonHoverExit);
         }
 

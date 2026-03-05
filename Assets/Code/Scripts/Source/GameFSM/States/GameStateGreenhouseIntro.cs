@@ -6,10 +6,6 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStateGreenhouseIntro : GameBaseState
     {
-        public override GameStatesIndex StateIndex { get; protected set; } = GameStatesIndex.GameStateGreenhouseIntro;
-
-        public override void EnterState(GameStateManager context) {}
-
         public override void UpdateState(GameStateManager context)
         {
 

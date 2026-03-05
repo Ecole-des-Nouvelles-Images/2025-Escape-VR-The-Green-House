@@ -8,16 +8,12 @@ namespace Code.Scripts.Source.GameFSM.States
     [Serializable]
     public class GameStateGreenhouseResolved : GameBaseState
     {
-        [SerializeField] private PlayableAsset _ivyStunnedAsset;
-
         private PlayableDirector _playableDirector;
-
-        public override GameStatesIndex StateIndex { get; protected set; } = GameStatesIndex.GameStateGreenhouseResolved;
-
-        public override void EnterState(GameStateManager context) {}
-
+        [SerializeField] private PlayableAsset _ivyStunnedAsset;
         public override void UpdateState(GameStateManager context)
         {
+            base.EnterState(context);
+            
             /*_playableDirector = GameObject.FindGameObjectWithTag("HallPlayableDirector").GetComponent<PlayableDirector>();
             if (!_playableDirector)
             {
@@ -26,10 +22,12 @@ namespace Code.Scripts.Source.GameFSM.States
             IvySleep();*/
         }
 
-        public override void ExitState(GameStateManager context) {}
+        public override void ExitState(GameStateManager context)
+        {
 
-        // ---
-
+        }
+        
+        
         private void IvySleep()
         {
             _playableDirector.playableAsset = _ivyStunnedAsset;

@@ -11,7 +11,7 @@ namespace Code.Scripts.Utils
         {
             get
             {
-                if (!_instance)
+                if (_instance == null)
                 {
                     T[] objs = FindObjectsByType<T>(FindObjectsSortMode.None);
 
@@ -19,12 +19,12 @@ namespace Code.Scripts.Utils
                         _instance = objs[0];
 
                     if (objs.Length > 1)
-                        CustomLogger.Raise<Exception>($"[{typeof(T)}] There is more than one instance in the scene !");
+                        throw new Exception($"[{typeof(T).Name}] There is more than one instance in the scene !");
                 }
 
                 if (!_instance)
                 {
-                    CustomLogger.Raise<Exception>($"No singleton instance of {typeof(T)} found in the scene");
+                    throw new Exception($"[{typeof(T).Name}] No singleton instance found in the scene !");
                 }
 
                 return _instance;
